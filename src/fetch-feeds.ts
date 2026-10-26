@@ -1,34 +1,31 @@
 import { readFileSync } from 'node:fs';
 import Parser from 'rss-parser';
 import { parse as parseYaml } from 'yaml';
-import type { FeedConfig, FeedStatusKind, Keywords, RawEntry } from './types.ts';
+import type { FeedConfig, Markers, RawEntry } from './types.ts';
 
 const FETCH_TIMEOUT_MS = 15_000;
-const MAX_ATTEMPTS = 2;
-export const MAX_PARALLEL = 8;
+const MAX_ATTEMPTS = 3; // the first try and two retries
+export const MAX_PARALLEL = 10;
 
 const USER_AGENT = 'Mozilla/5.0 (compatible; news-feed-bot/1.0; personal RSS digest)';
 
 export function loadFeeds(path: string): FeedConfig[] {
   const data = parseYaml(readFileSync(path, 'utf8')) as Record<string, unknown[]>;
   const feeds: FeedConfig[] = [];
-  for (const topic of Object.keys(data)) {
-    const entries = data[topic];
+  for (const group of Object.keys(data)) {
+    const entries = data[group];
     for (const entry of entries) {
       const row = entry as {
         name: string;
-        priority: number;
         url: string;
+        snippet?: boolean;
         urlMustContain?: string[];
       };
-      if (row.priority !== 1 && row.priority !== 2) {
-        throw new Error(`feeds.yml: priority of "${row.name}" must be 1 or 2`);
-      }
       feeds.push({
         name: row.name,
-        priority: row.priority,
         url: row.url,
-        topic,
+        group,
+        snippet: row.snippet ?? true,
         urlMustContain: row.urlMustContain ?? [],
       });
     }
@@ -36,17 +33,16 @@ export function loadFeeds(path: string): FeedConfig[] {
   return feeds;
 }
 
-export function loadKeywords(path: string): Keywords {
-  const data = parseYaml(readFileSync(path, 'utf8')) as Partial<Keywords>;
+export function loadMarkers(path: string): Markers {
+  const data = parseYaml(readFileSync(path, 'utf8')) as Partial<Markers>;
   return {
-    excludeWords: data.excludeWords ?? [],
-    excludeTitlePrefixes: data.excludeTitlePrefixes ?? [],
-    excludeUrlParts: data.excludeUrlParts ?? [],
+    titlePrefixes: data.titlePrefixes ?? [],
+    urlParts: data.urlParts ?? [],
   };
 }
 
 export type FetchResult = {
-  status: FeedStatusKind; // 'ok' if downloaded and parsed successfully
+  status: 'ok' | 'dead'; // 'ok' if downloaded and parsed successfully
   detail: string;
   entries: RawEntry[];
 };
@@ -103,14 +99,14 @@ export async function fetchFeed(feed: FeedConfig): Promise<FetchResult> {
       const isLastAttempt = attempt === MAX_ATTEMPTS;
       if (isClientError || isLastAttempt) {
         if (error instanceof HttpError) {
-          return { status: 'http_error', detail: error.message, entries: [] };
+          return { status: 'dead', detail: error.message, entries: [] };
         }
         if (isTimeout(error)) {
-          return { status: 'timeout', detail: `no response within ${FETCH_TIMEOUT_MS / 1000} s`, entries: [] };
+          return { status: 'dead', detail: `timeout: no response within ${FETCH_TIMEOUT_MS / 1000} s`, entries: [] };
         }
         const message = error instanceof Error ? error.message : String(error);
         // Network errors (DNS, TLS, dropped connection) count as unavailable.
-        return { status: 'http_error', detail: message, entries: [] };
+        return { status: 'dead', detail: message, entries: [] };
       }
     }
   }
@@ -121,7 +117,7 @@ export async function fetchFeed(feed: FeedConfig): Promise<FetchResult> {
     parsed = await parser.parseString(text);
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
-    return { status: 'parse_error', detail: message.slice(0, 120), entries: [] };
+    return { status: 'dead', detail: `parse error: ${message.slice(0, 100)}`, entries: [] };
   }
 
   const entries: RawEntry[] = [];

@@ -2,9 +2,14 @@ name: daily-news
 
 on:
   schedule:
-    # Every night at 03:30 UTC (about 04:30-05:30 Berlin time).
-    - cron: '30 3 * * *'
+    # Every day at 05:15 UTC (06:15 or 07:15 Berlin time, depending on daylight saving time).
+    - cron: '15 5 * * *'
   workflow_dispatch:
+    inputs:
+      window_hours:
+        description: 'Window in hours (empty: since the last successful run, 24-72 h)'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -29,26 +34,27 @@ jobs:
 
       - run: npm test
 
-      - name: Restore first-seen cache
+      # Fails only if more than half of the feeds are dead or the files cannot be written.
+      # In that case nothing is committed and out/ and state/ stay as they were.
+      - name: Build the digest
         env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          mkdir -p state
-          gh release download latest --pattern seen.json --dir state || echo "No cache yet"
+          WINDOW_HOURS: ${{ inputs.window_hours }}
+        run: npm run build-news
 
-      # Fails if no entries were collected; the publish step below is then skipped
-      # and yesterday's file stays in the release.
-      - run: npm run build-news
-
-      - name: Publish to release "latest"
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Commit out/ and state/
         run: |
-          gh release view latest >/dev/null 2>&1 || \
-            gh release create latest --title "Latest news" --notes "Updated daily by the daily-news workflow." --latest=false
-          gh release upload latest out/news.md out/news.json out/health.md state/seen.json --clobber
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add out state
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "data: $(TZ=Europe/Berlin date +'%Y-%m-%d %H:%M') [skip ci]"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
 
       - name: Show health summary
         if: always()
         run: |
-          if [ -f out/health.md ]; then head -40 out/health.md >> "$GITHUB_STEP_SUMMARY"; fi
+          if [ -f out/latest/health.md ]; then head -30 out/latest/health.md >> "$GITHUB_STEP_SUMMARY"; fi

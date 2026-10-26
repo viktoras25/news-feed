@@ -1,30 +1,35 @@
-import type { FeedConfig, Item, Keywords, RawEntry } from './types.ts';
+import type { FeedConfig, Item, Markers, RawEntry } from './types.ts';
+
+export const MIN_WINDOW_HOURS = 24;
+export const MAX_WINDOW_HOURS = 72;
 
 // A feed whose entries mostly share one timestamp has no real publication dates
 // (the feed stamps every entry with its build time), so the time window cannot be applied.
 const SHARED_TIMESTAMP_MIN_ENTRIES = 5;
 const SHARED_TIMESTAMP_SHARE = 0.8;
 
-// On Sunday and Monday (Berlin time) use 72 hours, otherwise Friday and Saturday would be lost.
-export function windowHours(now: Date): number {
-  const weekday = new Intl.DateTimeFormat('en-US', {
-    weekday: 'short',
-    timeZone: 'Europe/Berlin',
-  }).format(now);
-  if (weekday === 'Sun' || weekday === 'Mon') {
-    return 72;
+const HOUR_MS = 60 * 60 * 1000;
+
+// The window reaches back to the last successful run, but at least 24 and at most 72 hours.
+// An explicit override (WINDOW_HOURS) wins over the rule.
+export function computeWindowHours(now: Date, lastSuccess: Date | null, override?: number): number {
+  if (override !== undefined && Number.isFinite(override) && override > 0) {
+    return override;
   }
-  return 24;
+  if (lastSuccess === null) {
+    return MIN_WINDOW_HOURS;
+  }
+  const sinceLastRun = Math.ceil((now.getTime() - lastSuccess.getTime()) / HOUR_MS);
+  return Math.min(MAX_WINDOW_HOURS, Math.max(MIN_WINDOW_HOURS, sinceLastRun));
 }
 
 export function isInWindow(published: Date, now: Date, hours: number): boolean {
   const ageMs = now.getTime() - published.getTime();
   // Small tolerance into the future: source clocks can run ahead.
-  const oneHourMs = 60 * 60 * 1000;
-  if (ageMs < -oneHourMs) {
+  if (ageMs < -HOUR_MS) {
     return false;
   }
-  return ageMs <= hours * oneHourMs;
+  return ageMs <= hours * HOUR_MS;
 }
 
 // True if the feed has no usable publication dates: none at all, or one shared timestamp.
@@ -57,48 +62,32 @@ export function hasSharedTimestamp(entries: RawEntry[]): boolean {
   return biggest / dated >= SHARED_TIMESTAMP_SHARE;
 }
 
-function escapeRegExp(text: string): string {
-  return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-// Words that occur at the start of a word: "Gewinnspiel" finds "Gewinnspiele".
-export function findPrefixMatches(text: string, words: string[]): string[] {
-  const found: string[] = [];
-  for (const word of words) {
-    const pattern = new RegExp(`(^|[^\\p{L}])${escapeRegExp(word)}`, 'iu');
-    if (pattern.test(text) && !found.includes(word)) {
-      found.push(word);
-    }
-  }
-  return found;
-}
-
 // Ads, announcements, video pages and press portals: things that are not news articles.
-export function isNotAnArticle(title: string, snippet: string, url: string, keywords: Keywords): boolean {
+export function isNotAnArticle(title: string, url: string, markers: Markers): boolean {
   const lowerTitle = title.trim().toLowerCase();
-  for (const prefix of keywords.excludeTitlePrefixes) {
+  for (const prefix of markers.titlePrefixes) {
     if (lowerTitle.startsWith(prefix.toLowerCase())) {
       return true;
     }
   }
   const lowerUrl = url.toLowerCase();
-  for (const part of keywords.excludeUrlParts) {
+  for (const part of markers.urlParts) {
     if (lowerUrl.includes(part.toLowerCase())) {
       return true;
     }
   }
-  return findPrefixMatches(title + ' ' + snippet, keywords.excludeWords).length > 0;
+  return false;
 }
 
 // Removes what is not an article and applies the feed's own URL scope. No limits, no judgment of importance.
 export function filterFeedItems(
   items: Item[],
-  keywords: Keywords,
+  markers: Markers,
   feed: Pick<FeedConfig, 'urlMustContain'> = { urlMustContain: [] },
 ): Item[] {
   const result: Item[] = [];
   for (const item of items) {
-    if (isNotAnArticle(item.title, item.snippet, item.url, keywords)) {
+    if (isNotAnArticle(item.title, item.url, markers)) {
       continue;
     }
     if (feed.urlMustContain.length > 0) {

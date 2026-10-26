@@ -1,44 +1,49 @@
 export type FeedConfig = {
   name: string;
-  // Only decides which source is listed first when the same entry comes from several feeds.
-  priority: 1 | 2;
   url: string;
-  topic: string; // coarse group label from feeds.yml, not a classification
+  group: string; // coarse label from feeds.yml, not a classification
+  // false for wide feeds: their snippets are not worth the space.
+  snippet: boolean;
   // If set, an entry URL must contain at least one of these substrings (scopes a feed to a region).
   urlMustContain: string[];
 };
 
-// Mechanical markers only. Nothing here judges how important an entry is.
-export type Keywords = {
-  // Entries whose title or snippet contains one of these words (from the start of a word) are ads.
-  excludeWords: string[];
-  // Entries whose title starts with one of these are ads, announcements or recurring roundups.
-  excludeTitlePrefixes: string[];
-  // Entries whose URL contains one of these are not articles (video pages, press portals).
-  excludeUrlParts: string[];
+// Mechanical markers only (markers.yml). Nothing here judges how important an entry is.
+export type Markers = {
+  // A title starting with one of these is an ad, an announcement or a recurring roundup.
+  titlePrefixes: string[];
+  // A URL containing one of these is not an article (video pages, press portals).
+  urlParts: string[];
 };
 
 // One RSS entry after cleaning. title and snippet are already safe as text,
-// but Markdown escaping happens only at output time (see render.ts).
+// but Markdown escaping happens only at output time (see output.ts).
 export type Item = {
-  topic: string;
+  group: string;
   source: string;
-  priority: 1 | 2;
   title: string;
-  url: string;
+  url: string; // cleaned URL for display (tracking parameters and fragment removed)
+  key: string; // normalized URL used for comparison and ids
   published: Date;
-  snippet: string;
+  snippet: string; // empty if the feed has snippet: false
 };
 
-// One line of the digest: an entry, possibly seen in several feeds.
+export type SourceRef = {
+  name: string;
+  url: string;
+  published: Date;
+};
+
+// One record of the digest: an entry, possibly seen in several feeds.
 export type Entry = {
-  id: string; // stable id derived from the URL of the first item
-  topic: string;
-  head: Item; // the item shown (best priority, then earliest)
-  items: Item[]; // all items that were merged into this entry, head first
+  id: string; // first 6 hex of sha1 of the normalized URL (longer only on a collision)
+  group: string;
+  title: string;
+  url: string;
+  published: Date; // earliest publication time among the sources
   snippet: string;
-  published: Date; // earliest publication time among the items
-  seenBefore: boolean; // the URL was already in a previous export
+  sources: SourceRef[];
+  status: 'new' | 'seen_before';
 };
 
 // Result of downloading one feed, before its entries are processed.
@@ -51,11 +56,15 @@ export type RawEntry = {
 
 export type FeedStatusKind =
   | 'ok'
-  | 'quiet' // feed works, but has no entries within the window
+  | 'dead' // download or parsing failed, see detail
   | 'empty' // feed works, but contains no entries at all
-  | 'http_error'
-  | 'timeout'
-  | 'parse_error';
+  | 'quiet' // feed works, but has no entries within the window
+  | 'no_dates'; // feed has no usable dates: dates come from the first-seen cache
+
+export type FlaggedText = {
+  url: string;
+  field: 'title' | 'snippet';
+};
 
 export type FeedReport = {
   feed: FeedConfig;
@@ -63,8 +72,7 @@ export type FeedReport = {
   detail: string;
   fetched: number; // entries in the feed
   inWindow: number; // after the time filter
-  afterFilter: number; // after removing ads and non-articles
-  kept: number; // items of this feed inside the final entries
-  droppedInjection: number; // entries dropped for a suspicious title
-  strippedSnippets: number; // snippets removed because of suspicious text
+  afterCleaning: number; // after removing ads and non-articles
+  kept: number; // entries of this feed in the final output (new and seen_before)
+  flagged: FlaggedText[]; // texts that tripped the injection guard
 };

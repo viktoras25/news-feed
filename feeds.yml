@@ -1,84 +1,84 @@
-# Topic -> list of feeds. The topic is a coarse group label for the digest, not a classification.
-# priority only decides which source is listed first when several feeds carry the same entry.
+# Group -> list of feeds. The group is a coarse label for the digest, not a classification.
+# Per feed: name, url; snippet: false (wide feeds: no snippet in the output); urlMustContain (scope to URL paths).
 # "ok" means the feed opened; "check" means the URL was taken from memory.
 
 national:            # Germany: politics, general news
-  - { name: Tagesschau,      priority: 1, url: https://www.tagesschau.de/index~rss2.xml }
-  - { name: ZDFheute,        priority: 1, url: https://www.zdfheute.de/rss/zdf/nachrichten }   # ok
-  - { name: ZDFheute Politik,priority: 2, url: https://www.zdfheute.de/rss/zdf/nachrichten/politik }
-  - { name: ARD,             priority: 2, url: https://www.ard.de/index~rss2.xml }
-  - { name: Spiegel,         priority: 1, url: https://www.spiegel.de/schlagzeilen/index.rss }
-  - { name: Spiegel Politik, priority: 2, url: https://www.spiegel.de/politik/deutschland/index.rss }
-  - { name: Zeit,            priority: 1, url: https://newsfeed.zeit.de/index }
-  - { name: SZ Topthemen,    priority: 1, url: https://rss.sueddeutsche.de/rss/Topthemen }
-  - { name: SZ Eilmeldungen, priority: 1, url: https://rss.sueddeutsche.de/rss/Eilmeldungen }
-  - { name: SZ Politik,      priority: 2, url: https://rss.sueddeutsche.de/rss/Politik }
-  - { name: FAZ,             priority: 1, url: https://www.faz.net/rss/aktuell/ }
-  - { name: Welt,            priority: 2, url: https://www.welt.de/feeds/latest.rss }
-  - { name: taz,             priority: 2, url: https://taz.de/rss.xml }   # ok
-  - { name: t-online,        priority: 2, url: https://www.t-online.de/nachrichten/feed.rss }   # ok
-  - { name: n-tv Politik,    priority: 2, url: https://www.n-tv.de/politik/rss }
-  - { name: Bundestag aktuell, priority: 2, url: https://www.bundestag.de/static/appdata/includes/rss/aktuellethemen.rss }   # ok
-  - { name: Deutschlandfunk, priority: 1, url: https://www.deutschlandfunk.de/nachrichten-100.rss }   # from memory, check
-  - { name: DW Deutsch,      priority: 1, url: https://rss.dw.com/rdf/rss-de-all }   # from memory, check
+  - { name: Tagesschau,      snippet: false, url: https://www.tagesschau.de/index~rss2.xml }
+  - { name: ZDFheute,        snippet: false, url: https://www.zdfheute.de/rss/zdf/nachrichten }   # ok
+  - { name: ZDFheute Politik,snippet: false, url: https://www.zdfheute.de/rss/zdf/nachrichten/politik }
+  - { name: ARD,             snippet: false, url: https://www.ard.de/index~rss2.xml }
+  - { name: Spiegel,         url: https://www.spiegel.de/schlagzeilen/index.rss }
+  - { name: Spiegel Politik, url: https://www.spiegel.de/politik/deutschland/index.rss }
+  - { name: Zeit,            url: https://newsfeed.zeit.de/index }
+  - { name: SZ Topthemen,    url: https://rss.sueddeutsche.de/rss/Topthemen }
+  - { name: SZ Eilmeldungen, url: https://rss.sueddeutsche.de/rss/Eilmeldungen }
+  - { name: SZ Politik,      url: https://rss.sueddeutsche.de/rss/Politik }
+  - { name: FAZ,             snippet: false, url: https://www.faz.net/rss/aktuell/ }
+  - { name: Welt,            snippet: false, url: https://www.welt.de/feeds/latest.rss }
+  - { name: taz,             snippet: false, url: https://taz.de/rss.xml }   # ok
+  - { name: t-online,        url: https://www.t-online.de/nachrichten/feed.rss }   # ok
+  - { name: n-tv Politik,    snippet: false, url: https://www.n-tv.de/politik/rss }
+  - { name: Bundestag aktuell, url: https://www.bundestag.de/static/appdata/includes/rss/aktuellethemen.rss }   # ok
+  - { name: Deutschlandfunk, url: https://www.deutschlandfunk.de/nachrichten-100.rss }   # from memory, check
+  - { name: DW Deutsch,      url: https://rss.dw.com/rdf/rss-de-all }   # from memory, check
 
 ukraine_world:       # Ukraine, Middle East, world
-  - { name: Spiegel Ukraine, priority: 1, url: https://www.spiegel.de/thema/ukraine/index.rss }
-  - { name: Spiegel Russland,priority: 2, url: https://www.spiegel.de/thema/russland/index.rss }
-  - { name: Spiegel Ausland, priority: 1, url: https://www.spiegel.de/ausland/index.rss }
-  - { name: t-online Ukraine,priority: 1, url: https://www.t-online.de/nachrichten/ukraine/feed.rss }
-  - { name: Euractiv DE,     priority: 2, url: https://euractiv.com/de/?feed=mcfeed }
+  - { name: Spiegel Ukraine, url: https://www.spiegel.de/thema/ukraine/index.rss }
+  - { name: Spiegel Russland,url: https://www.spiegel.de/thema/russland/index.rss }
+  - { name: Spiegel Ausland, url: https://www.spiegel.de/ausland/index.rss }
+  - { name: t-online Ukraine,url: https://www.t-online.de/nachrichten/ukraine/feed.rss }
+  - { name: Euractiv DE,     url: https://euractiv.com/de/?feed=mcfeed }
 
 economy:             # economy, markets, central banks, statistics
-  - { name: Spiegel Wirtschaft, priority: 1, url: https://www.spiegel.de/wirtschaft/index.rss }
-  - { name: SZ Wirtschaft,   priority: 1, url: https://rss.sueddeutsche.de/rss/Wirtschaft }
-  - { name: Manager Magazin, priority: 1, url: https://www.manager-magazin.de/index.rss }
-  - { name: n-tv Wirtschaft, priority: 2, url: https://www.n-tv.de/wirtschaft/rss }
-  - { name: Stern Wirtschaft,priority: 2, url: https://www.stern.de/feed/standard/wirtschaft/ }
-  - { name: Destatis,        priority: 1, url: https://www.destatis.de/SiteGlobals/Functions/RSSFeed/DE/RSSNewsfeed/Aktuell.xml }   # ok
-  - { name: Bundesbank (research), priority: 2, url: https://www.bundesbank.de/service/rss/en/633292/feed.rss }   # ok
-  - { name: BaFin Presse,    priority: 2, url: https://www.bafin.de/DE/service/rss/_function/RSS_Presse.xml?nn=150166 }
-  - { name: BMWE Pressemitteilungen, priority: 2, url: https://www.bundeswirtschaftsministerium.de/SiteGlobals/BMWI/Functions/RSSFeed/DE/RSSFeed-Pressemitteilung.xml }
-  - { name: BMWE Energie,    priority: 2, url: https://www.bundeswirtschaftsministerium.de/SiteGlobals/BMWI/Functions/RSSFeed/DE/RSSFeed-Energie.xml }
+  - { name: Spiegel Wirtschaft, url: https://www.spiegel.de/wirtschaft/index.rss }
+  - { name: SZ Wirtschaft,   url: https://rss.sueddeutsche.de/rss/Wirtschaft }
+  - { name: Manager Magazin, url: https://www.manager-magazin.de/index.rss }
+  - { name: n-tv Wirtschaft, url: https://www.n-tv.de/wirtschaft/rss }
+  - { name: Stern Wirtschaft,url: https://www.stern.de/feed/standard/wirtschaft/ }
+  - { name: Destatis,        url: https://www.destatis.de/SiteGlobals/Functions/RSSFeed/DE/RSSNewsfeed/Aktuell.xml }   # ok
+  - { name: Bundesbank (research), url: https://www.bundesbank.de/service/rss/en/633292/feed.rss }   # ok
+  - { name: BaFin Presse,    url: https://www.bafin.de/DE/service/rss/_function/RSS_Presse.xml?nn=150166 }
+  - { name: BMWE Pressemitteilungen, url: https://www.bundeswirtschaftsministerium.de/SiteGlobals/BMWI/Functions/RSSFeed/DE/RSSFeed-Pressemitteilung.xml }
+  - { name: BMWE Energie,    url: https://www.bundeswirtschaftsministerium.de/SiteGlobals/BMWI/Functions/RSSFeed/DE/RSSFeed-Energie.xml }
 
 tax_work:            # taxes, self-employed, labor, pensions
-  - { name: Bundesfinanzhof, priority: 1, url: https://www.bundesfinanzhof.de/de/news.rss }   # ok
-  - { name: BFH Urteile,     priority: 2, url: https://www.bundesfinanzhof.de/de/precedent.rss }
-  - { name: BMAS,            priority: 1, url: https://www.bmas.de/SiteGlobals/Functions/RSSFeed/DE/RSSNewsfeed/RSSNewsfeed.xml }
-  - { name: Deloitte Tax News, priority: 2, url: https://deloitte-tax-news.de/steuern/rss/steuern_rss.xml }
-  - { name: "Deloitte: Einkommensteuer", priority: 2, url: https://deloitte-tax-news.de/steuern/private-einkommensteuer/rss/private-einkommensteuer_rss.xml }
-  - { name: "Deloitte: Sozialversicherung", priority: 2, url: https://deloitte-tax-news.de/steuern/arbeitnehmerbesteuerung-sozialversicherung/rss/arbeitnehmerbesteuerung-sozialversicherung_rss.xml }
-  - { name: Bundeskanzler,   priority: 2, url: https://www.bundeskanzler.de/service/rss/bk-de/1859754/feed.xml }   # check which section this is
-  - { name: Manager Magazin ETF, priority: 2, url: https://www.manager-magazin.de/thema/etfs-exchange-traded-funds/index.rss }
+  - { name: Bundesfinanzhof, url: https://www.bundesfinanzhof.de/de/news.rss }   # ok
+  - { name: BFH Urteile,     url: https://www.bundesfinanzhof.de/de/precedent.rss }
+  - { name: BMAS,            url: https://www.bmas.de/SiteGlobals/Functions/RSSFeed/DE/RSSNewsfeed/RSSNewsfeed.xml }
+  - { name: Deloitte Tax News, url: https://deloitte-tax-news.de/steuern/rss/steuern_rss.xml }
+  - { name: "Deloitte: Einkommensteuer", url: https://deloitte-tax-news.de/steuern/private-einkommensteuer/rss/private-einkommensteuer_rss.xml }
+  - { name: "Deloitte: Sozialversicherung", url: https://deloitte-tax-news.de/steuern/arbeitnehmerbesteuerung-sozialversicherung/rss/arbeitnehmerbesteuerung-sozialversicherung_rss.xml }
+  - { name: Bundeskanzler,   url: https://www.bundeskanzler.de/service/rss/bk-de/1859754/feed.xml }   # check which section this is
+  - { name: Manager Magazin ETF, url: https://www.manager-magazin.de/thema/etfs-exchange-traded-funds/index.rss }
 
 tech_ai_labor:       # AI, tech, labor market
-  - { name: heise,           priority: 1, url: https://www.heise.de/rss/heise-atom.xml }
-  - { name: heise iX,        priority: 2, url: https://www.heise.de/ix/feed.xml }
-  - { name: Golem,           priority: 1, url: https://golem.de/rss }
-  - { name: t3n,             priority: 1, url: https://t3n.de/rss.xml }   # ok
-  - { name: Manager Magazin KI, priority: 1, url: https://www.manager-magazin.de/thema/ki_kuenstliche_intelligenz/index.rss }
-  - { name: Manager Magazin Führung, priority: 2, url: https://www.manager-magazin.de/hbm/fuehrung/index.rss }
-  - { name: Spiegel Netzwelt,priority: 2, url: https://www.spiegel.de/netzwelt/index.rss }
-  - { name: Computerwoche,   priority: 2, url: https://www.computerwoche.de/feed/ }
-  - { name: Deutsche Startups, priority: 2, url: "http://deutsche-startups.de/feed" }
-  - { name: Basic Thinking,  priority: 2, url: https://www.basicthinking.de/blog/feed/ }
+  - { name: heise,           url: https://www.heise.de/rss/heise-atom.xml }
+  - { name: heise iX,        url: https://www.heise.de/ix/feed.xml }
+  - { name: Golem,           url: https://golem.de/rss }
+  - { name: t3n,             url: https://t3n.de/rss.xml }   # ok
+  - { name: Manager Magazin KI, url: https://www.manager-magazin.de/thema/ki_kuenstliche_intelligenz/index.rss }
+  - { name: Manager Magazin Führung, url: https://www.manager-magazin.de/hbm/fuehrung/index.rss }
+  - { name: Spiegel Netzwelt,url: https://www.spiegel.de/netzwelt/index.rss }
+  - { name: Computerwoche,   url: https://www.computerwoche.de/feed/ }
+  - { name: Deutsche Startups, url: "http://deutsche-startups.de/feed" }
+  - { name: Basic Thinking,  url: https://www.basicthinking.de/blog/feed/ }
 
 leipzig_saxony:      # local: Leipzig + Saxony
-  - { name: Leipzig.de (city), priority: 1, url: https://www.leipzig.de/newsfeed/rss.xml }   # ok
-  - { name: Leipzig.de Verkehr, priority: 1, url: https://www.leipzig.de/newsfeed/kategorie/verkehr/rss.xml }
-  - { name: Leipzig.de Bauen/Wohnen, priority: 2, url: https://www.leipzig.de/newsfeed/kategorie/bauen-und-wohnen/rss.xml }
-  - { name: Leipzig.de Wirtschaft, priority: 2, url: https://www.leipzig.de/newsfeed/kategorie/wirtschaft/rss.xml }
-  - { name: L-IZ,            priority: 1, url: https://www.l-iz.de/feed }   # ok
-  - { name: Sachsen Fernsehen, priority: 2, url: https://www.sachsen-fernsehen.de/feed/ }   # ok
-  - { name: LVZ Leipzig,     priority: 1, url: https://www.lvz.de/arc/outboundfeeds/rss/tags_slug/leipzig/ }
-  - { name: LVZ Stadtpolitik,priority: 1, url: https://www.lvz.de/arc/outboundfeeds/rss/tags_slug/leipzig-stadtpolitik/ }
-  - { name: LVZ Bauen/Wohnen,priority: 2, url: https://www.lvz.de/arc/outboundfeeds/rss/tags_slug/leipzig-bauen-und-wohnen/ }
-  - { name: LVZ Politik regional, priority: 2, url: https://www.lvz.de/arc/outboundfeeds/rss/category/politik/regional/ }
-  - { name: LVZ Wirtschaft regional, priority: 2, url: https://www.lvz.de/arc/outboundfeeds/rss/category/wirtschaft/regional/ }
-  - { name: Sächsische Sachsen, priority: 1, url: https://www.saechsische.de/arc/outboundfeeds/rss/category/sachsen }
-  - { name: Sächsische Leipzig, priority: 2, url: https://www.saechsische.de/arc/outboundfeeds/rss/category/lokales/leipzig }
-  - { name: Sächsische Wirtschaft, priority: 2, url: https://www.saechsische.de/arc/outboundfeeds/rss/category/wirtschaft/regional }
-  - { name: MDR,             priority: 1, urlMustContain: ["/nachrichten/sachsen/"], url: https://www.mdr.de/home/mdr-home-index-100-rss.xml }
-  - { name: Freie Presse Sachsen, priority: 2, url: https://www.freiepresse.de/rss/rss_sachsen.php }
-  - { name: DNN Politik,     priority: 2, url: https://www.dnn.de/arc/outboundfeeds/rss/category/politik/ }
+  - { name: Leipzig.de (city), url: https://www.leipzig.de/newsfeed/rss.xml }   # ok
+  - { name: Leipzig.de Verkehr, url: https://www.leipzig.de/newsfeed/kategorie/verkehr/rss.xml }
+  - { name: Leipzig.de Bauen/Wohnen, url: https://www.leipzig.de/newsfeed/kategorie/bauen-und-wohnen/rss.xml }
+  - { name: Leipzig.de Wirtschaft, url: https://www.leipzig.de/newsfeed/kategorie/wirtschaft/rss.xml }
+  - { name: L-IZ,            url: https://www.l-iz.de/feed }   # ok
+  - { name: Sachsen Fernsehen, url: https://www.sachsen-fernsehen.de/feed/ }   # ok
+  - { name: LVZ Leipzig,     url: https://www.lvz.de/arc/outboundfeeds/rss/tags_slug/leipzig/ }
+  - { name: LVZ Stadtpolitik,url: https://www.lvz.de/arc/outboundfeeds/rss/tags_slug/leipzig-stadtpolitik/ }
+  - { name: LVZ Bauen/Wohnen,url: https://www.lvz.de/arc/outboundfeeds/rss/tags_slug/leipzig-bauen-und-wohnen/ }
+  - { name: LVZ Politik regional, url: https://www.lvz.de/arc/outboundfeeds/rss/category/politik/regional/ }
+  - { name: LVZ Wirtschaft regional, url: https://www.lvz.de/arc/outboundfeeds/rss/category/wirtschaft/regional/ }
+  - { name: Sächsische Sachsen, url: https://www.saechsische.de/arc/outboundfeeds/rss/category/sachsen }
+  - { name: Sächsische Leipzig, url: https://www.saechsische.de/arc/outboundfeeds/rss/category/lokales/leipzig }
+  - { name: Sächsische Wirtschaft, url: https://www.saechsische.de/arc/outboundfeeds/rss/category/wirtschaft/regional }
+  - { name: MDR,             urlMustContain: ["/nachrichten/sachsen/"], url: https://www.mdr.de/home/mdr-home-index-100-rss.xml }
+  - { name: Freie Presse Sachsen, url: https://www.freiepresse.de/rss/rss_sachsen.php }
+  - { name: DNN Politik,     snippet: false, url: https://www.dnn.de/arc/outboundfeeds/rss/category/politik/ }
 

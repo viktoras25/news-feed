@@ -32,6 +32,8 @@ export const INJECTION_PATTERNS: RegExp[] = [
   /neue\s+anweisung/i,
   /\b(ki|assistent|chatbot)\s*[,:]\s*(bitte|du\s+(musst|sollst)|ignorier|vergiss)/i,
   // markup used to disguise commands
+  // tags that pose as a prompt structure, checked on the raw text before HTML is stripped
+  /<\/?\s*(instructions?|system|assistant|prompt|tool_?calls?|function_?calls?)\b/i,
   /```/,
   /<\|.*?\|>/,
   /\[\/?INST\]/i,
@@ -127,7 +129,7 @@ export type CleanTitle = {
 
 export function cleanTitle(raw: string): CleanTitle {
   const text = stripHtml(raw);
-  if (looksLikeInjection(text)) {
+  if (looksLikeInjection(raw) || looksLikeInjection(text)) {
     return { text: '', flagged: true };
   }
   return { text: truncate(text, MAX_TITLE_LENGTH), flagged: false };
@@ -141,7 +143,7 @@ export type CleanSnippet = {
 
 export function cleanSnippet(raw: string): CleanSnippet {
   const stripped = stripHtml(raw);
-  if (looksLikeInjection(stripped)) {
+  if (looksLikeInjection(raw) || looksLikeInjection(stripped)) {
     return { text: '', full: '', flagged: true };
   }
   // Links are removed from the snippet: the only link in an entry is the entry's own url.
@@ -156,5 +158,7 @@ export function cleanSnippet(raw: string): CleanSnippet {
 // Markdown escaping for output: so that text from a feed cannot create
 // a heading, link, image or table.
 export function escapeMarkdown(text: string): string {
-  return text.replace(/[\\`*_{}\[\]()<>#+!|~]/g, '\\$&');
+  const escaped = text.replace(/[\\`*_\[\]<>|~]/g, '\\$&');
+  // A line that starts with a list, quote or heading marker would turn into markup.
+  return escaped.replace(/^(\s*)([#>+-]|\d+[.)])/, '$1\\$2');
 }

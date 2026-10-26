@@ -1,0 +1,32 @@
+# Mechanical markers for things that are not news articles. Nothing here judges importance or topic:
+# that is left to the reader (an LLM). Edit freely, no code change needed.
+
+# A title starting with one of these is an ad, an announcement or a recurring roundup (case-insensitive).
+titlePrefixes:
+  - Anzeige
+  - heise-Angebot
+  - heise+
+  - Gewinnspiel
+  - Sponsored
+  - Pressemitteilung
+  - Aktuelle Pressemitteilungen
+  - Entdecken Sie
+  - Livestream
+  # daily roundups (a list of stories under one title)
+  - "Montag:"
+  - "Dienstag:"
+  - "Mittwoch:"
+  - "Donnerstag:"
+  - "Freitag:"
+  - "Samstag:"
+  - "Sonntag:"
+
+# A URL containing one of these is not an article: video and audio pages, press portals, studio promotion.
+urlParts:
+  - /video/
+  - /videos/
+  - /video-
+  - /multimedia/
+  - /podcast
+  - presseportal.zdf.de
+  - 3d.zdf.de
