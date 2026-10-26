@@ -1,86 +1,10 @@
-# include: case-insensitive substring, except words from wordBoundary (whole word, case-sensitive).
-# exclude: match from the start of a word, case-insensitive.
+# Mechanical markers only. The script does not judge importance or topic: that is left to the reader (an LLM).
 
-# priority 2 feeds and feeds with requireKeywords: an entry passes only if at least one of these words
-# is in the title or description.
-include:
-  - Steuer
-  - Rente
-  - Freiberufler
-  - Selbstständig
-  - Sozialversicherung
-  - Bürgergeld
-  - Mindestlohn
-  - Entlassung
-  - Stellenabbau
-  - Arbeitsmarkt
-  - Fachkräfte
-  - Künstliche Intelligenz
-  - Datenschutz
-  - Leipzig
-  - Sachsen
-  - Ukraine
-  - EZB
-  - Inflation
-  - Zinsen
-  - Bundesbank
-  - Wohnen
-  - Miete
-  - KI
-  - AI
-
-# Short words that must be matched as whole words only (otherwise "KI" would be found inside "Kinder").
-wordBoundary:
-  - KI
-  - EZB
-  - AI
-
-# Noise: the entry is dropped for any priority.
-exclude:
-  # sport
-  - Bundesliga
-  - Regionalliga
-  - Zweitligist
-  - Champions League
-  - Fußball
-  - Handball
-  - Basketball
-  - Eishockey
-  - Biathlon
-  - Skispringen
-  - Radsport
-  - Formel 1
-  - Tennis
-  - Olympia
-  - DFB
-  # gossip and society
-  - Promi
-  - Klatsch
-  - Royals
-  - Horoskop
-  - Opernball
-  - Bürgerfest
-  - Dschungelcamp
-  - Schlagerstar
+# Ads: matched from the start of a word, case-insensitive, in the title or snippet.
+excludeWords:
   - Gewinnspiel
-  - Webcam
-  - Horoscope
-  # cars
-  - Autotest
-  - Fahrbericht
-  - Probefahrt
-  # tech reviews and gadgets
-  - Steam
-  - Unboxing
-  - Foldable
-  # crime blotter
-  - Polizeimeldung
-  - Festnahme
-  - Messerangriff
-  - Tatverdächtig
-  - Leiche
 
-# Ads and announcements (title prefixes, compared case-insensitively).
+# Ads, announcements and recurring roundups: title prefixes, case-insensitive.
 excludeTitlePrefixes:
   - Anzeige
   - heise-Angebot
@@ -89,13 +13,7 @@ excludeTitlePrefixes:
   - Aktuelle Pressemitteilungen
   - Entdecken Sie
   - Livestream
-  - Bilder des Tages
-  - "Fotografie:"
-  - "Gesellschaft:"
-  - "Test:"
-  - Ratgeber
-  - Good News in History
-  # daily news roundups (they glue unrelated stories together)
+  # daily roundups (a list of stories under one title)
   - "Montag:"
   - "Dienstag:"
   - "Mittwoch:"
@@ -104,7 +22,7 @@ excludeTitlePrefixes:
   - "Samstag:"
   - "Sonntag:"
 
-# URL substrings: video/audio pages, press portals, culture and lifestyle sections.
+# Not articles: video and audio pages, press portals, studio promotion.
 excludeUrlParts:
   - /video/
   - /videos/
@@ -113,22 +31,3 @@ excludeUrlParts:
   - /podcast
   - presseportal.zdf.de
   - 3d.zdf.de
-  - /sport/
-  - /feuilleton/
-  - /kultur/
-  - /stil/
-  - /reisen/
-  - /ratgeber/
-
-# Tags written to news.json as "topics". Same matching rules as `include`.
-tags:
-  tax: [Steuer, Finanzamt, Freiberufler, Selbstständig, Bundesfinanzhof, BFH]
-  pensions: [Rente, Altersvorsorge, Pension]
-  social_insurance: [Sozialversicherung, Bürgergeld, Krankenkasse, Pflegeversicherung]
-  labor: [Entlassung, Stellenabbau, Arbeitsmarkt, Mindestlohn, Fachkräfte, Kündigung, Arbeitslos]
-  ai: [KI, AI, Künstliche Intelligenz, OpenAI, Anthropic, ChatGPT]
-  central_bank_markets: [EZB, Zinsen, Inflation, Bundesbank, DAX, Leitzins]
-  ukraine: [Ukraine, Kiew, Selenskyj]
-  leipzig: [Leipzig]
-  saxony: [Sachsen, Dresden, Chemnitz]
-  housing: [Miete, Wohnen, Wohnungsbau]

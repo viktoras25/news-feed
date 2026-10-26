@@ -1,10 +1,10 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
-import { MAX_CLUSTERS_PER_TOPIC, MAX_CLUSTERS_TOTAL, capClusters, clusterItems } from './cluster.ts';
+import { mergeDuplicates } from './dedupe.ts';
 import { fetchAll, loadFeeds, loadKeywords } from './fetch-feeds.ts';
 import { filterFeedItems, isInWindow, lacksUsableDates, windowHours } from './filter.ts';
 import { renderHealth, renderNews, renderNewsJson } from './render.ts';
 import { cleanSnippet, cleanTitle } from './sanitize.ts';
-import { datesFromFirstSeen, loadSeen, saveSeen } from './seen.ts';
+import { datesFromFirstSeen, loadSeen, rememberUrls, saveSeen } from './seen.ts';
 import type { SeenStore } from './seen.ts';
 import type { FeedConfig, FeedReport, FeedStatusKind, Item, Keywords, RawEntry } from './types.ts';
 
@@ -12,7 +12,7 @@ const SEEN_PATH = 'state/seen.json';
 
 type FeedProcessed = {
   report: FeedReport;
-  items: Item[]; // after noise filters, before clustering
+  items: Item[]; // after removing ads and non-articles, before merging duplicates
 };
 
 // Turns the raw entries of one feed into cleaned Items and collects statistics.
@@ -32,7 +32,7 @@ function processFeed(
     detail,
     fetched: rawEntries.length,
     inWindow: 0,
-    afterNoise: 0,
+    afterFilter: 0,
     kept: 0,
     droppedInjection: 0,
     strippedSnippets: 0,
@@ -84,13 +84,11 @@ function processFeed(
       url: entry.link,
       published: entry.date,
       snippet: snippet.text,
-      searchText: snippet.full,
-      feedRank: 0, // set by filterFeedItems
     });
   }
 
   const filtered = filterFeedItems(candidates, keywords, feed);
-  report.afterNoise = filtered.length;
+  report.afterFilter = filtered.length;
 
   if (report.inWindow === 0) {
     report.status = 'quiet';
@@ -101,11 +99,15 @@ function processFeed(
 
 async function main(): Promise<void> {
   const now = new Date();
-  const hours = windowHours(now);
+  // WINDOW_HOURS overrides the default window (for example for a manual run of the workflow).
+  const hours = Number(process.env.WINDOW_HOURS) || windowHours(now);
 
   const feeds = loadFeeds('feeds.yml');
   const keywords = loadKeywords('keywords.yml');
   const seen = loadSeen(SEEN_PATH);
+  // URLs of earlier exports, taken before this run adds anything: they make an entry "seen_before".
+  const previousUrls = new Set(Object.keys(seen));
+
   const topicOrder: string[] = [];
   for (const feed of feeds) {
     if (!topicOrder.includes(feed.topic)) {
@@ -113,7 +115,7 @@ async function main(): Promise<void> {
     }
   }
 
-  console.log(`Feeds: ${feeds.length}, window: ${hours} h`);
+  console.log(`Feeds: ${feeds.length}, window: ${hours} h, cache: ${previousUrls.size} URLs`);
   const fetched = await fetchAll(feeds);
 
   const reports: FeedReport[] = [];
@@ -125,43 +127,49 @@ async function main(): Promise<void> {
     allItems.push(...processed.items);
   }
 
-  // Saved before anything can fail below, so the cache survives an empty result.
-  saveSeen(SEEN_PATH, seen, now);
+  const merged = mergeDuplicates(allItems, previousUrls);
 
-  const clustered = clusterItems(allItems, keywords);
-  const finalClusters = capClusters(clustered.clusters, MAX_CLUSTERS_PER_TOPIC, MAX_CLUSTERS_TOTAL);
-
-  // How many entries of each feed ended up in the final events (key: source + topic of the entry's feed).
-  for (const cluster of finalClusters) {
-    for (const member of cluster.members) {
-      const report = reports.find((r) => r.feed.name === member.source && r.feed.topic === member.topic);
+  // How many items of each feed ended up in the final entries (key: feed name + topic).
+  for (const entry of merged.entries) {
+    for (const item of entry.items) {
+      const report = reports.find((r) => r.feed.name === item.source && r.feed.topic === item.topic);
       if (report) {
         report.kept += 1;
       }
     }
   }
 
+  // Everything exported now counts as seen in the next run. Saved before anything can fail below.
+  rememberUrls(
+    seen,
+    merged.entries.flatMap((entry) => entry.items.map((item) => item.url)),
+    now,
+  );
+  saveSeen(SEEN_PATH, seen, now);
+
   mkdirSync('out', { recursive: true });
   const health = renderHealth(reports, now, hours, {
-    removedByUrl: clustered.removedByUrl,
     items: allItems.length,
-    clustersBeforeCap: clustered.clusters.length,
-    clustersFinal: finalClusters.length,
+    removedByUrl: merged.removedByUrl,
+    removedByTitle: merged.removedByTitle,
+    entries: merged.entries.length,
   });
   writeFileSync('out/health.md', health);
 
+  const newCount = merged.entries.filter((entry) => !entry.seenBefore).length;
   console.log(
-    `Events in total: ${finalClusters.length} (from ${clustered.clusters.length} events, ${allItems.length} entries; URL duplicates: ${clustered.removedByUrl})`,
+    `Entries: ${merged.entries.length} (new ${newCount}, seen_before ${merged.entries.length - newCount}) ` +
+      `from ${allItems.length} items; merged: URL ${merged.removedByUrl}, title ${merged.removedByTitle}`,
   );
 
   // An empty result is almost certainly a failure: keep yesterday's file and fail the workflow.
-  if (finalClusters.length === 0) {
+  if (merged.entries.length === 0) {
     console.error('No entries: news.md was not created');
     process.exit(1);
   }
 
-  writeFileSync('out/news.md', renderNews(finalClusters, topicOrder, reports, now, hours));
-  writeFileSync('out/news.json', renderNewsJson(finalClusters, topicOrder, reports, now, hours));
+  writeFileSync('out/news.md', renderNews(merged.entries, topicOrder, reports, now, hours));
+  writeFileSync('out/news.json', renderNewsJson(merged.entries, topicOrder, reports, now, hours));
 }
 
 main().catch((error) => {

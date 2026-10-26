@@ -3,9 +3,11 @@ import { dirname } from 'node:path';
 import { normalizeUrl } from './dedupe.ts';
 import type { RawEntry } from './types.ts';
 
-// Feeds without usable dates cannot be filtered by time. For them we remember when each URL was
-// first seen: an unseen URL counts as published "now", a seen one keeps its first-seen time and
-// therefore ages out of the window like any other entry.
+// The cache has two jobs.
+// 1. Feeds without usable dates cannot be filtered by time. For them we remember when each URL was
+//    first seen: an unseen URL counts as published "now", a seen one keeps its first-seen time and
+//    therefore ages out of the window like any other entry.
+// 2. Every exported URL is remembered, so the next export can mark it "seen before".
 
 // normalized URL -> ISO time of the first sighting
 export type SeenStore = Record<string, string>;
@@ -47,4 +49,14 @@ export function datesFromFirstSeen(entries: RawEntry[], seen: SeenStore, now: Da
     result.push({ ...entry, date: new Date(seen[key]) });
   }
   return result;
+}
+
+// Remembers the URLs of everything that was exported, so the next run can mark it as seen before.
+export function rememberUrls(seen: SeenStore, urls: string[], now: Date): void {
+  for (const url of urls) {
+    const key = normalizeUrl(url);
+    if (seen[key] === undefined) {
+      seen[key] = now.toISOString();
+    }
+  }
 }

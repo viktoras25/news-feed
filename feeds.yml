@@ -1,4 +1,5 @@
-# Topics -> list of feeds. priority 1 = main, priority 2 = only with keywords, max 5 entries per feed.
+# Topic -> list of feeds. The topic is a coarse group label for the digest, not a classification.
+# priority only decides which source is listed first when several feeds carry the same entry.
 # "ok" means the feed opened; "check" means the URL was taken from memory.
 
 national:            # Germany: politics, general news
@@ -53,8 +54,8 @@ tax_work:            # taxes, self-employed, labor, pensions
 tech_ai_labor:       # AI, tech, labor market
   - { name: heise,           priority: 1, url: https://www.heise.de/rss/heise-atom.xml }
   - { name: heise iX,        priority: 2, url: https://www.heise.de/ix/feed.xml }
-  - { name: Golem,           priority: 1, requireKeywords: true, url: https://golem.de/rss }
-  - { name: t3n,             priority: 1, requireKeywords: true, url: https://t3n.de/rss.xml }   # ok
+  - { name: Golem,           priority: 1, url: https://golem.de/rss }
+  - { name: t3n,             priority: 1, url: https://t3n.de/rss.xml }   # ok
   - { name: Manager Magazin KI, priority: 1, url: https://www.manager-magazin.de/thema/ki_kuenstliche_intelligenz/index.rss }
   - { name: Manager Magazin Führung, priority: 2, url: https://www.manager-magazin.de/hbm/fuehrung/index.rss }
   - { name: Spiegel Netzwelt,priority: 2, url: https://www.spiegel.de/netzwelt/index.rss }

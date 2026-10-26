@@ -19,7 +19,6 @@ export function loadFeeds(path: string): FeedConfig[] {
         name: string;
         priority: number;
         url: string;
-        requireKeywords?: boolean;
         urlMustContain?: string[];
       };
       if (row.priority !== 1 && row.priority !== 2) {
@@ -30,7 +29,6 @@ export function loadFeeds(path: string): FeedConfig[] {
         priority: row.priority,
         url: row.url,
         topic,
-        requireKeywords: row.requireKeywords ?? false,
         urlMustContain: row.urlMustContain ?? [],
       });
     }
@@ -41,12 +39,9 @@ export function loadFeeds(path: string): FeedConfig[] {
 export function loadKeywords(path: string): Keywords {
   const data = parseYaml(readFileSync(path, 'utf8')) as Partial<Keywords>;
   return {
-    include: data.include ?? [],
-    wordBoundary: data.wordBoundary ?? [],
-    exclude: data.exclude ?? [],
+    excludeWords: data.excludeWords ?? [],
     excludeTitlePrefixes: data.excludeTitlePrefixes ?? [],
     excludeUrlParts: data.excludeUrlParts ?? [],
-    tags: data.tags ?? {},
   };
 }
 

@@ -1,8 +1,5 @@
 import type { FeedConfig, Item, Keywords, RawEntry } from './types.ts';
 
-export const MAX_PRIORITY1_PER_FEED = 20;
-export const MAX_PRIORITY2_PER_FEED = 10;
-
 // A feed whose entries mostly share one timestamp has no real publication dates
 // (the feed stamps every entry with its build time), so the time window cannot be applied.
 const SHARED_TIMESTAMP_MIN_ENTRIES = 5;
@@ -64,44 +61,20 @@ function escapeRegExp(text: string): string {
   return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-// Short words (KI, EZB) are matched as whole words, case-sensitive.
-function matchesWholeWord(text: string, word: string): boolean {
-  const pattern = new RegExp(`(^|[^\\p{L}\\p{N}])${escapeRegExp(word)}($|[^\\p{L}\\p{N}])`, 'u');
-  return pattern.test(text);
-}
-
-// True if any of the words occurs in the text. Words listed in wholeWords need a whole-word match.
-export function matchesWords(text: string, words: string[], wholeWords: string[]): boolean {
-  const lower = text.toLowerCase();
+// Words that occur at the start of a word: "Gewinnspiel" finds "Gewinnspiele".
+export function findPrefixMatches(text: string, words: string[]): string[] {
+  const found: string[] = [];
   for (const word of words) {
-    if (wholeWords.includes(word)) {
-      if (matchesWholeWord(text, word)) {
-        return true;
-      }
-    } else if (lower.includes(word.toLowerCase())) {
-      return true;
-    }
-  }
-  return false;
-}
-
-export function matchesInclude(text: string, keywords: Keywords): boolean {
-  return matchesWords(text, keywords.include, keywords.wordBoundary);
-}
-
-// Noise words are matched from the start of a word: "Promi" finds "Promis", but "Gala" does not find "Galapagos".
-export function matchesExclude(text: string, keywords: Keywords): boolean {
-  for (const word of keywords.exclude) {
     const pattern = new RegExp(`(^|[^\\p{L}])${escapeRegExp(word)}`, 'iu');
-    if (pattern.test(text)) {
-      return true;
+    if (pattern.test(text) && !found.includes(word)) {
+      found.push(word);
     }
   }
-  return false;
+  return found;
 }
 
-// Ads, announcements, video pages and section URLs that are never news for this digest.
-export function isAnnouncement(title: string, url: string, keywords: Keywords): boolean {
+// Ads, announcements, video pages and press portals: things that are not news articles.
+export function isNotAnArticle(title: string, snippet: string, url: string, keywords: Keywords): boolean {
   const lowerTitle = title.trim().toLowerCase();
   for (const prefix of keywords.excludeTitlePrefixes) {
     if (lowerTitle.startsWith(prefix.toLowerCase())) {
@@ -114,46 +87,28 @@ export function isAnnouncement(title: string, url: string, keywords: Keywords): 
       return true;
     }
   }
-  return false;
+  return findPrefixMatches(title + ' ' + snippet, keywords.excludeWords).length > 0;
 }
 
-// Filter for the entries of one feed. Entries are already inside the time window.
-// Applies: ads, per-feed URL rule, noise words, keyword requirement, per-feed limit.
+// Removes what is not an article and applies the feed's own URL scope. No limits, no judgment of importance.
 export function filterFeedItems(
   items: Item[],
   keywords: Keywords,
-  feed: Pick<FeedConfig, 'requireKeywords' | 'urlMustContain'> = { requireKeywords: false, urlMustContain: [] },
+  feed: Pick<FeedConfig, 'urlMustContain'> = { urlMustContain: [] },
 ): Item[] {
   const result: Item[] = [];
-
-  // Newest first, so the per-feed limit keeps the most recent entries.
-  const sorted = [...items].sort((a, b) => b.published.getTime() - a.published.getTime());
-
-  for (const item of sorted) {
-    if (isAnnouncement(item.title, item.url, keywords)) {
+  for (const item of items) {
+    if (isNotAnArticle(item.title, item.snippet, item.url, keywords)) {
       continue;
     }
     if (feed.urlMustContain.length > 0) {
       const lowerUrl = item.url.toLowerCase();
-      const allowed = feed.urlMustContain.some((part) => lowerUrl.includes(part.toLowerCase()));
-      if (!allowed) {
+      const inScope = feed.urlMustContain.some((part) => lowerUrl.includes(part.toLowerCase()));
+      if (!inScope) {
         continue;
       }
     }
-    const text = item.title + ' ' + item.searchText;
-    if (matchesExclude(text, keywords)) {
-      continue;
-    }
-    const needsKeywords = item.priority === 2 || feed.requireKeywords;
-    if (needsKeywords && !matchesInclude(text, keywords)) {
-      continue;
-    }
-    result.push({ ...item, feedRank: result.length });
-    const limit = item.priority === 1 ? MAX_PRIORITY1_PER_FEED : MAX_PRIORITY2_PER_FEED;
-    if (result.length >= limit) {
-      break;
-    }
+    result.push(item);
   }
-
   return result;
 }
