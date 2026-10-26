@@ -34,7 +34,7 @@ export function titleTokens(title: string): Set<string> {
   const tokens = new Set<string>();
   const parts = title.toLowerCase().split(/[^\p{L}\p{N}]+/u);
   for (const part of parts) {
-    // Слова короче 3 символов (der, im, zu) почти ничего не говорят о сюжете.
+    // Words shorter than 3 characters (der, im, zu) say almost nothing about the story.
     if (part.length >= 3) {
       tokens.add(part);
     }
@@ -62,7 +62,7 @@ export type DedupeResult = {
   removedByTitle: number;
 };
 
-// Из дублей остаётся запись с меньшим priority, при равенстве самая ранняя.
+// Of duplicates, the entry with the lower priority number is kept; on a tie, the earliest.
 export function dedupe(items: Item[]): DedupeResult {
   const sorted = [...items].sort((a, b) => {
     if (a.priority !== b.priority) {
@@ -86,7 +86,7 @@ export function dedupe(items: Item[]): DedupeResult {
 
     const tokens = titleTokens(item.title);
     let isSimilar = false;
-    // Слишком короткие заголовки не сравниваем: ложные совпадения.
+    // Very short titles are not compared: too many false matches.
     if (tokens.size >= 3) {
       for (const other of keptTokens) {
         if (jaccard(tokens, other) >= TITLE_SIMILARITY_THRESHOLD) {

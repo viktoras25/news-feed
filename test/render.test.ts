@@ -27,7 +27,7 @@ test('renderNews не даёт тексту из фида создать раз�
   assert.ok(entryLine);
   assert.ok(!entryLine.includes('[click]('));
   assert.ok(entryLine.includes('\\[click\\]'));
-  // Разметка заголовка не появилась ни в одной строке, кроме наших.
+  // No heading markup appeared on any line except our own.
   const headings = output.split('\n').filter((line) => line.startsWith('#'));
   assert.deepEqual(headings, ['# Новости на 2026-10-26', '## Германия: политика и повестка']);
 });

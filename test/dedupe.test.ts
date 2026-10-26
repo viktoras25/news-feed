@@ -63,7 +63,7 @@ test('dedupe убирает один сюжет из разных источни
   const result = dedupe([zdf, tagesschau, other]);
   assert.equal(result.kept.length, 2);
   assert.equal(result.removedByTitle, 1);
-  // При равном priority остаётся более ранняя запись.
+  // With equal priority the earlier entry is kept.
   assert.ok(result.kept.some((item) => item.source === 'ZDFheute'));
 });
 

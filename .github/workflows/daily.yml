@@ -2,7 +2,7 @@ name: daily-news
 
 on:
   schedule:
-    # Каждую ночь, 03:30 UTC (около 04:30-05:30 по Берлину).
+    # Every night at 03:30 UTC (about 04:30-05:30 Berlin time).
     - cron: '30 3 * * *'
   workflow_dispatch:
 
@@ -29,8 +29,8 @@ jobs:
 
       - run: npm test
 
-      # Падает, если не собралось ни одной записи; тогда публикация ниже пропускается,
-      # и в релизе остаётся вчерашний файл.
+      # Fails if no entries were collected; the publish step below is then skipped
+      # and yesterday's file stays in the release.
       - run: npm run build-news
 
       - name: Publish to release "latest"

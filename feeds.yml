@@ -1,5 +1,5 @@
-# Темы -> список фидов. priority 1 = основные, priority 2 = только по ключевым словам, макс. 5 записей на фид.
-# Пометки "ok" означают, что фид открывался; "проверить" означает, что URL взят из памяти.
+# Topics -> list of feeds. priority 1 = main, priority 2 = only with keywords, max 5 entries per feed.
+# "ok" means the feed opened; "check" means the URL was taken from memory.
 
 national:            # Германия: политика, общая повестка
   - { name: Tagesschau,      priority: 1, url: https://www.tagesschau.de/index~rss2.xml }
@@ -18,8 +18,8 @@ national:            # Германия: политика, общая повес
   - { name: t-online,        priority: 2, url: https://www.t-online.de/nachrichten/feed.rss }   # ok
   - { name: n-tv Politik,    priority: 2, url: https://www.n-tv.de/politik/rss }
   - { name: Bundestag aktuell, priority: 2, url: https://www.bundestag.de/static/appdata/includes/rss/aktuellethemen.rss }   # ok
-  - { name: Deutschlandfunk, priority: 1, url: https://www.deutschlandfunk.de/nachrichten-100.rss }   # из памяти, проверить
-  - { name: DW Deutsch,      priority: 1, url: https://rss.dw.com/rdf/rss-de-all }   # из памяти, проверить
+  - { name: Deutschlandfunk, priority: 1, url: https://www.deutschlandfunk.de/nachrichten-100.rss }   # from memory, check
+  - { name: DW Deutsch,      priority: 1, url: https://rss.dw.com/rdf/rss-de-all }   # from memory, check
 
 ukraine_world:       # Украина, Ближний Восток, мир
   - { name: Spiegel Ukraine, priority: 1, url: https://www.spiegel.de/thema/ukraine/index.rss }
@@ -47,7 +47,7 @@ tax_work:            # налоги, самозанятые, труд, пенс�
   - { name: Deloitte Tax News, priority: 2, url: https://deloitte-tax-news.de/steuern/rss/steuern_rss.xml }
   - { name: "Deloitte: Einkommensteuer", priority: 2, url: https://deloitte-tax-news.de/steuern/private-einkommensteuer/rss/private-einkommensteuer_rss.xml }
   - { name: "Deloitte: Sozialversicherung", priority: 2, url: https://deloitte-tax-news.de/steuern/arbeitnehmerbesteuerung-sozialversicherung/rss/arbeitnehmerbesteuerung-sozialversicherung_rss.xml }
-  - { name: Bundeskanzler,   priority: 2, url: https://www.bundeskanzler.de/service/rss/bk-de/1859754/feed.xml }   # проверить, что за раздел
+  - { name: Bundeskanzler,   priority: 2, url: https://www.bundeskanzler.de/service/rss/bk-de/1859754/feed.xml }   # check which section this is
   - { name: Manager Magazin ETF, priority: 2, url: https://www.manager-magazin.de/thema/etfs-exchange-traded-funds/index.rss }
 
 tech_ai_labor:       # ИИ, tech, рынок труда
@@ -82,5 +82,5 @@ leipzig_saxony:      # локальное: Лейпциг + Саксония
   - { name: DNN Politik,     priority: 2, url: https://www.dnn.de/arc/outboundfeeds/rss/category/politik/ }
 
 good_news:
-  # priority 1, чтобы не требовать ключевых слов: для хороших новостей они бессмысленны.
+  # priority 1 so that keywords are not required: they make no sense for good news.
   - { name: Good News Network, priority: 1, url: https://www.goodnewsnetwork.org/feed/ }   # ok

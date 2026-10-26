@@ -35,7 +35,7 @@ export function loadKeywords(path: string): Keywords {
 }
 
 export type FetchResult = {
-  status: FeedStatusKind; // 'ok' если всё скачано и разобрано
+  status: FeedStatusKind; // 'ok' if downloaded and parsed successfully
   detail: string;
   entries: RawEntry[];
 };
@@ -63,13 +63,13 @@ async function downloadText(url: string): Promise<string> {
 
   const buffer = await response.arrayBuffer();
   let text = new TextDecoder('utf-8').decode(buffer);
-  // Редкие фиды отдаются в ISO-8859-1: кодировка указана в прологе XML.
+  // Rare feeds are served as ISO-8859-1; the encoding is declared in the XML prolog.
   const prolog = text.slice(0, 200).match(/encoding=["']([^"']+)["']/i);
   if (prolog && prolog[1].toLowerCase() !== 'utf-8') {
     try {
       text = new TextDecoder(prolog[1]).decode(buffer);
     } catch {
-      // Неизвестная кодировка: оставляем utf-8.
+      // Unknown encoding: keep utf-8.
     }
   }
   return text;
@@ -87,7 +87,7 @@ export async function fetchFeed(feed: FeedConfig): Promise<FetchResult> {
       text = await downloadText(feed.url);
       break;
     } catch (error) {
-      // 4xx не повторяем: страница не появится от второй попытки.
+      // Do not retry 4xx: a second attempt will not make the page appear.
       const isClientError = error instanceof HttpError && error.code >= 400 && error.code < 500;
       const isLastAttempt = attempt === MAX_ATTEMPTS;
       if (isClientError || isLastAttempt) {
@@ -98,7 +98,7 @@ export async function fetchFeed(feed: FeedConfig): Promise<FetchResult> {
           return { status: 'timeout', detail: `нет ответа за ${FETCH_TIMEOUT_MS / 1000} с`, entries: [] };
         }
         const message = error instanceof Error ? error.message : String(error);
-        // Сетевые ошибки (DNS, TLS, обрыв) считаем как недоступность.
+        // Network errors (DNS, TLS, dropped connection) count as unavailable.
         return { status: 'http_error', detail: message, entries: [] };
       }
     }
@@ -116,7 +116,7 @@ export async function fetchFeed(feed: FeedConfig): Promise<FetchResult> {
   const entries: RawEntry[] = [];
   for (const item of parsed.items) {
     const link = (item.link ?? '').trim();
-    // Только http/https: никаких javascript: и data: ссылок из недоверенного фида.
+    // http/https only: no javascript: or data: links from an untrusted feed.
     if (!/^https?:\/\//i.test(link)) {
       continue;
     }
@@ -133,7 +133,7 @@ export async function fetchFeed(feed: FeedConfig): Promise<FetchResult> {
   return { status: 'ok', detail: '', entries };
 }
 
-// Простой пул: не больше MAX_PARALLEL загрузок одновременно, порядок результатов = порядок входа.
+// Simple pool: at most MAX_PARALLEL downloads at once; results keep the input order.
 export async function fetchAll(feeds: FeedConfig[]): Promise<FetchResult[]> {
   const results: FetchResult[] = new Array(feeds.length);
   let nextIndex = 0;

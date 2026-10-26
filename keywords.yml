@@ -1,7 +1,7 @@
-# include: подстрока без учёта регистра, кроме слов из wordBoundary (целое слово, с учётом регистра).
-# exclude: совпадение с начала слова без учёта регистра.
+# include: case-insensitive substring, except words from wordBoundary (whole word, case-sensitive).
+# exclude: match from the start of a word, case-insensitive.
 
-# priority 2: запись проходит, только если есть хотя бы одно из этих слов в заголовке или описании.
+# priority 2: an entry passes only if at least one of these words is in the title or description.
 include:
   - Steuer
   - Rente
@@ -24,13 +24,13 @@ include:
   - Wohnen
   - Miete
 
-# Короткие слова, которые нужно искать только как целое слово (иначе "KI" найдётся внутри "Kinder").
+# Short words that must be matched as whole words only (otherwise "KI" would be found inside "Kinder").
 wordBoundary:
   - KI
   - EZB
   - AI
 
-# Шум: запись отбрасывается для любого priority.
+# Noise: the entry is dropped for any priority.
 exclude:
   - Bundesliga
   - Champions League

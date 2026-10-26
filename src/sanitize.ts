@@ -1,14 +1,14 @@
-// Всё, что приходит из RSS, считается недоверенными данными.
-// Здесь текст очищается от HTML, а всё похожее на инструкции для ассистента убирается.
+// Everything that comes from RSS is treated as untrusted data.
+// Here the text is stripped of HTML and anything that looks like instructions for an assistant is removed.
 
 export const MAX_SNIPPET_LENGTH = 300;
 export const MAX_TITLE_LENGTH = 200;
 
-// Если хотя бы один паттерн сработал, текст считается подозрительным.
-// Для сниппета это значит: сниппет выбрасывается целиком. Для заголовка: запись выбрасывается.
-// Паттерны без флага g, чтобы у RegExp не было состояния между вызовами.
+// If at least one pattern matches, the text is considered suspicious.
+// For a snippet that means the snippet is dropped entirely; for a title, the entry is dropped.
+// Patterns have no g flag so that RegExp carries no state between calls.
 export const INJECTION_PATTERNS: RegExp[] = [
-  // английский
+  // English
   /ignore\s+(all\s+|any\s+|the\s+)?(previous|prior|above|earlier)/i,
   /disregard\s+(all\s+|any\s+|the\s+)?(previous|prior|above|earlier|instructions)/i,
   /forget\s+(all\s+|everything|your|the\s+previous)/i,
@@ -16,8 +16,8 @@ export const INJECTION_PATTERNS: RegExp[] = [
   /(system|developer)\s+prompt/i,
   /new\s+instructions?/i,
   /\binstructions?\s*:/i,
-  // Обращение к ИИ по структуре. Сами названия (OpenAI, Claude, Home Assistant) в tech-новостях
-  // нормальны, поэтому ловим только обращение или команду.
+  // Addressing an AI, detected by structure. The names themselves (OpenAI, Claude, Home Assistant) are
+  // normal in tech news, so only an address or a command is matched.
   /\b(dear|hey|hello|attention|note\s+to|message\s+for|for\s+the)\s+(ai|a\.i\.|assistant|claude|chatgpt|chatbot|llm|model|agent)s?\b/i,
   /\b(ai|assistant|claude|chatgpt|chatbot|llm|agent)\s*[,:]\s*(please|you\s+(must|should|will|need)|ignore|do\s+not|don't|call|send|forward|summari[sz]e|read|fetch|open|visit|run|execute|output|reply|respond)\b(?!\s+source)/i,
   /\bif\s+you\s+are\s+(an?\s+)?(ai|llm|assistant|language\s+model|chatbot|agent)/i,
@@ -25,19 +25,19 @@ export const INJECTION_PATTERNS: RegExp[] = [
   /\b(tool|function)\s+call/i,
   /\bas\s+an\s+ai\b/i,
   /\bdo\s+not\s+(tell|mention|reveal)/i,
-  // немецкий
+  // German
   /ignorier(e|en)\s+(alle|die|jegliche)/i,
   /vergiss\s+(alle|die|alles)/i,
   /du\s+bist\s+(nun|jetzt|ein)/i,
   /neue\s+anweisung/i,
   /\b(ki|assistent|chatbot)\s*[,:]\s*(bitte|du\s+(musst|sollst)|ignorier|vergiss)/i,
-  // русский
+  // Russian
   /игнорир(уй|уйте)/i,
   /забудь(те)?\s+(все|предыдущ)/i,
   /ты\s+(теперь|должен)/i,
   /системн(ый|ое)\s+(промпт|сообщение)/i,
   /(ассистент|нейросеть|ии)\s*[,:]\s*(пожалуйста|ты\s+должен|игнорируй|отправь|перешли|выполни)/i,
-  // разметка, которой маскируют команды
+  // markup used to disguise commands
   /```/,
   /<\|.*?\|>/,
   /\[\/?INST\]/i,
@@ -80,7 +80,7 @@ const NAMED_ENTITIES: Record<string, string> = {
   euro: '€',
 };
 
-// Одним проходом, чтобы "&amp;lt;" стало "&lt;", а не "<".
+// Single pass, so that "&amp;lt;" becomes "&lt;" and not "<".
 export function decodeEntities(input: string): string {
   return input.replace(/&(#x[0-9a-f]+|#[0-9]+|[a-z]+);/gi, (whole, body: string) => {
     if (body.startsWith('#x') || body.startsWith('#X')) {
@@ -108,9 +108,9 @@ export function stripHtml(input: string): string {
   text = text.replace(/<(script|style)[\s\S]*?<\/\1>/gi, ' ');
   text = text.replace(/<[^>]*>/g, ' ');
   text = decodeEntities(text);
-  // После декодирования из "&lt;b&gt;" снова могли получиться теги.
+  // After decoding, "&lt;b&gt;" may have turned into tags again.
   text = text.replace(/<[^>]*>/g, ' ');
-  // Одиночные угловые скобки больше не нужны.
+  // Stray angle brackets are no longer needed.
   text = text.replace(/[<>]/g, ' ');
   return text.replace(/\s+/g, ' ').trim();
 }
@@ -121,7 +121,7 @@ export function truncate(text: string, max: number): string {
   }
   const cut = text.slice(0, max);
   const lastSpace = cut.lastIndexOf(' ');
-  // Режем по границе слова, но только если не потеряем слишком много.
+  // Cut at a word boundary, but only if that does not lose too much.
   const base = lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut;
   return base.replace(/[\s.,;:!?-]+$/, '') + '…';
 }
@@ -140,8 +140,8 @@ export function cleanTitle(raw: string): CleanTitle {
 }
 
 export type CleanSnippet = {
-  text: string; // для вывода, до 300 символов
-  full: string; // для поиска ключевых слов
+  text: string; // for output, up to 300 characters
+  full: string; // for keyword search
   flagged: boolean;
 };
 
@@ -150,7 +150,7 @@ export function cleanSnippet(raw: string): CleanSnippet {
   if (looksLikeInjection(stripped)) {
     return { text: '', full: '', flagged: true };
   }
-  // Ссылки из сниппета убираем: единственная ссылка в записи - это url самой записи.
+  // Links are removed from the snippet: the only link in an entry is the entry's own url.
   const withoutUrls = stripped.replace(/https?:\/\/\S+/gi, '').replace(/\s+/g, ' ').trim();
   return {
     text: truncate(withoutUrls, MAX_SNIPPET_LENGTH),
@@ -159,8 +159,8 @@ export function cleanSnippet(raw: string): CleanSnippet {
   };
 }
 
-// Экранирование для вывода в Markdown: чтобы текст из фида не мог создать
-// заголовок, ссылку, картинку или таблицу.
+// Markdown escaping for output: so that text from a feed cannot create
+// a heading, link, image or table.
 export function escapeMarkdown(text: string): string {
   return text.replace(/[\\`*_{}\[\]()<>#+!|~]/g, '\\$&');
 }

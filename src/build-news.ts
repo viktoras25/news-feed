@@ -8,10 +8,10 @@ import type { FeedConfig, FeedReport, FeedStatusKind, Item, RawEntry } from './t
 
 type FeedProcessed = {
   report: FeedReport;
-  items: Item[]; // после фильтров шума, до дедупликации
+  items: Item[]; // after noise filters, before deduplication
 };
 
-// Превращает сырые записи одного фида в очищенные Item и считает статистику.
+// Turns the raw entries of one feed into cleaned Items and collects statistics.
 function processFeed(
   feed: FeedConfig,
   fetchStatus: FeedStatusKind,
@@ -125,7 +125,7 @@ async function main(): Promise<void> {
   const deduped = dedupe(allItems);
   const finalItems = capPerTopic(deduped.kept, MAX_PER_TOPIC);
 
-  // Сколько записей каждого фида дожило до конца (ключ: источник + тема).
+  // How many entries of each feed survived to the end (key: source + topic).
   for (const item of finalItems) {
     const report = reports.find((r) => r.feed.name === item.source && r.feed.topic === item.topic);
     if (report) {
@@ -141,7 +141,7 @@ async function main(): Promise<void> {
     `Записей в итоге: ${finalItems.length} (после дедупликации ${deduped.kept.length}; дубли: URL ${deduped.removedByUrl}, заголовок ${deduped.removedByTitle})`,
   );
 
-  // Пустой результат почти наверняка сбой: не затираем вчерашний файл, workflow упадёт.
+  // An empty result is almost certainly a failure: keep yesterday's file and fail the workflow.
   if (finalItems.length === 0) {
     console.error('Ни одной записи: news.md не создан');
     process.exit(1);

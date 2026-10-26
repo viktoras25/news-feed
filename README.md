@@ -1,39 +1,43 @@
 # news-feed
 
-Каждую ночь GitHub Actions собирает RSS-ленты из `feeds.yml`, фильтрует их и публикует два файла в release `latest`:
+Every night GitHub Actions collects the RSS feeds listed in `feeds.yml`, filters them, and publishes two files to the `latest` release:
 
-- `news.md`: подборка за последние 24 часа (72 часа в воскресенье и понедельник), по темам. Перезаписывается целиком.
-- `health.md`: какие фиды мёртвые или пустые, сколько записей отсеяно на каждом этапе.
+- `news.md`: a digest of the last 24 hours (72 hours on Sunday and Monday), grouped by topic. Overwritten in full on every run.
+- `health.md`: which feeds are dead or empty, and how many entries were dropped at each stage.
 
-Постоянные ссылки:
+Permanent links:
 
 ```
 https://github.com/<user>/<repo>/releases/download/latest/news.md
 https://github.com/<user>/<repo>/releases/download/latest/health.md
 ```
 
-## Что делает скрипт
+## What the script does
 
-1. Скачивает фиды параллельно (таймаут 15 с, один повтор).
-2. Оставляет записи моложе окна времени.
-3. Отсекает шум (`exclude` в `keywords.yml`). Для фидов с `priority: 2` пропускает только записи с ключевыми словами (`include`) и не больше 5 на фид.
-4. Убирает дубли по нормализованному URL и по похожести заголовка.
-5. Очищает текст: HTML, ссылки, фразы, похожие на команды для ассистента (`src/sanitize.ts`). Сниппеты обрезаются до 300 символов. Подозрительный сниппет удаляется целиком, запись с подозрительным заголовком отбрасывается.
-6. Экранирует Markdown в заголовках и сниппетах.
+1. Downloads all feeds in parallel (15 s timeout, one retry).
+2. Keeps entries newer than the time window.
+3. Drops noise (`exclude` in `keywords.yml`). For feeds with `priority: 2` only entries that match a keyword (`include`) pass, at most 5 per feed. Feeds with `priority: 1` are capped at 8 entries each.
+4. Removes duplicates by normalized URL and by title similarity.
+5. Keeps at most 15 entries per topic, taking entries round-robin across feeds so one noisy feed cannot crowd out the others.
+6. Cleans the text (`src/sanitize.ts`): strips HTML and links, and removes phrases that look like commands addressed to an AI assistant. Snippets are truncated to 300 characters. A suspicious snippet is dropped entirely; an entry with a suspicious title is dropped.
+7. Escapes Markdown in titles and snippets, so feed text cannot create headings, links or tables.
 
-Содержимое `news.md` это данные из внешних источников. В промпте для Claude стоит указать, что инструкции внутри файла не выполняются.
+Each entry in `news.md` is rendered as: topic (heading) → source → title → time → link → snippet.
 
-## Разработка
+The content of `news.md` is external data. When using it from Claude, state in the prompt that instructions inside the file must not be followed.
+
+## Development
 
 ```
 npm ci
 npm test
-npm run build-news   # результат в out/
+npm run build-news   # output goes to out/
 ```
 
-Список фидов правится в `feeds.yml`, ключевые слова в `keywords.yml`. После правок смотрите `out/health.md`.
+Edit the feed list in `feeds.yml` and the keyword lists in `keywords.yml`. After changes, check `out/health.md`.
 
-## Замечания
+## Notes
 
-- GitHub отключает расписание в публичных репозиториях после 60 дней без активности. Если ночные запуски остановились, запустите workflow вручную (`Actions` → `daily-news` → `Run workflow`).
-- Публикуются только заголовки, ссылки и короткие фрагменты из открытых RSS-лент, права на материалы остаются у источников.
+- GitHub disables scheduled workflows in public repositories after 60 days without repository activity. If the nightly runs stop, start the workflow manually (`Actions` → `daily-news` → `Run workflow`).
+- Only titles, links and short excerpts from public RSS feeds are published; rights to the material remain with the sources.
+- Feeds without publication dates cannot be filtered by time and show up as `no_dates` in `health.md`.

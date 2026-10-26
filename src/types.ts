@@ -11,8 +11,8 @@ export type Keywords = {
   exclude: string[];
 };
 
-// Одна запись из RSS после очистки. title и snippet уже безопасны как текст,
-// но Markdown-экранирование делается только при выводе (см. render.ts).
+// One RSS entry after cleaning. title and snippet are already safe as text,
+// but Markdown escaping happens only at output time (see render.ts).
 export type Item = {
   topic: string;
   source: string;
@@ -21,11 +21,11 @@ export type Item = {
   url: string;
   published: Date;
   snippet: string;
-  // Полный очищенный текст (без обрезки) только для поиска ключевых слов.
+  // Full cleaned text (not truncated), used only for keyword search.
   searchText: string;
 };
 
-// Результат загрузки одного фида до разбора записей.
+// Result of downloading one feed, before its entries are processed.
 export type RawEntry = {
   title: string;
   link: string;
@@ -35,9 +35,9 @@ export type RawEntry = {
 
 export type FeedStatusKind =
   | 'ok'
-  | 'quiet' // фид работает, но за окно нет записей
-  | 'empty' // фид работает, но в нём нет ни одной записи
-  | 'no_dates' // записи есть, но ни у одной нет даты
+  | 'quiet' // feed works, but has no entries within the window
+  | 'empty' // feed works, but contains no entries at all
+  | 'no_dates' // entries exist, but none has a date
   | 'http_error'
   | 'timeout'
   | 'parse_error';
@@ -46,10 +46,10 @@ export type FeedReport = {
   feed: FeedConfig;
   status: FeedStatusKind;
   detail: string;
-  fetched: number; // записей в фиде
-  inWindow: number; // после фильтра по времени
-  afterNoise: number; // после фильтра шума и лимита priority 2
-  kept: number; // осталось после дедупликации
-  droppedInjection: number; // записей с подозрительным заголовком
-  strippedSnippets: number; // сниппетов, убранных из-за подозрительного текста
+  fetched: number; // entries in the feed
+  inWindow: number; // after the time filter
+  afterNoise: number; // after the noise filter and the priority 2 limit
+  kept: number; // left after deduplication
+  droppedInjection: number; // entries dropped for a suspicious title
+  strippedSnippets: number; // snippets removed because of suspicious text
 };

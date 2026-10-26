@@ -15,7 +15,7 @@ export function topicTitle(topic: string): string {
   return TOPIC_TITLES[topic] ?? topic;
 }
 
-// "2026-10-26 08:15" по времени Берлина.
+// "2026-10-26 08:15" in Berlin time.
 export function formatBerlin(date: Date): string {
   const parts = new Intl.DateTimeFormat('en-CA', {
     timeZone: 'Europe/Berlin',
@@ -31,7 +31,7 @@ export function formatBerlin(date: Date): string {
   return `${get('year')}-${get('month')}-${get('day')} ${get('hour')}:${get('minute')}`;
 }
 
-// Скобки и пробелы в адресе ломают Markdown-ссылку.
+// Parentheses and spaces in a URL break a Markdown link.
 export function safeLinkTarget(url: string): string {
   return url.replace(/ /g, '%20').replace(/\(/g, '%28').replace(/\)/g, '%29');
 }

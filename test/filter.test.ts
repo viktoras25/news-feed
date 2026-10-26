@@ -31,10 +31,10 @@ function makeItem(title: string, minutesAgo: number, priority: 1 | 2): Item {
 }
 
 test('windowHours: 72 часа в воскресенье и понедельник, иначе 24', () => {
-  assert.equal(windowHours(new Date('2026-10-25T04:00:00Z')), 72); // воскресенье
-  assert.equal(windowHours(new Date('2026-10-26T04:00:00Z')), 72); // понедельник
-  assert.equal(windowHours(new Date('2026-10-27T04:00:00Z')), 24); // вторник
-  assert.equal(windowHours(new Date('2026-10-31T04:00:00Z')), 24); // суббота
+  assert.equal(windowHours(new Date('2026-10-25T04:00:00Z')), 72); // Sunday
+  assert.equal(windowHours(new Date('2026-10-26T04:00:00Z')), 72); // Monday
+  assert.equal(windowHours(new Date('2026-10-27T04:00:00Z')), 24); // Tuesday
+  assert.equal(windowHours(new Date('2026-10-31T04:00:00Z')), 24); // Saturday
 });
 
 test('isInWindow учитывает границу и записи из будущего', () => {
@@ -56,7 +56,7 @@ test('include находит слово внутри составного (Einko
 
 test('exclude ищет с начала слова', () => {
   assert.equal(matchesExclude('Promis feiern', keywords), true);
-  // Совпадение в середине слова не считается.
+  // A match in the middle of a word does not count.
   assert.equal(matchesExclude('Impromptu im Park', keywords), false);
 });
 
@@ -95,7 +95,7 @@ test('capPerTopic ограничивает тему и предпочитает 
 
 test('capPerTopic берёт записи по кругу между фидами', () => {
   const items: Item[] = [];
-  // Шумный фид с очень свежими записями и тихий фид со старыми.
+  // A noisy feed with very fresh entries and a quiet feed with old ones.
   for (let i = 0; i < 10; i++) {
     items.push({ ...makeItem(`Laut ${i}`, i, 1), source: 'Laut' });
   }

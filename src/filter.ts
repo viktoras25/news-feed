@@ -2,10 +2,10 @@ import type { Item, Keywords } from './types.ts';
 
 export const MAX_PRIORITY1_PER_FEED = 8;
 export const MAX_PRIORITY2_PER_FEED = 5;
-// Верхняя граница на тему, чтобы news.md оставался компактным (около 40-50 КБ).
+// Upper bound per topic so that news.md stays compact (about 40-50 KB).
 export const MAX_PER_TOPIC = 15;
 
-// В воскресенье и понедельник (по Берлину) берём 72 часа, иначе пятница-суббота потеряются.
+// On Sunday and Monday (Berlin time) use 72 hours, otherwise Friday and Saturday would be lost.
 export function windowHours(now: Date): number {
   const weekday = new Intl.DateTimeFormat('en-US', {
     weekday: 'short',
@@ -19,7 +19,7 @@ export function windowHours(now: Date): number {
 
 export function isInWindow(published: Date, now: Date, hours: number): boolean {
   const ageMs = now.getTime() - published.getTime();
-  // Небольшой допуск вперёд: часы источников могут уходить вперёд.
+  // Small tolerance into the future: source clocks can run ahead.
   const oneHourMs = 60 * 60 * 1000;
   if (ageMs < -oneHourMs) {
     return false;
@@ -31,7 +31,7 @@ function escapeRegExp(text: string): string {
   return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-// Короткие слова (KI, EZB) ищем как отдельное слово и с учётом регистра.
+// Short words (KI, EZB) are matched as whole words, case-sensitive.
 function matchesWholeWord(text: string, word: string): boolean {
   const pattern = new RegExp(`(^|[^\\p{L}\\p{N}])${escapeRegExp(word)}($|[^\\p{L}\\p{N}])`, 'u');
   return pattern.test(text);
@@ -51,7 +51,7 @@ export function matchesInclude(text: string, keywords: Keywords): boolean {
   return false;
 }
 
-// Шумовые слова ищем с начала слова: "Promi" найдёт "Promis", но "Gala" не найдёт "Galapagos".
+// Noise words are matched from the start of a word: "Promi" finds "Promis", but "Gala" does not find "Galapagos".
 export function matchesExclude(text: string, keywords: Keywords): boolean {
   for (const word of keywords.exclude) {
     const pattern = new RegExp(`(^|[^\\p{L}])${escapeRegExp(word)}`, 'iu');
@@ -62,11 +62,11 @@ export function matchesExclude(text: string, keywords: Keywords): boolean {
   return false;
 }
 
-// Фильтр шума для записей одного фида. Записи на входе уже внутри окна времени.
+// Noise filter for the entries of one feed. Entries are already inside the time window.
 export function filterFeedItems(items: Item[], keywords: Keywords): Item[] {
   const result: Item[] = [];
 
-  // Новые записи первыми, чтобы лимит для priority 2 оставлял самые свежие.
+  // Newest first, so the priority 2 limit keeps the most recent entries.
   const sorted = [...items].sort((a, b) => b.published.getTime() - a.published.getTime());
 
   for (const item of sorted) {
@@ -87,11 +87,11 @@ export function filterFeedItems(items: Item[], keywords: Keywords): Item[] {
   return result;
 }
 
-// Оставляет не больше max записей на тему. Порядок отбора: сначала priority 1, внутри priority
-// "по кругу" между фидами (по одной самой свежей записи от каждого, потом по второй и т.д.),
-// чтобы один шумный фид не вытеснил остальные. Вызывается после дедупликации.
+// Keeps at most max entries per topic. Selection order: priority 1 first, then within a priority
+// round-robin across feeds (the newest entry of each feed, then the second, and so on),
+// so that one noisy feed does not crowd out the others. Runs after deduplication.
 export function capPerTopic(items: Item[], max: number): Item[] {
-  // Место записи внутри своего фида: 0 = самая свежая.
+  // Position of the entry within its own feed: 0 = newest.
   const newestFirst = [...items].sort((a, b) => b.published.getTime() - a.published.getTime());
   const seenPerFeed = new Map<string, number>();
   const rankByItem = new Map<Item, number>();
