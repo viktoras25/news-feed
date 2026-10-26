@@ -1,9 +1,12 @@
-import type { Item, Keywords } from './types.ts';
+import type { FeedConfig, Item, Keywords, RawEntry } from './types.ts';
 
 export const MAX_PRIORITY1_PER_FEED = 8;
 export const MAX_PRIORITY2_PER_FEED = 5;
-// Upper bound per topic so that news.md stays compact (about 40-50 KB).
-export const MAX_PER_TOPIC = 15;
+
+// A feed whose entries mostly share one timestamp has no real publication dates
+// (the feed stamps every entry with its build time), so the time window cannot be applied.
+const SHARED_TIMESTAMP_MIN_ENTRIES = 5;
+const SHARED_TIMESTAMP_SHARE = 0.8;
 
 // On Sunday and Monday (Berlin time) use 72 hours, otherwise Friday and Saturday would be lost.
 export function windowHours(now: Date): number {
@@ -27,6 +30,30 @@ export function isInWindow(published: Date, now: Date, hours: number): boolean {
   return ageMs <= hours * oneHourMs;
 }
 
+// True if most dated entries carry exactly the same timestamp.
+export function hasSharedTimestamp(entries: RawEntry[]): boolean {
+  const countByTime = new Map<number, number>();
+  let dated = 0;
+  for (const entry of entries) {
+    if (entry.date === null) {
+      continue;
+    }
+    dated += 1;
+    const time = entry.date.getTime();
+    countByTime.set(time, (countByTime.get(time) ?? 0) + 1);
+  }
+  if (dated < SHARED_TIMESTAMP_MIN_ENTRIES) {
+    return false;
+  }
+  let biggest = 0;
+  for (const count of countByTime.values()) {
+    if (count > biggest) {
+      biggest = count;
+    }
+  }
+  return biggest / dated >= SHARED_TIMESTAMP_SHARE;
+}
+
 function escapeRegExp(text: string): string {
   return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
@@ -37,10 +64,11 @@ function matchesWholeWord(text: string, word: string): boolean {
   return pattern.test(text);
 }
 
-export function matchesInclude(text: string, keywords: Keywords): boolean {
+// True if any of the words occurs in the text. Words listed in wholeWords need a whole-word match.
+export function matchesWords(text: string, words: string[], wholeWords: string[]): boolean {
   const lower = text.toLowerCase();
-  for (const word of keywords.include) {
-    if (keywords.wordBoundary.includes(word)) {
+  for (const word of words) {
+    if (wholeWords.includes(word)) {
       if (matchesWholeWord(text, word)) {
         return true;
       }
@@ -49,6 +77,10 @@ export function matchesInclude(text: string, keywords: Keywords): boolean {
     }
   }
   return false;
+}
+
+export function matchesInclude(text: string, keywords: Keywords): boolean {
+  return matchesWords(text, keywords.include, keywords.wordBoundary);
 }
 
 // Noise words are matched from the start of a word: "Promi" finds "Promis", but "Gala" does not find "Galapagos".
@@ -62,67 +94,60 @@ export function matchesExclude(text: string, keywords: Keywords): boolean {
   return false;
 }
 
-// Noise filter for the entries of one feed. Entries are already inside the time window.
-export function filterFeedItems(items: Item[], keywords: Keywords): Item[] {
+// Ads, announcements, video pages and section URLs that are never news for this digest.
+export function isAnnouncement(title: string, url: string, keywords: Keywords): boolean {
+  const lowerTitle = title.trim().toLowerCase();
+  for (const prefix of keywords.excludeTitlePrefixes) {
+    if (lowerTitle.startsWith(prefix.toLowerCase())) {
+      return true;
+    }
+  }
+  const lowerUrl = url.toLowerCase();
+  for (const part of keywords.excludeUrlParts) {
+    if (lowerUrl.includes(part.toLowerCase())) {
+      return true;
+    }
+  }
+  return false;
+}
+
+// Filter for the entries of one feed. Entries are already inside the time window.
+// Applies: ads, per-feed URL rule, noise words, keyword requirement, per-feed limit.
+export function filterFeedItems(
+  items: Item[],
+  keywords: Keywords,
+  feed: Pick<FeedConfig, 'requireKeywords' | 'urlMustContain'> = { requireKeywords: false, urlMustContain: [] },
+): Item[] {
   const result: Item[] = [];
 
-  // Newest first, so the priority 2 limit keeps the most recent entries.
+  // Newest first, so the per-feed limit keeps the most recent entries.
   const sorted = [...items].sort((a, b) => b.published.getTime() - a.published.getTime());
 
   for (const item of sorted) {
+    if (isAnnouncement(item.title, item.url, keywords)) {
+      continue;
+    }
+    if (feed.urlMustContain.length > 0) {
+      const lowerUrl = item.url.toLowerCase();
+      const allowed = feed.urlMustContain.some((part) => lowerUrl.includes(part.toLowerCase()));
+      if (!allowed) {
+        continue;
+      }
+    }
     const text = item.title + ' ' + item.searchText;
     if (matchesExclude(text, keywords)) {
       continue;
     }
-    if (item.priority === 2 && !matchesInclude(text, keywords)) {
+    const needsKeywords = item.priority === 2 || feed.requireKeywords;
+    if (needsKeywords && !matchesInclude(text, keywords)) {
       continue;
     }
-    result.push(item);
+    result.push({ ...item, feedRank: result.length });
     const limit = item.priority === 1 ? MAX_PRIORITY1_PER_FEED : MAX_PRIORITY2_PER_FEED;
     if (result.length >= limit) {
       break;
     }
   }
 
-  return result;
-}
-
-// Keeps at most max entries per topic. Selection order: priority 1 first, then within a priority
-// round-robin across feeds (the newest entry of each feed, then the second, and so on),
-// so that one noisy feed does not crowd out the others. Runs after deduplication.
-export function capPerTopic(items: Item[], max: number): Item[] {
-  // Position of the entry within its own feed: 0 = newest.
-  const newestFirst = [...items].sort((a, b) => b.published.getTime() - a.published.getTime());
-  const seenPerFeed = new Map<string, number>();
-  const rankByItem = new Map<Item, number>();
-  for (const item of newestFirst) {
-    const feedKey = item.topic + '|' + item.source;
-    const rank = seenPerFeed.get(feedKey) ?? 0;
-    rankByItem.set(item, rank);
-    seenPerFeed.set(feedKey, rank + 1);
-  }
-
-  const sorted = [...newestFirst].sort((a, b) => {
-    if (a.priority !== b.priority) {
-      return a.priority - b.priority;
-    }
-    const rankA = rankByItem.get(a) ?? 0;
-    const rankB = rankByItem.get(b) ?? 0;
-    if (rankA !== rankB) {
-      return rankA - rankB;
-    }
-    return b.published.getTime() - a.published.getTime();
-  });
-
-  const countByTopic = new Map<string, number>();
-  const result: Item[] = [];
-  for (const item of sorted) {
-    const count = countByTopic.get(item.topic) ?? 0;
-    if (count >= max) {
-      continue;
-    }
-    countByTopic.set(item.topic, count + 1);
-    result.push(item);
-  }
   return result;
 }

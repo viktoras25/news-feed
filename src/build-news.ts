@@ -1,14 +1,14 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
-import { dedupe } from './dedupe.ts';
+import { MAX_CLUSTERS_PER_TOPIC, MAX_CLUSTERS_TOTAL, capClusters, clusterItems } from './cluster.ts';
 import { fetchAll, loadFeeds, loadKeywords } from './fetch-feeds.ts';
-import { MAX_PER_TOPIC, capPerTopic, filterFeedItems, isInWindow, windowHours } from './filter.ts';
-import { renderHealth, renderNews } from './render.ts';
+import { filterFeedItems, hasSharedTimestamp, isInWindow, windowHours } from './filter.ts';
+import { renderHealth, renderNews, renderNewsJson } from './render.ts';
 import { cleanSnippet, cleanTitle } from './sanitize.ts';
 import type { FeedConfig, FeedReport, FeedStatusKind, Item, RawEntry } from './types.ts';
 
 type FeedProcessed = {
   report: FeedReport;
-  items: Item[]; // after noise filters, before deduplication
+  items: Item[]; // after noise filters, before clustering
 };
 
 // Turns the raw entries of one feed into cleaned Items and collects statistics.
@@ -39,6 +39,13 @@ function processFeed(
 
   if (entries.length === 0) {
     report.status = 'empty';
+    return { report, items: [] };
+  }
+
+  // Some feeds stamp every entry with the time the feed was built: the dates are fake.
+  if (hasSharedTimestamp(entries)) {
+    report.status = 'no_dates';
+    report.detail = 'all entries share one timestamp (feed build time)';
     return { report, items: [] };
   }
 
@@ -78,6 +85,7 @@ function processFeed(
       published: entry.date,
       snippet: snippet.text,
       searchText: snippet.full,
+      feedRank: 0, // set by filterFeedItems
     });
   }
 
@@ -87,7 +95,7 @@ function processFeed(
     return { report, items: [] };
   }
 
-  const filtered = filterFeedItems(candidates, keywords);
+  const filtered = filterFeedItems(candidates, keywords, feed);
   report.afterNoise = filtered.length;
 
   if (report.inWindow === 0) {
@@ -122,32 +130,40 @@ async function main(): Promise<void> {
     allItems.push(...processed.items);
   }
 
-  const deduped = dedupe(allItems);
-  const finalItems = capPerTopic(deduped.kept, MAX_PER_TOPIC);
+  const clustered = clusterItems(allItems, keywords);
+  const finalClusters = capClusters(clustered.clusters, MAX_CLUSTERS_PER_TOPIC, MAX_CLUSTERS_TOTAL);
 
-  // How many entries of each feed survived to the end (key: source + topic).
-  for (const item of finalItems) {
-    const report = reports.find((r) => r.feed.name === item.source && r.feed.topic === item.topic);
-    if (report) {
-      report.kept += 1;
+  // How many entries of each feed ended up in the final events (key: source + topic of the entry's feed).
+  for (const cluster of finalClusters) {
+    for (const member of cluster.members) {
+      const report = reports.find((r) => r.feed.name === member.source && r.feed.topic === member.topic);
+      if (report) {
+        report.kept += 1;
+      }
     }
   }
 
   mkdirSync('out', { recursive: true });
-  const health = renderHealth(reports, now, hours, deduped, deduped.kept.length, finalItems.length);
+  const health = renderHealth(reports, now, hours, {
+    removedByUrl: clustered.removedByUrl,
+    items: allItems.length,
+    clustersBeforeCap: clustered.clusters.length,
+    clustersFinal: finalClusters.length,
+  });
   writeFileSync('out/health.md', health);
 
   console.log(
-    `Entries in total: ${finalItems.length} (after deduplication ${deduped.kept.length}; duplicates: URL ${deduped.removedByUrl}, title ${deduped.removedByTitle})`,
+    `Events in total: ${finalClusters.length} (from ${clustered.clusters.length} events, ${allItems.length} entries; URL duplicates: ${clustered.removedByUrl})`,
   );
 
   // An empty result is almost certainly a failure: keep yesterday's file and fail the workflow.
-  if (finalItems.length === 0) {
+  if (finalClusters.length === 0) {
     console.error('No entries: news.md was not created');
     process.exit(1);
   }
 
-  writeFileSync('out/news.md', renderNews(finalItems, topicOrder, now, hours));
+  writeFileSync('out/news.md', renderNews(finalClusters, topicOrder, reports, now, hours));
+  writeFileSync('out/news.json', renderNewsJson(finalClusters, topicOrder, reports, now, hours));
 }
 
 main().catch((error) => {

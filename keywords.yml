@@ -1,7 +1,8 @@
 # include: case-insensitive substring, except words from wordBoundary (whole word, case-sensitive).
 # exclude: match from the start of a word, case-insensitive.
 
-# priority 2: an entry passes only if at least one of these words is in the title or description.
+# priority 2 feeds and feeds with requireKeywords: an entry passes only if at least one of these words
+# is in the title or description.
 include:
   - Steuer
   - Rente
@@ -13,7 +14,9 @@ include:
   - Entlassung
   - Stellenabbau
   - Arbeitsmarkt
+  - Fachkräfte
   - Künstliche Intelligenz
+  - Datenschutz
   - Leipzig
   - Sachsen
   - Ukraine
@@ -23,6 +26,8 @@ include:
   - Bundesbank
   - Wohnen
   - Miete
+  - KI
+  - AI
 
 # Short words that must be matched as whole words only (otherwise "KI" would be found inside "Kinder").
 wordBoundary:
@@ -32,22 +37,78 @@ wordBoundary:
 
 # Noise: the entry is dropped for any priority.
 exclude:
+  # sport
   - Bundesliga
+  - Regionalliga
+  - Zweitligist
   - Champions League
   - Fußball
+  - Handball
+  - Basketball
+  - Eishockey
+  - Biathlon
+  - Skispringen
+  - Radsport
   - Formel 1
   - Tennis
-  - Handball
   - Olympia
+  - DFB
+  # gossip and society
   - Promi
   - Klatsch
   - Royals
   - Horoskop
+  - Opernball
+  - Bürgerfest
+  - Dschungelcamp
+  - Schlagerstar
+  # cars
   - Autotest
   - Fahrbericht
   - Probefahrt
+  # crime blotter
   - Polizeimeldung
   - Festnahme
   - Messerangriff
   - Tatverdächtig
   - Leiche
+
+# Ads and announcements (title prefixes, compared case-insensitively).
+excludeTitlePrefixes:
+  - Anzeige
+  - heise-Angebot
+  - heise+
+  - Pressemitteilung
+  - Aktuelle Pressemitteilungen
+  - Entdecken Sie
+  - Livestream
+  - Bilder des Tages
+  - "Fotografie:"
+
+# URL substrings: video/audio pages, press portals, culture and lifestyle sections.
+excludeUrlParts:
+  - /video/
+  - /videos/
+  - /video-
+  - /multimedia/
+  - /podcast
+  - presseportal.zdf.de
+  - 3d.zdf.de
+  - /sport/
+  - /feuilleton/
+  - /kultur/
+  - /stil/
+  - /reisen/
+
+# Tags written to news.json as "topics". Same matching rules as `include`.
+tags:
+  tax: [Steuer, Finanzamt, Freiberufler, Selbstständig, Bundesfinanzhof, BFH]
+  pensions: [Rente, Altersvorsorge, Pension]
+  social_insurance: [Sozialversicherung, Bürgergeld, Krankenkasse, Pflegeversicherung]
+  labor: [Entlassung, Stellenabbau, Arbeitsmarkt, Mindestlohn, Fachkräfte, Kündigung, Arbeitslos]
+  ai: [KI, AI, Künstliche Intelligenz, OpenAI, Anthropic, ChatGPT]
+  central_bank_markets: [EZB, Zinsen, Inflation, Bundesbank, DAX, Leitzins]
+  ukraine: [Ukraine, Kiew, Selenskyj]
+  leipzig: [Leipzig]
+  saxony: [Sachsen, Dresden, Chemnitz]
+  housing: [Miete, Wohnen, Wohnungsbau]

@@ -1,6 +1,4 @@
-import type { Item } from './types.ts';
-
-export const TITLE_SIMILARITY_THRESHOLD = 0.75;
+// Helpers for recognizing the same URL or the same story. Clustering itself lives in cluster.ts.
 
 const TRACKING_PARAMS = ['fbclid', 'gclid', 'mc_cid', 'mc_eid', 'at_medium', 'at_campaign', 'wt_mc'];
 
@@ -42,68 +40,21 @@ export function titleTokens(title: string): Set<string> {
   return tokens;
 }
 
-export function jaccard(a: Set<string>, b: Set<string>): number {
-  if (a.size === 0 || b.size === 0) {
-    return 0;
-  }
+export function sharedTokenCount(a: Set<string>, b: Set<string>): number {
   let common = 0;
   for (const token of a) {
     if (b.has(token)) {
       common += 1;
     }
   }
-  const union = a.size + b.size - common;
-  return common / union;
+  return common;
 }
 
-export type DedupeResult = {
-  kept: Item[];
-  removedByUrl: number;
-  removedByTitle: number;
-};
-
-// Of duplicates, the entry with the lower priority number is kept; on a tie, the earliest.
-export function dedupe(items: Item[]): DedupeResult {
-  const sorted = [...items].sort((a, b) => {
-    if (a.priority !== b.priority) {
-      return a.priority - b.priority;
-    }
-    return a.published.getTime() - b.published.getTime();
-  });
-
-  const kept: Item[] = [];
-  const keptTokens: Set<string>[] = [];
-  const seenUrls = new Set<string>();
-  let removedByUrl = 0;
-  let removedByTitle = 0;
-
-  for (const item of sorted) {
-    const urlKey = normalizeUrl(item.url);
-    if (seenUrls.has(urlKey)) {
-      removedByUrl += 1;
-      continue;
-    }
-
-    const tokens = titleTokens(item.title);
-    let isSimilar = false;
-    // Very short titles are not compared: too many false matches.
-    if (tokens.size >= 3) {
-      for (const other of keptTokens) {
-        if (jaccard(tokens, other) >= TITLE_SIMILARITY_THRESHOLD) {
-          isSimilar = true;
-          break;
-        }
-      }
-    }
-    if (isSimilar) {
-      removedByTitle += 1;
-      continue;
-    }
-
-    seenUrls.add(urlKey);
-    kept.push(item);
-    keptTokens.push(tokens);
+export function jaccard(a: Set<string>, b: Set<string>): number {
+  if (a.size === 0 || b.size === 0) {
+    return 0;
   }
-
-  return { kept, removedByUrl, removedByTitle };
+  const common = sharedTokenCount(a, b);
+  const union = a.size + b.size - common;
+  return common / union;
 }

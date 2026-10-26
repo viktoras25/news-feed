@@ -53,8 +53,8 @@ tax_work:            # taxes, self-employed, labor, pensions
 tech_ai_labor:       # AI, tech, labor market
   - { name: heise,           priority: 1, url: https://www.heise.de/rss/heise-atom.xml }
   - { name: heise iX,        priority: 2, url: https://www.heise.de/ix/feed.xml }
-  - { name: Golem,           priority: 1, url: https://golem.de/rss }
-  - { name: t3n,             priority: 1, url: https://t3n.de/rss.xml }   # ok
+  - { name: Golem,           priority: 1, requireKeywords: true, url: https://golem.de/rss }
+  - { name: t3n,             priority: 1, requireKeywords: true, url: https://t3n.de/rss.xml }   # ok
   - { name: Manager Magazin KI, priority: 1, url: https://www.manager-magazin.de/thema/ki_kuenstliche_intelligenz/index.rss }
   - { name: Manager Magazin Führung, priority: 2, url: https://www.manager-magazin.de/hbm/fuehrung/index.rss }
   - { name: Spiegel Netzwelt,priority: 2, url: https://www.spiegel.de/netzwelt/index.rss }
@@ -77,7 +77,7 @@ leipzig_saxony:      # local: Leipzig + Saxony
   - { name: Sächsische Sachsen, priority: 1, url: https://www.saechsische.de/arc/outboundfeeds/rss/category/sachsen }
   - { name: Sächsische Leipzig, priority: 2, url: https://www.saechsische.de/arc/outboundfeeds/rss/category/lokales/leipzig }
   - { name: Sächsische Wirtschaft, priority: 2, url: https://www.saechsische.de/arc/outboundfeeds/rss/category/wirtschaft/regional }
-  - { name: MDR,             priority: 1, url: https://www.mdr.de/home/mdr-home-index-100-rss.xml }
+  - { name: MDR,             priority: 1, urlMustContain: ["/nachrichten/sachsen/"], url: https://www.mdr.de/home/mdr-home-index-100-rss.xml }
   - { name: Freie Presse Sachsen, priority: 2, url: https://www.freiepresse.de/rss/rss_sachsen.php }
   - { name: DNN Politik,     priority: 2, url: https://www.dnn.de/arc/outboundfeeds/rss/category/politik/ }
 

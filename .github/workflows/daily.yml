@@ -39,7 +39,7 @@ jobs:
         run: |
           gh release view latest >/dev/null 2>&1 || \
             gh release create latest --title "Latest news" --notes "Updated daily by the daily-news workflow." --latest=false
-          gh release upload latest out/news.md out/health.md --clobber
+          gh release upload latest out/news.md out/news.json out/health.md --clobber
 
       - name: Show health summary
         if: always()

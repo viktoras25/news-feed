@@ -1,21 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { dedupe, jaccard, normalizeUrl, titleTokens } from '../src/dedupe.ts';
-import type { Item } from '../src/types.ts';
-
-function makeItem(overrides: Partial<Item>): Item {
-  return {
-    topic: 'national',
-    source: 'Test',
-    priority: 1,
-    title: 'Titel',
-    url: 'https://example.com/a',
-    published: new Date('2026-10-26T06:00:00Z'),
-    snippet: '',
-    searchText: '',
-    ...overrides,
-  };
-}
+import { jaccard, normalizeUrl, sharedTokenCount, titleTokens } from '../src/dedupe.ts';
 
 test('normalizeUrl removes www, utm, fragment and trailing slash', () => {
   assert.equal(
@@ -34,42 +19,14 @@ test('jaccard of similar titles is above the threshold', () => {
   assert.ok(jaccard(a, b) >= 0.75);
 });
 
-test('dedupe removes a URL duplicate and keeps priority 1', () => {
-  const first = makeItem({ source: 'ARD', priority: 2, url: 'https://example.com/a?utm_source=x' });
-  const second = makeItem({ source: 'Tagesschau', priority: 1, url: 'https://www.example.com/a' });
-  const result = dedupe([first, second]);
-  assert.equal(result.kept.length, 1);
-  assert.equal(result.kept[0].source, 'Tagesschau');
-  assert.equal(result.removedByUrl, 1);
+test('jaccard of unrelated titles is low', () => {
+  const a = titleTokens('Leipzig sperrt Brücke wegen Bauarbeiten');
+  const b = titleTokens('Bundestag beschließt neues Rentenpaket');
+  assert.equal(jaccard(a, b), 0);
 });
 
-test('dedupe removes one story from different sources by title', () => {
-  const zdf = makeItem({
-    source: 'ZDFheute',
-    url: 'https://zdf.de/1',
-    title: 'Bundestag beschließt neues Rentenpaket mit großer Mehrheit',
-  });
-  const tagesschau = makeItem({
-    source: 'Tagesschau',
-    url: 'https://tagesschau.de/2',
-    title: 'Bundestag beschließt neues Rentenpaket mit großer Mehrheit',
-    published: new Date('2026-10-26T07:00:00Z'),
-  });
-  const other = makeItem({
-    source: 'Spiegel',
-    url: 'https://spiegel.de/3',
-    title: 'Leipzig sperrt Brücke wegen Bauarbeiten',
-  });
-  const result = dedupe([zdf, tagesschau, other]);
-  assert.equal(result.kept.length, 2);
-  assert.equal(result.removedByTitle, 1);
-  // With equal priority the earlier entry is kept.
-  assert.ok(result.kept.some((item) => item.source === 'ZDFheute'));
-});
-
-test('dedupe does not merge short different titles', () => {
-  const a = makeItem({ url: 'https://a.de/1', title: 'Eilmeldung Berlin' });
-  const b = makeItem({ url: 'https://a.de/2', title: 'Eilmeldung Berlin' });
-  const result = dedupe([a, b]);
-  assert.equal(result.kept.length, 2);
+test('sharedTokenCount counts common words', () => {
+  const a = titleTokens('Lula gewinnt Stichwahl in Brasilien');
+  const b = titleTokens('Brasilien: Lula gewinnt knapp');
+  assert.equal(sharedTokenCount(a, b), 3);
 });

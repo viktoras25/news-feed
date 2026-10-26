@@ -15,11 +15,24 @@ export function loadFeeds(path: string): FeedConfig[] {
   for (const topic of Object.keys(data)) {
     const entries = data[topic];
     for (const entry of entries) {
-      const row = entry as { name: string; priority: number; url: string };
+      const row = entry as {
+        name: string;
+        priority: number;
+        url: string;
+        requireKeywords?: boolean;
+        urlMustContain?: string[];
+      };
       if (row.priority !== 1 && row.priority !== 2) {
         throw new Error(`feeds.yml: priority of "${row.name}" must be 1 or 2`);
       }
-      feeds.push({ name: row.name, priority: row.priority, url: row.url, topic });
+      feeds.push({
+        name: row.name,
+        priority: row.priority,
+        url: row.url,
+        topic,
+        requireKeywords: row.requireKeywords ?? false,
+        urlMustContain: row.urlMustContain ?? [],
+      });
     }
   }
   return feeds;
@@ -31,6 +44,9 @@ export function loadKeywords(path: string): Keywords {
     include: data.include ?? [],
     wordBoundary: data.wordBoundary ?? [],
     exclude: data.exclude ?? [],
+    excludeTitlePrefixes: data.excludeTitlePrefixes ?? [],
+    excludeUrlParts: data.excludeUrlParts ?? [],
+    tags: data.tags ?? {},
   };
 }
 
