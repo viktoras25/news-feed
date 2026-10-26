@@ -1,0 +1,47 @@
+name: daily-news
+
+on:
+  schedule:
+    # Каждую ночь, 03:30 UTC (около 04:30-05:30 по Берлину).
+    - cron: '30 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-news
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm test
+
+      # Падает, если не собралось ни одной записи; тогда публикация ниже пропускается,
+      # и в релизе остаётся вчерашний файл.
+      - run: npm run build-news
+
+      - name: Publish to release "latest"
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view latest >/dev/null 2>&1 || \
+            gh release create latest --title "Latest news" --notes "Updated daily by the daily-news workflow." --latest=false
+          gh release upload latest out/news.md out/health.md --clobber
+
+      - name: Show health summary
+        if: always()
+        run: |
+          if [ -f out/health.md ]; then head -40 out/health.md >> "$GITHUB_STEP_SUMMARY"; fi

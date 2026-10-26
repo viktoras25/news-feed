@@ -1,0 +1,53 @@
+# include: подстрока без учёта регистра, кроме слов из wordBoundary (целое слово, с учётом регистра).
+# exclude: совпадение с начала слова без учёта регистра.
+
+# priority 2: запись проходит, только если есть хотя бы одно из этих слов в заголовке или описании.
+include:
+  - Steuer
+  - Rente
+  - Freiberufler
+  - Selbstständig
+  - Sozialversicherung
+  - Bürgergeld
+  - Mindestlohn
+  - Entlassung
+  - Stellenabbau
+  - Arbeitsmarkt
+  - Künstliche Intelligenz
+  - Leipzig
+  - Sachsen
+  - Ukraine
+  - EZB
+  - Inflation
+  - Zinsen
+  - Bundesbank
+  - Wohnen
+  - Miete
+
+# Короткие слова, которые нужно искать только как целое слово (иначе "KI" найдётся внутри "Kinder").
+wordBoundary:
+  - KI
+  - EZB
+  - AI
+
+# Шум: запись отбрасывается для любого priority.
+exclude:
+  - Bundesliga
+  - Champions League
+  - Fußball
+  - Formel 1
+  - Tennis
+  - Handball
+  - Olympia
+  - Promi
+  - Klatsch
+  - Royals
+  - Horoskop
+  - Autotest
+  - Fahrbericht
+  - Probefahrt
+  - Polizeimeldung
+  - Festnahme
+  - Messerangriff
+  - Tatverdächtig
+  - Leiche
