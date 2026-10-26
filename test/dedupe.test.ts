@@ -17,24 +17,24 @@ function makeItem(overrides: Partial<Item>): Item {
   };
 }
 
-test('normalizeUrl убирает www, utm, fragment и хвостовой слеш', () => {
+test('normalizeUrl removes www, utm, fragment and trailing slash', () => {
   assert.equal(
     normalizeUrl('https://www.Example.com/a/b/?utm_source=x&id=5#top'),
     'example.com/a/b?id=5',
   );
 });
 
-test('normalizeUrl считает http и https одним адресом', () => {
+test('normalizeUrl treats http and https as the same address', () => {
   assert.equal(normalizeUrl('http://example.com/a'), normalizeUrl('https://example.com/a/'));
 });
 
-test('jaccard похожих заголовков выше порога', () => {
+test('jaccard of similar titles is above the threshold', () => {
   const a = titleTokens('Bundestag beschließt neues Rentenpaket mit großer Mehrheit');
   const b = titleTokens('Bundestag beschließt neues Rentenpaket mit großer Mehrheit - Bericht');
   assert.ok(jaccard(a, b) >= 0.75);
 });
 
-test('dedupe убирает дубль по URL и оставляет priority 1', () => {
+test('dedupe removes a URL duplicate and keeps priority 1', () => {
   const first = makeItem({ source: 'ARD', priority: 2, url: 'https://example.com/a?utm_source=x' });
   const second = makeItem({ source: 'Tagesschau', priority: 1, url: 'https://www.example.com/a' });
   const result = dedupe([first, second]);
@@ -43,7 +43,7 @@ test('dedupe убирает дубль по URL и оставляет priority 1
   assert.equal(result.removedByUrl, 1);
 });
 
-test('dedupe убирает один сюжет из разных источников по заголовку', () => {
+test('dedupe removes one story from different sources by title', () => {
   const zdf = makeItem({
     source: 'ZDFheute',
     url: 'https://zdf.de/1',
@@ -67,7 +67,7 @@ test('dedupe убирает один сюжет из разных источни
   assert.ok(result.kept.some((item) => item.source === 'ZDFheute'));
 });
 
-test('dedupe не склеивает короткие разные заголовки', () => {
+test('dedupe does not merge short different titles', () => {
   const a = makeItem({ url: 'https://a.de/1', title: 'Eilmeldung Berlin' });
   const b = makeItem({ url: 'https://a.de/2', title: 'Eilmeldung Berlin' });
   const result = dedupe([a, b]);

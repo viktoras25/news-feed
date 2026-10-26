@@ -1,7 +1,7 @@
 # Topics -> list of feeds. priority 1 = main, priority 2 = only with keywords, max 5 entries per feed.
 # "ok" means the feed opened; "check" means the URL was taken from memory.
 
-national:            # Германия: политика, общая повестка
+national:            # Germany: politics, general news
   - { name: Tagesschau,      priority: 1, url: https://www.tagesschau.de/index~rss2.xml }
   - { name: ZDFheute,        priority: 1, url: https://www.zdfheute.de/rss/zdf/nachrichten }   # ok
   - { name: ZDFheute Politik,priority: 2, url: https://www.zdfheute.de/rss/zdf/nachrichten/politik }
@@ -21,14 +21,14 @@ national:            # Германия: политика, общая повес
   - { name: Deutschlandfunk, priority: 1, url: https://www.deutschlandfunk.de/nachrichten-100.rss }   # from memory, check
   - { name: DW Deutsch,      priority: 1, url: https://rss.dw.com/rdf/rss-de-all }   # from memory, check
 
-ukraine_world:       # Украина, Ближний Восток, мир
+ukraine_world:       # Ukraine, Middle East, world
   - { name: Spiegel Ukraine, priority: 1, url: https://www.spiegel.de/thema/ukraine/index.rss }
   - { name: Spiegel Russland,priority: 2, url: https://www.spiegel.de/thema/russland/index.rss }
   - { name: Spiegel Ausland, priority: 1, url: https://www.spiegel.de/ausland/index.rss }
   - { name: t-online Ukraine,priority: 1, url: https://www.t-online.de/nachrichten/ukraine/feed.rss }
   - { name: Euractiv DE,     priority: 2, url: https://euractiv.com/de/?feed=mcfeed }
 
-economy:             # экономика, рынки, ЦБ, статистика
+economy:             # economy, markets, central banks, statistics
   - { name: Spiegel Wirtschaft, priority: 1, url: https://www.spiegel.de/wirtschaft/index.rss }
   - { name: SZ Wirtschaft,   priority: 1, url: https://rss.sueddeutsche.de/rss/Wirtschaft }
   - { name: Manager Magazin, priority: 1, url: https://www.manager-magazin.de/index.rss }
@@ -40,7 +40,7 @@ economy:             # экономика, рынки, ЦБ, статистик�
   - { name: BMWE Pressemitteilungen, priority: 2, url: https://www.bundeswirtschaftsministerium.de/SiteGlobals/BMWI/Functions/RSSFeed/DE/RSSFeed-Pressemitteilung.xml }
   - { name: BMWE Energie,    priority: 2, url: https://www.bundeswirtschaftsministerium.de/SiteGlobals/BMWI/Functions/RSSFeed/DE/RSSFeed-Energie.xml }
 
-tax_work:            # налоги, самозанятые, труд, пенсии
+tax_work:            # taxes, self-employed, labor, pensions
   - { name: Bundesfinanzhof, priority: 1, url: https://www.bundesfinanzhof.de/de/news.rss }   # ok
   - { name: BFH Urteile,     priority: 2, url: https://www.bundesfinanzhof.de/de/precedent.rss }
   - { name: BMAS,            priority: 1, url: https://www.bmas.de/SiteGlobals/Functions/RSSFeed/DE/RSSNewsfeed/RSSNewsfeed.xml }
@@ -50,7 +50,7 @@ tax_work:            # налоги, самозанятые, труд, пенс�
   - { name: Bundeskanzler,   priority: 2, url: https://www.bundeskanzler.de/service/rss/bk-de/1859754/feed.xml }   # check which section this is
   - { name: Manager Magazin ETF, priority: 2, url: https://www.manager-magazin.de/thema/etfs-exchange-traded-funds/index.rss }
 
-tech_ai_labor:       # ИИ, tech, рынок труда
+tech_ai_labor:       # AI, tech, labor market
   - { name: heise,           priority: 1, url: https://www.heise.de/rss/heise-atom.xml }
   - { name: heise iX,        priority: 2, url: https://www.heise.de/ix/feed.xml }
   - { name: Golem,           priority: 1, url: https://golem.de/rss }
@@ -62,8 +62,8 @@ tech_ai_labor:       # ИИ, tech, рынок труда
   - { name: Deutsche Startups, priority: 2, url: "http://deutsche-startups.de/feed" }
   - { name: Basic Thinking,  priority: 2, url: https://www.basicthinking.de/blog/feed/ }
 
-leipzig_saxony:      # локальное: Лейпциг + Саксония
-  - { name: Leipzig.de (город), priority: 1, url: https://www.leipzig.de/newsfeed/rss.xml }   # ok
+leipzig_saxony:      # local: Leipzig + Saxony
+  - { name: Leipzig.de (city), priority: 1, url: https://www.leipzig.de/newsfeed/rss.xml }   # ok
   - { name: Leipzig.de Verkehr, priority: 1, url: https://www.leipzig.de/newsfeed/kategorie/verkehr/rss.xml }
   - { name: Leipzig.de Bauen/Wohnen, priority: 2, url: https://www.leipzig.de/newsfeed/kategorie/bauen-und-wohnen/rss.xml }
   - { name: Leipzig.de Wirtschaft, priority: 2, url: https://www.leipzig.de/newsfeed/kategorie/wirtschaft/rss.xml }

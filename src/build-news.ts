@@ -83,7 +83,7 @@ function processFeed(
 
   if (withDate === 0) {
     report.status = 'no_dates';
-    report.detail = 'ни у одной записи нет даты';
+    report.detail = 'none of the entries has a date';
     return { report, items: [] };
   }
 
@@ -110,7 +110,7 @@ async function main(): Promise<void> {
     }
   }
 
-  console.log(`Фидов: ${feeds.length}, окно: ${hours} ч`);
+  console.log(`Feeds: ${feeds.length}, window: ${hours} h`);
   const fetched = await fetchAll(feeds);
 
   const reports: FeedReport[] = [];
@@ -138,12 +138,12 @@ async function main(): Promise<void> {
   writeFileSync('out/health.md', health);
 
   console.log(
-    `Записей в итоге: ${finalItems.length} (после дедупликации ${deduped.kept.length}; дубли: URL ${deduped.removedByUrl}, заголовок ${deduped.removedByTitle})`,
+    `Entries in total: ${finalItems.length} (after deduplication ${deduped.kept.length}; duplicates: URL ${deduped.removedByUrl}, title ${deduped.removedByTitle})`,
   );
 
   // An empty result is almost certainly a failure: keep yesterday's file and fail the workflow.
   if (finalItems.length === 0) {
-    console.error('Ни одной записи: news.md не создан');
+    console.error('No entries: news.md was not created');
     process.exit(1);
   }
 

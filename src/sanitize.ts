@@ -31,12 +31,6 @@ export const INJECTION_PATTERNS: RegExp[] = [
   /du\s+bist\s+(nun|jetzt|ein)/i,
   /neue\s+anweisung/i,
   /\b(ki|assistent|chatbot)\s*[,:]\s*(bitte|du\s+(musst|sollst)|ignorier|vergiss)/i,
-  // Russian
-  /игнорир(уй|уйте)/i,
-  /забудь(те)?\s+(все|предыдущ)/i,
-  /ты\s+(теперь|должен)/i,
-  /системн(ый|ое)\s+(промпт|сообщение)/i,
-  /(ассистент|нейросеть|ии)\s*[,:]\s*(пожалуйста|ты\s+должен|игнорируй|отправь|перешли|выполни)/i,
   // markup used to disguise commands
   /```/,
   /<\|.*?\|>/,

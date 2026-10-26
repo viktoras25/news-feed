@@ -17,7 +17,7 @@ export function loadFeeds(path: string): FeedConfig[] {
     for (const entry of entries) {
       const row = entry as { name: string; priority: number; url: string };
       if (row.priority !== 1 && row.priority !== 2) {
-        throw new Error(`feeds.yml: у "${row.name}" priority должен быть 1 или 2`);
+        throw new Error(`feeds.yml: priority of "${row.name}" must be 1 or 2`);
       }
       feeds.push({ name: row.name, priority: row.priority, url: row.url, topic });
     }
@@ -95,7 +95,7 @@ export async function fetchFeed(feed: FeedConfig): Promise<FetchResult> {
           return { status: 'http_error', detail: error.message, entries: [] };
         }
         if (isTimeout(error)) {
-          return { status: 'timeout', detail: `нет ответа за ${FETCH_TIMEOUT_MS / 1000} с`, entries: [] };
+          return { status: 'timeout', detail: `no response within ${FETCH_TIMEOUT_MS / 1000} s`, entries: [] };
         }
         const message = error instanceof Error ? error.message : String(error);
         // Network errors (DNS, TLS, dropped connection) count as unavailable.
