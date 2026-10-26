@@ -81,7 +81,7 @@ test('renderNews lists all sources of an event on one line', () => {
 });
 
 test('renderNews skips empty topics, prints the window and the health line', () => {
-  const reports = [makeReport('Alpha', 'ok', 3), makeReport('Beta', 'http_error', 0), makeReport('Gamma', 'no_dates', 0)];
+  const reports = [makeReport('Alpha', 'ok', 3), makeReport('Beta', 'http_error', 0), makeReport('Gamma', 'empty', 0)];
   const output = renderNews([], ['national', 'economy'], reports, now, 24);
   assert.ok(output.includes('window: 24 h'));
   assert.ok(!output.includes('## '));

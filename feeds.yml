@@ -81,6 +81,3 @@ leipzig_saxony:      # local: Leipzig + Saxony
   - { name: Freie Presse Sachsen, priority: 2, url: https://www.freiepresse.de/rss/rss_sachsen.php }
   - { name: DNN Politik,     priority: 2, url: https://www.dnn.de/arc/outboundfeeds/rss/category/politik/ }
 
-good_news:
-  # priority 1 so that keywords are not required: they make no sense for good news.
-  - { name: Good News Network, priority: 1, url: https://www.goodnewsnetwork.org/feed/ }   # ok

@@ -61,7 +61,6 @@ export type FeedStatusKind =
   | 'ok'
   | 'quiet' // feed works, but has no entries within the window
   | 'empty' // feed works, but contains no entries at all
-  | 'no_dates' // no usable dates: missing, or one shared timestamp for all entries
   | 'http_error'
   | 'timeout'
   | 'parse_error';

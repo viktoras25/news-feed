@@ -29,6 +29,13 @@ jobs:
 
       - run: npm test
 
+      - name: Restore first-seen cache
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p state
+          gh release download latest --pattern seen.json --dir state || echo "No cache yet"
+
       # Fails if no entries were collected; the publish step below is then skipped
       # and yesterday's file stays in the release.
       - run: npm run build-news
@@ -39,7 +46,7 @@ jobs:
         run: |
           gh release view latest >/dev/null 2>&1 || \
             gh release create latest --title "Latest news" --notes "Updated daily by the daily-news workflow." --latest=false
-          gh release upload latest out/news.md out/news.json out/health.md --clobber
+          gh release upload latest out/news.md out/news.json out/health.md state/seen.json --clobber
 
       - name: Show health summary
         if: always()

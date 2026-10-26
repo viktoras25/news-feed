@@ -133,23 +133,23 @@ test('urlMustContain keeps only matching URLs', () => {
   assert.equal(result[0].title, 'Stau in Dresden');
 });
 
-test('priority 1: at most 8 entries per feed', () => {
+test('priority 1: at most 20 entries per feed', () => {
   const items: Item[] = [];
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < 25; i++) {
     items.push(makeItem(`Meldung ${i}`, i * 10, 1));
   }
-  assert.equal(filterFeedItems(items, keywords).length, 8);
+  assert.equal(filterFeedItems(items, keywords).length, 20);
 });
 
-test('priority 2: at most 5 newest entries', () => {
+test('priority 2: at most 10 newest entries', () => {
   const items: Item[] = [];
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 14; i++) {
     items.push(makeItem(`Steuer Meldung ${i}`, i * 10, 2));
   }
   const result = filterFeedItems(items, keywords);
-  assert.equal(result.length, 5);
+  assert.equal(result.length, 10);
   assert.equal(result[0].title, 'Steuer Meldung 0');
-  assert.equal(result[4].title, 'Steuer Meldung 4');
+  assert.equal(result[9].title, 'Steuer Meldung 9');
 });
 
 test('feedRank is the position in the feed, newest first', () => {

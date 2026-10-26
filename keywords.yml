@@ -62,10 +62,17 @@ exclude:
   - Bürgerfest
   - Dschungelcamp
   - Schlagerstar
+  - Gewinnspiel
+  - Webcam
+  - Horoscope
   # cars
   - Autotest
   - Fahrbericht
   - Probefahrt
+  # tech reviews and gadgets
+  - Steam
+  - Unboxing
+  - Foldable
   # crime blotter
   - Polizeimeldung
   - Festnahme
@@ -84,6 +91,18 @@ excludeTitlePrefixes:
   - Livestream
   - Bilder des Tages
   - "Fotografie:"
+  - "Gesellschaft:"
+  - "Test:"
+  - Ratgeber
+  - Good News in History
+  # daily news roundups (they glue unrelated stories together)
+  - "Montag:"
+  - "Dienstag:"
+  - "Mittwoch:"
+  - "Donnerstag:"
+  - "Freitag:"
+  - "Samstag:"
+  - "Sonntag:"
 
 # URL substrings: video/audio pages, press portals, culture and lifestyle sections.
 excludeUrlParts:
@@ -99,6 +118,7 @@ excludeUrlParts:
   - /kultur/
   - /stil/
   - /reisen/
+  - /ratgeber/
 
 # Tags written to news.json as "topics". Same matching rules as `include`.
 tags:

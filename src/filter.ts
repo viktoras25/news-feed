@@ -1,7 +1,7 @@
 import type { FeedConfig, Item, Keywords, RawEntry } from './types.ts';
 
-export const MAX_PRIORITY1_PER_FEED = 8;
-export const MAX_PRIORITY2_PER_FEED = 5;
+export const MAX_PRIORITY1_PER_FEED = 20;
+export const MAX_PRIORITY2_PER_FEED = 10;
 
 // A feed whose entries mostly share one timestamp has no real publication dates
 // (the feed stamps every entry with its build time), so the time window cannot be applied.
@@ -28,6 +28,12 @@ export function isInWindow(published: Date, now: Date, hours: number): boolean {
     return false;
   }
   return ageMs <= hours * oneHourMs;
+}
+
+// True if the feed has no usable publication dates: none at all, or one shared timestamp.
+export function lacksUsableDates(entries: RawEntry[]): boolean {
+  const anyDate = entries.some((entry) => entry.date !== null);
+  return !anyDate || hasSharedTimestamp(entries);
 }
 
 // True if most dated entries carry exactly the same timestamp.

@@ -1,10 +1,14 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { MAX_CLUSTERS_PER_TOPIC, MAX_CLUSTERS_TOTAL, capClusters, clusterItems } from './cluster.ts';
 import { fetchAll, loadFeeds, loadKeywords } from './fetch-feeds.ts';
-import { filterFeedItems, hasSharedTimestamp, isInWindow, windowHours } from './filter.ts';
+import { filterFeedItems, isInWindow, lacksUsableDates, windowHours } from './filter.ts';
 import { renderHealth, renderNews, renderNewsJson } from './render.ts';
 import { cleanSnippet, cleanTitle } from './sanitize.ts';
-import type { FeedConfig, FeedReport, FeedStatusKind, Item, RawEntry } from './types.ts';
+import { datesFromFirstSeen, loadSeen, saveSeen } from './seen.ts';
+import type { SeenStore } from './seen.ts';
+import type { FeedConfig, FeedReport, FeedStatusKind, Item, Keywords, RawEntry } from './types.ts';
+
+const SEEN_PATH = 'state/seen.json';
 
 type FeedProcessed = {
   report: FeedReport;
@@ -16,16 +20,17 @@ function processFeed(
   feed: FeedConfig,
   fetchStatus: FeedStatusKind,
   detail: string,
-  entries: RawEntry[],
+  rawEntries: RawEntry[],
   now: Date,
   hours: number,
-  keywords: ReturnType<typeof loadKeywords>,
+  keywords: Keywords,
+  seen: SeenStore,
 ): FeedProcessed {
   const report: FeedReport = {
     feed,
     status: fetchStatus,
     detail,
-    fetched: entries.length,
+    fetched: rawEntries.length,
     inWindow: 0,
     afterNoise: 0,
     kept: 0,
@@ -37,27 +42,22 @@ function processFeed(
     return { report, items: [] };
   }
 
-  if (entries.length === 0) {
+  if (rawEntries.length === 0) {
     report.status = 'empty';
     return { report, items: [] };
   }
 
-  // Some feeds stamp every entry with the time the feed was built: the dates are fake.
-  if (hasSharedTimestamp(entries)) {
-    report.status = 'no_dates';
-    report.detail = 'all entries share one timestamp (feed build time)';
-    return { report, items: [] };
+  // Feeds without real dates (none, or one shared timestamp) get dates from the first-seen cache.
+  let entries = rawEntries;
+  if (lacksUsableDates(rawEntries)) {
+    entries = datesFromFirstSeen(rawEntries, seen, now);
+    report.detail = 'no usable dates in the feed: using first-seen times';
   }
 
   const candidates: Item[] = [];
-  let withDate = 0;
 
   for (const entry of entries) {
-    if (entry.date === null) {
-      continue;
-    }
-    withDate += 1;
-    if (!isInWindow(entry.date, now, hours)) {
+    if (entry.date === null || !isInWindow(entry.date, now, hours)) {
       continue;
     }
     report.inWindow += 1;
@@ -89,12 +89,6 @@ function processFeed(
     });
   }
 
-  if (withDate === 0) {
-    report.status = 'no_dates';
-    report.detail = 'none of the entries has a date';
-    return { report, items: [] };
-  }
-
   const filtered = filterFeedItems(candidates, keywords, feed);
   report.afterNoise = filtered.length;
 
@@ -111,6 +105,7 @@ async function main(): Promise<void> {
 
   const feeds = loadFeeds('feeds.yml');
   const keywords = loadKeywords('keywords.yml');
+  const seen = loadSeen(SEEN_PATH);
   const topicOrder: string[] = [];
   for (const feed of feeds) {
     if (!topicOrder.includes(feed.topic)) {
@@ -125,10 +120,13 @@ async function main(): Promise<void> {
   const allItems: Item[] = [];
   for (let i = 0; i < feeds.length; i++) {
     const result = fetched[i];
-    const processed = processFeed(feeds[i], result.status, result.detail, result.entries, now, hours, keywords);
+    const processed = processFeed(feeds[i], result.status, result.detail, result.entries, now, hours, keywords, seen);
     reports.push(processed.report);
     allItems.push(...processed.items);
   }
+
+  // Saved before anything can fail below, so the cache survives an empty result.
+  saveSeen(SEEN_PATH, seen, now);
 
   const clustered = clusterItems(allItems, keywords);
   const finalClusters = capClusters(clustered.clusters, MAX_CLUSTERS_PER_TOPIC, MAX_CLUSTERS_TOTAL);

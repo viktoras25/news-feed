@@ -17,9 +17,9 @@ https://github.com/<user>/<repo>/releases/download/latest/health.md
 ## What the script does
 
 1. Downloads all feeds in parallel (15 s timeout, one retry).
-2. Keeps entries newer than the time window. A feed whose entries all carry the same timestamp (the feed build time) has no real dates and is reported as `no_dates`.
+2. Keeps entries newer than the time window. A feed without real dates (none at all, or every entry stamped with the feed build time) gets dates from a first-seen cache: an unseen URL counts as published now, a seen one keeps its first-seen time and ages out of the window. The cache (`state/seen.json`) is stored as an asset of the `latest` release between runs; on the first run every undated feed looks new once.
 3. Drops ads and announcements (`excludeTitlePrefixes`, `excludeUrlParts` in `keywords.yml`: "Anzeige", "heise+", video pages, press portals, sport and culture sections) and noise words (`exclude`).
-4. Applies per-feed rules from `feeds.yml`: feeds with `priority: 2` or `requireKeywords: true` pass only entries that match a keyword (`include`); `urlMustContain` restricts a feed to certain URL paths (for example MDR to Saxony). Priority 1 feeds contribute at most 8 entries, priority 2 feeds at most 5.
+4. Applies per-feed rules from `feeds.yml`: feeds with `priority: 2` or `requireKeywords: true` pass only entries that match a keyword (`include`); `urlMustContain` restricts a feed to certain URL paths (for example MDR to Saxony). Priority 1 feeds contribute at most 20 entries, priority 2 feeds at most 10 (only a safety ceiling; judging importance is left to the LLM reading the digest).
 5. Groups entries into events: identical URLs are merged, and titles are clustered by word overlap (Jaccard similarity of at least 0.4 and at least two shared words). The earliest entry from the best-priority feed is the head of the event; all sources are listed.
 6. Keeps at most 12 events per topic and 50 in total. Events reported by more sources rank first; ties are broken by feed priority and by position in the feed, so every feed gets its top entry in before any feed gets its second.
 7. Cleans the text (`src/sanitize.ts`): strips HTML and links, and removes phrases that look like commands addressed to an AI assistant. Snippets are truncated to 300 characters. A suspicious snippet is dropped entirely; an entry with a suspicious title is dropped.
@@ -62,4 +62,4 @@ Edit the feed list in `feeds.yml` and the keyword lists in `keywords.yml`. After
 
 - GitHub disables scheduled workflows in public repositories after 60 days without repository activity. If the nightly runs stop, start the workflow manually (`Actions` → `daily-news` → `Run workflow`).
 - Only titles, links and short excerpts from public RSS feeds are published; rights to the material remain with the sources.
-- Feeds without usable publication dates cannot be filtered by time and show up as `no_dates` in `health.md`.
+- The script is deliberately dumb: it collects, cleans and thins out; ranking and summarizing is left to the LLM that reads the files.

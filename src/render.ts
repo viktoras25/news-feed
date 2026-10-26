@@ -9,7 +9,6 @@ const TOPIC_TITLES: Record<string, string> = {
   tax_work: 'Taxes, work, pensions',
   tech_ai_labor: 'AI, tech, labor market',
   leipzig_saxony: 'Leipzig and Saxony',
-  good_news: 'Good news',
 };
 
 export function topicTitle(topic: string): string {
@@ -42,7 +41,7 @@ function isDead(report: FeedReport): boolean {
 }
 
 function isEmpty(report: FeedReport): boolean {
-  return report.status === 'empty' || report.status === 'no_dates';
+  return report.status === 'empty';
 }
 
 // Counts used by the closing line of news.md and by news.json.
