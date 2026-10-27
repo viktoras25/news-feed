@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-10-27T08:48:00.111Z",
-  "generated_at_berlin": "2026-10-27 09:48",
-  "window_hours": 48,
-  "window_from": "2026-10-25T08:48:00.111Z",
-  "entries_total": 842,
-  "entries_new": 610,
-  "entries_seen_before": 232,
+  "generated_at": "2026-10-27T10:31:35.113Z",
+  "generated_at_berlin": "2026-10-27 11:31",
+  "window_hours": 24,
+  "window_from": "2026-10-26T10:31:35.113Z",
+  "entries_total": 707,
+  "entries_new": 157,
+  "entries_seen_before": 550,
   "new_entries_by_group": {
-    "national": 349,
-    "ukraine_world": 18,
-    "economy": 63,
-    "tax_work": 1,
-    "tech_ai_labor": 93,
-    "leipzig_saxony": 86
+    "national": 107,
+    "ukraine_world": 3,
+    "economy": 21,
+    "tax_work": 0,
+    "tech_ai_labor": 12,
+    "leipzig_saxony": 14
   },
   "files": [
     "details/economy.md",
