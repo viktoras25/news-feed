@@ -3,7 +3,7 @@ name: daily-news
 on:
   schedule:
     # Every day at 05:15 UTC (06:15 or 07:15 Berlin time, depending on daylight saving time).
-    - cron: '15 5 * * *'
+    - cron: '00 3 * * *'
   workflow_dispatch:
     inputs:
       window_hours:
