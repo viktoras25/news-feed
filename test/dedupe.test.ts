@@ -148,3 +148,19 @@ test('ids are unique across entries', () => {
   const ids = mergeDuplicates(items, new Set()).entries.map((entry) => entry.id);
   assert.equal(new Set(ids).size, ids.length);
 });
+
+test('an entry whose title was exported before is seen_before even under a new URL', () => {
+  const title = 'Altersvorsorge: Früher in Rente wegen Krankheit?';
+  const previousTitles = new Set([normalizeTitle(title)]);
+  const result = mergeDuplicates(
+    [makeItem({ url: 'https://stern.de/neu-1', title }), makeItem({ url: 'https://stern.de/neu-2', title: 'Ein ganz anderer langer Titel heute' })],
+    new Set(),
+    previousTitles,
+  );
+  assert.deepEqual(result.entries.map((entry) => entry.status).sort(), ['new', 'seen_before']);
+});
+
+test('short titles are never matched across runs', () => {
+  const result = mergeDuplicates([makeItem({ title: 'Eilmeldung' })], new Set(), new Set(['eilmeldung', '']));
+  assert.equal(result.entries[0].status, 'new');
+});

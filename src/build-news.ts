@@ -1,7 +1,9 @@
-import { mergeDuplicates } from './dedupe.ts';
+import { mergeDuplicates, usableTitleKey } from './dedupe.ts';
 import { fetchAll, loadFeeds, loadMarkers } from './fetch-feeds.ts';
 import { computeWindowHours } from './filter.ts';
+import { feedWeekStats, loadArchive, toArchived } from './history.ts';
 import {
+  berlinDate,
   groupTitle,
   renderDetails,
   renderHealth,
@@ -15,6 +17,7 @@ import { loadLastRun, loadSeen, rememberKeys, saveLastRun, saveSeen } from './se
 import type { FeedReport, Item } from './types.ts';
 
 const SEEN_PATH = 'state/seen.json';
+const SEEN_TITLES_PATH = 'state/seen_titles.json';
 const LAST_RUN_PATH = 'state/last_run.json';
 const OUT_DIR = 'out';
 
@@ -28,8 +31,10 @@ async function main(): Promise<void> {
   const feeds = loadFeeds('feeds.yml');
   const markers = loadMarkers('markers.yml');
   const seen = loadSeen(SEEN_PATH);
-  // URLs of earlier exports, taken before this run adds anything: they make an entry "seen_before".
+  const seenTitles = loadSeen(SEEN_TITLES_PATH);
+  // URLs and titles of earlier exports, taken before this run adds anything: they make an entry "seen_before".
   const previousKeys = new Set(Object.keys(seen));
+  const previousTitles = new Set(Object.keys(seenTitles));
 
   const groupOrder: string[] = [];
   for (const feed of feeds) {
@@ -43,11 +48,13 @@ async function main(): Promise<void> {
 
   const reports: FeedReport[] = [];
   const allItems: Item[] = [];
+  const undatedKeys = new Set<string>();
   for (let i = 0; i < feeds.length; i++) {
     const result = fetched[i];
     const processed = processFeed(feeds[i], result.status, result.detail, result.entries, now, hours, markers, seen);
     reports.push(processed.report);
     allItems.push(...processed.items);
+    processed.undatedKeys.forEach((key) => undatedKeys.add(key));
   }
 
   const deadCount = reports.filter((report) => report.status === 'dead').length;
@@ -57,7 +64,7 @@ async function main(): Promise<void> {
     process.exit(1);
   }
 
-  const merged = mergeDuplicates(allItems, previousKeys);
+  const merged = mergeDuplicates(allItems, previousKeys, previousTitles);
   const newEntries = merged.entries.filter((entry) => entry.status === 'new');
   const seenBeforeCount = merged.entries.length - newEntries.length;
 
@@ -83,6 +90,10 @@ async function main(): Promise<void> {
     removedByTitle: merged.removedByTitle,
     entries: merged.entries.length,
     newEntries: newEntries.length,
+    week: feedWeekStats(
+      [...loadArchive(`${OUT_DIR}/archive`, berlinDate(now)), ...toArchived(merged.entries)],
+      feeds.map((feed) => feed.name),
+    ),
   });
   files['manifest.json'] = renderManifest(
     merged.entries,
@@ -97,7 +108,9 @@ async function main(): Promise<void> {
 
   // State is updated only after the files are written: a failed run leaves it untouched.
   rememberKeys(seen, allItems.map((item) => item.key), now);
-  saveSeen(SEEN_PATH, seen, now);
+  saveSeen(SEEN_PATH, seen, now, undatedKeys);
+  rememberKeys(seenTitles, allItems.map((item) => usableTitleKey(item.title)).filter((key) => key !== ''), now);
+  saveSeen(SEEN_TITLES_PATH, seenTitles, now);
   saveLastRun(LAST_RUN_PATH, now);
 
   console.log(

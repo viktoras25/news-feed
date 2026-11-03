@@ -2,8 +2,10 @@ name: daily-news
 
 on:
   schedule:
-    # Every day at 05:15 UTC (06:15 or 07:15 Berlin time, depending on daylight saving time).
-    - cron: '00 3 * * *'
+    # GitHub starts scheduled runs late: the single 03:00 UTC slot started at 09:16-10:32 UTC (6-7.5 h late).
+    # So there are several slots, 01:37-07:37 UTC (off the full hour, where the queue is longest). The first
+    # one that actually starts at 08:00 Berlin time or later builds; the others see today's build and stop.
+    - cron: '37 1-7 * * *'
   workflow_dispatch:
     inputs:
       window_hours:
@@ -23,25 +25,49 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      # The branch tip, not the commit the event was created for: an earlier slot may have pushed today's data since.
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      # Scheduled runs only: skip if the data is already today's (Berlin) or it is not yet 08:00 in Berlin.
+      # Manual runs always build.
+      - name: Decide whether to build
+        id: guard
+        run: |
+          today=$(TZ=Europe/Berlin date +%F)
+          last=$(jq -r '.last_success // empty' state/last_run.json 2>/dev/null || true)
+          last_day=$([ -n "$last" ] && TZ=Europe/Berlin date -d "$last" +%F || echo none)
+          hour=$(TZ=Europe/Berlin date +%H)
+          if [ "${{ github.event_name }}" = "schedule" ] && { [ "$last_day" = "$today" ] || [ "$hour" -lt 8 ]; }; then
+            echo "Skip: last build ${last_day}, now ${hour}h Berlin"
+            echo "build=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "build=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - uses: actions/setup-node@v4
+        if: steps.guard.outputs.build == 'true'
         with:
           node-version: 22
           cache: npm
 
       - run: npm ci
+        if: steps.guard.outputs.build == 'true'
 
       - run: npm test
+        if: steps.guard.outputs.build == 'true'
 
       # Fails only if more than half of the feeds are dead or the files cannot be written.
       # In that case nothing is committed and out/ and state/ stay as they were.
       - name: Build the digest
+        if: steps.guard.outputs.build == 'true'
         env:
           WINDOW_HOURS: ${{ inputs.window_hours }}
         run: npm run build-news
 
       - name: Commit out/ and state/
+        if: steps.guard.outputs.build == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -55,6 +81,6 @@ jobs:
           fi
 
       - name: Show health summary
-        if: always()
+        if: always() && steps.guard.outputs.build == 'true'
         run: |
           if [ -f out/latest/health.md ]; then head -30 out/latest/health.md >> "$GITHUB_STEP_SUMMARY"; fi

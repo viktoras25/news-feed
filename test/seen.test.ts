@@ -88,3 +88,16 @@ test('last run round-trips; a missing or broken file means no last run', () => {
     assert.equal(loadLastRun(path)?.toISOString(), '2026-10-26T05:15:00.000Z');
   });
 });
+
+test('saveSeen keeps old URLs an undated feed still lists, so they do not come back as fresh', () => {
+  withTempDir((dir) => {
+    const path = join(dir, 'seen.json');
+    const now = new Date('2026-11-20T10:00:00Z');
+    const seen: SeenStore = {
+      'example.com/still-listed': '2026-10-26T10:00:00.000Z',
+      'example.com/gone': '2026-10-26T10:00:00.000Z',
+    };
+    saveSeen(path, seen, now, new Set(['example.com/still-listed']));
+    assert.deepEqual(loadSeen(path), { 'example.com/still-listed': '2026-10-26T10:00:00.000Z' });
+  });
+});

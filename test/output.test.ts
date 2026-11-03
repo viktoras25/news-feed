@@ -6,6 +6,7 @@ import { test } from 'node:test';
 import { mergeDuplicates, normalizeUrl } from '../src/dedupe.ts';
 import {
   formatBerlin,
+  nextBerlinMidnight,
   pruneArchive,
   renderDetails,
   renderHealth,
@@ -43,6 +44,8 @@ function makeReport(name: string, status: FeedReport['status'], detail = ''): Fe
     afterCleaning: 4,
     kept: 3,
     flagged: [],
+    topicDropped: [],
+    keptByKeepWords: [],
   };
 }
 
@@ -216,6 +219,8 @@ test('manifest: freshness fields, counts by group, file list', () => {
   const manifest = JSON.parse(renderManifest(entries, groups, reports, ['index.md', 'news.json'], now, 24));
   assert.equal(manifest.generated_at, '2026-10-26T09:40:00.000Z');
   assert.equal(manifest.generated_at_berlin, '2026-10-26 10:40');
+  assert.equal(manifest.data_date, '2026-10-26');
+  assert.equal(manifest.stale_after, '2026-10-26T23:00:00.000Z'); // midnight Berlin, winter time
   assert.equal(manifest.window_hours, 24);
   assert.equal(manifest.window_from, '2026-10-25T09:40:00.000Z');
   assert.equal(manifest.entries_total, 2);
@@ -272,3 +277,31 @@ test('written files contain no absolute paths', () => {
   }
 });
 
+
+test('nextBerlinMidnight: summer, winter and the day of the clock change', () => {
+  assert.equal(nextBerlinMidnight(new Date('2026-07-01T12:00:00Z')).toISOString(), '2026-07-01T22:00:00.000Z');
+  assert.equal(nextBerlinMidnight(new Date('2026-11-03T22:59:00Z')).toISOString(), '2026-11-03T23:00:00.000Z');
+  assert.equal(nextBerlinMidnight(new Date('2026-11-03T23:00:00Z')).toISOString(), '2026-11-04T23:00:00.000Z');
+  // 2026-10-25 has 25 hours in Berlin: summer time ends at 03:00
+  assert.equal(nextBerlinMidnight(new Date('2026-10-25T08:00:00Z')).toISOString(), '2026-10-25T23:00:00.000Z');
+  assert.equal(nextBerlinMidnight(new Date('2026-03-28T12:00:00Z')).toISOString(), '2026-03-28T23:00:00.000Z');
+});
+
+test('health: topic filter counts per feed, keepWord saves, and the 7-day table', () => {
+  const report = makeReport('FAZ', 'ok');
+  report.topicDropped = [
+    { rule: 'soft sections', title: 'Bayern *gewinnt*', url: 'https://faz.net/aktuell/sport/1' },
+    { rule: 'soft sections', title: 'Neuer Roman', url: 'https://faz.net/aktuell/feuilleton/2' },
+  ];
+  report.keptByKeepWords = [{ rule: 'soft sections', title: 'Fußballer und die Rente', url: 'https://faz.net/aktuell/sport/3' }];
+  const quiet = makeReport('BMAS', 'ok');
+  const week = [{ name: 'FAZ', entries: 480, unique: 400, shared: 80, mostSharedWith: 'Spiegel (30)' }];
+  const health = renderHealth([report, quiet], now, 24, { items: 1, removedByUrl: 0, removedByTitle: 0, entries: 1, newEntries: 1, week });
+  assert.ok(health.includes('- FAZ: dropped 2 (soft sections 2) · kept by keepWords 1'));
+  assert.ok(!health.includes('- BMAS:'));
+  assert.ok(health.includes('- FAZ · Fußballer und die Rente · https://faz.net/aktuell/sport/3'));
+  assert.ok(health.includes('- FAZ · soft sections · Bayern \\*gewinnt\\* · https://faz.net/aktuell/sport/1'));
+  assert.ok(health.includes('| FAZ | 480 | 400 | 80 | Spiegel (30) |'));
+  // the existing table is unchanged
+  assert.ok(health.includes('| Feed | Group | Status | In feed | In window | After cleaning | In output |'));
+});

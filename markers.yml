@@ -1,5 +1,5 @@
-# Mechanical markers for things that are not news articles. Nothing here judges importance or topic:
-# that is left to the reader (an LLM). Edit freely, no code change needed.
+# Mechanical markers for things that are not news articles, plus topic rules for a few named feeds.
+# Importance is still left to the reader (an LLM). Edit freely, no code change needed.
 
 # A title starting with one of these is an ad, an announcement or a recurring roundup (case-insensitive).
 titlePrefixes:
@@ -20,6 +20,8 @@ titlePrefixes:
   - "Freitag:"
   - "Samstag:"
   - "Sonntag:"
+  # Good News Network: a daily "on this day" list, not news
+  - Good News in History
 
 # A URL containing one of these is not an article: video and audio pages, press portals, studio promotion.
 urlParts:
@@ -30,3 +32,98 @@ urlParts:
   - /podcast
   - presseportal.zdf.de
   - 3d.zdf.de
+
+# Topic rules apply only to the feeds they name. Every drop is counted per feed in health.md (## Topic filter),
+# with the title and the rule. Matching is case-insensitive.
+#   dropUrlParts:       the URL contains the part (section paths are the most reliable signal)
+#   dropTitlePrefixes:  the title starts with it
+#   dropTitleWords:     the word occurs at a word start ("Tennis" hits "Tennisspitze", "Sport" would not hit "Transport")
+#   keepOnlyMentioning: keep only entries whose title or snippet contains one of these (substring)
+# keepWords overrule the drop* lists, never keepOnlyMentioning.
+keepWords:
+  - Altersvorsorge
+  - Rente      # also Renten-, Rentner
+  - Pension
+  - Steuer     # also Steuerreform, Einkommensteuer
+  - Freiberuf
+  - Selbstständig
+  - Miete      # also Mieten, Mieter
+  - Mietpreis
+  - Entlassung # also Entlassungen, Massenentlassung
+  - Stellenabbau
+
+topicRules:
+  # Sport, celebrities, culture pages, lifestyle, food, travel, horoscopes and gadget tests of the wide feeds.
+  - name: soft sections
+    feeds: [FAZ, taz, ZDFheute, Spiegel, Welt, Good News Network]
+    dropUrlParts:
+      - faz.net/aktuell/sport/
+      # FAZ feuilleton without /debatten/, which carries political debate
+      - faz.net/aktuell/feuilleton/buecher/
+      - faz.net/aktuell/feuilleton/medien-und-film/
+      - faz.net/aktuell/feuilleton/musik-und-buehne/
+      - faz.net/aktuell/feuilleton/kunst-und-architektur/
+      - faz.net/aktuell/feuilleton/kunstmarkt/
+      - faz.net/aktuell/feuilleton/kino/
+      - faz.net/aktuell/gesellschaft/menschen/
+      - faz.net/aktuell/stil/
+      - faz.net/aktuell/besser-leben/
+      - faz.net/aktuell/reise/
+      - faz.net/aktuell/technik-motor/motor/
+      - zdfheute.de/sport/
+      - zdfheute.de/briefing/zdfsportstudio
+      - zdfheute.de/panorama/prominente/
+      - spiegel.de/sport/
+      - spiegel.de/panorama/leute/
+      - spiegel.de/kultur/
+      - spiegel.de/stil/
+      - spiegel.de/reise/
+      - spiegel.de/partnerschaft/
+      - spiegel.de/effilee/
+      - spiegel.de/games/
+      - spiegel.de/netzwelt/gadgets/
+      - welt.de/sport/
+      - welt.de/kultur/
+      - welt.de/icon/
+      - welt.de/reise/
+      - welt.de/food/
+      - welt.de/kmpkt/
+      - welt.de/vermischtes/prominente/
+      - welt.de/testberichte/
+    # taz has no sections in its URLs: titles only
+    dropTitlePrefixes:
+      - "Die Wahrheit:"          # taz satire page
+      - Das Detail zum Bundesligaspieltag
+      - "Film „"
+      - "Doku „"
+    dropTitleWords:
+      - Bundesliga
+      - DFB-Pokal
+      - Champions League
+      - Fußball
+      - Tennis
+      - Formel 1
+      - Olympi
+      - Handball
+      - Eishockey
+      - Horoskop
+      - Horoscope
+      - Astrology
+      - Theaterstück
+      - Kinofilm
+
+  # The state-wide Saxony feeds bring every district (Oberlausitz, Bautzen, Görlitz). Keep Leipzig and state politics.
+  - name: outside Leipzig / state politics
+    feeds: [Sächsische Sachsen, Freie Presse Sachsen, Sachsen Fernsehen]
+    keepOnlyMentioning:
+      - Leipzig
+      - Landtag
+      - Kretschmer
+      - Staatsregierung
+      - Landesregierung
+      - Staatskanzlei
+      - Minister   # also Ministerpräsident, Staatsminister, Innenministerin
+      - Sachsens   # "Sachsens Linke", "Sachsens Polizei"; plain "Sachsen" would keep everything
+      - Freistaat
+      - Landeshaushalt
+      - Doppelhaushalt

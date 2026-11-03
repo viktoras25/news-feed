@@ -1,4 +1,4 @@
-import type { FeedConfig, Item, Markers, RawEntry } from './types.ts';
+import type { FeedConfig, Item, Markers, RawEntry, TopicRule } from './types.ts';
 
 export const MIN_WINDOW_HOURS = 24;
 export const MAX_WINDOW_HOURS = 72;
@@ -100,4 +100,68 @@ export function filterFeedItems(
     result.push(item);
   }
   return result;
+}
+
+// ---- Topic rules (markers.yml topicRules) ------------------------------------------------------------
+
+export type TopicVerdict = {
+  dropRule: string | null; // name of the rule that removes the entry, or null
+  keptByKeepWords: string | null; // name of the drop rule that matched but was overruled by a keepWord
+};
+
+function containsAny(text: string, words: string[]): boolean {
+  const lower = text.toLowerCase();
+  return words.some((word) => lower.includes(word.toLowerCase()));
+}
+
+// The word at a word start: "Sport" matches "Sportler" and "Sport-News", not "Transport".
+function hasWordStart(text: string, words: string[]): boolean {
+  const lower = text.toLowerCase();
+  for (const word of words) {
+    const needle = word.toLowerCase();
+    let from = 0;
+    while (true) {
+      const at = lower.indexOf(needle, from);
+      if (at === -1) {
+        break;
+      }
+      if (at === 0 || !/[\p{L}\p{N}]/u.test(lower[at - 1])) {
+        return true;
+      }
+      from = at + 1;
+    }
+  }
+  return false;
+}
+
+function matchesDrop(rule: TopicRule, title: string, url: string): boolean {
+  const lowerTitle = title.trim().toLowerCase();
+  const lowerUrl = url.toLowerCase();
+  return (
+    rule.dropUrlParts.some((part) => lowerUrl.includes(part.toLowerCase())) ||
+    rule.dropTitlePrefixes.some((prefix) => lowerTitle.startsWith(prefix.toLowerCase())) ||
+    hasWordStart(title, rule.dropTitleWords)
+  );
+}
+
+// Applies the topic rules of one feed to one entry. `text` is the cleaned snippet, also for feeds whose
+// snippets are not published (snippet: false), so keepWords and scopes can look at it.
+export function topicVerdict(feedName: string, title: string, url: string, text: string, markers: Markers): TopicVerdict {
+  let keptByKeepWords: string | null = null;
+  for (const rule of markers.topicRules) {
+    if (!rule.feeds.includes(feedName)) {
+      continue;
+    }
+    if (rule.keepOnlyMentioning.length > 0 && !containsAny(`${title} ${text}`, rule.keepOnlyMentioning)) {
+      return { dropRule: rule.name, keptByKeepWords: null };
+    }
+    if (matchesDrop(rule, title, url)) {
+      if (containsAny(`${title} ${text}`, markers.keepWords)) {
+        keptByKeepWords = rule.name;
+      } else {
+        return { dropRule: rule.name, keptByKeepWords: null };
+      }
+    }
+  }
+  return { dropRule: null, keptByKeepWords };
 }

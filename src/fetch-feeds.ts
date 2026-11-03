@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import Parser from 'rss-parser';
 import { parse as parseYaml } from 'yaml';
-import type { FeedConfig, Markers, RawEntry } from './types.ts';
+import type { FeedConfig, Markers, RawEntry, TopicRule } from './types.ts';
 
 const FETCH_TIMEOUT_MS = 15_000;
 const MAX_ATTEMPTS = 3; // the first try and two retries
@@ -34,10 +34,21 @@ export function loadFeeds(path: string): FeedConfig[] {
 }
 
 export function loadMarkers(path: string): Markers {
-  const data = parseYaml(readFileSync(path, 'utf8')) as Partial<Markers>;
+  const data = parseYaml(readFileSync(path, 'utf8')) as Partial<Omit<Markers, 'topicRules'>> & {
+    topicRules?: Partial<TopicRule>[];
+  };
   return {
     titlePrefixes: data.titlePrefixes ?? [],
     urlParts: data.urlParts ?? [],
+    keepWords: data.keepWords ?? [],
+    topicRules: (data.topicRules ?? []).map((rule) => ({
+      name: rule.name ?? 'topic rule',
+      feeds: rule.feeds ?? [],
+      dropUrlParts: rule.dropUrlParts ?? [],
+      dropTitlePrefixes: rule.dropTitlePrefixes ?? [],
+      dropTitleWords: rule.dropTitleWords ?? [],
+      keepOnlyMentioning: rule.keepOnlyMentioning ?? [],
+    })),
   };
 }
 

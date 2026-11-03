@@ -13,6 +13,8 @@ import type { Item, Markers, RawEntry } from '../src/types.ts';
 const markers: Markers = {
   titlePrefixes: ['Anzeige', 'heise-Angebot', 'Gewinnspiel', 'Sponsored', 'Montag:'],
   urlParts: ['/video/', 'presseportal.zdf.de'],
+  topicRules: [],
+  keepWords: [],
 };
 
 function makeItem(title: string, url?: string): Item {

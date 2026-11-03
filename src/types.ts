@@ -14,6 +14,29 @@ export type Markers = {
   titlePrefixes: string[];
   // A URL containing one of these is not an article (video pages, press portals).
   urlParts: string[];
+  // Topic rules for named feeds: soft sections of wide feeds, regional scope of state-wide feeds.
+  topicRules: TopicRule[];
+  // An entry whose title or snippet contains one of these is never dropped by a drop rule (case-insensitive).
+  keepWords: string[];
+};
+
+// One rule of markers.yml `topicRules`. It applies only to the feeds it names.
+export type TopicRule = {
+  name: string; // label in health.md
+  feeds: string[];
+  // Drop: the URL contains one of these, the title starts with one of these, or the title has one of these
+  // words (at a word start, so "Sport" does not hit "Transport"). keepWords protect an entry from these.
+  dropUrlParts: string[];
+  dropTitlePrefixes: string[];
+  dropTitleWords: string[];
+  // Scope: if set, only entries whose title or snippet mentions one of these are kept. keepWords do not apply.
+  keepOnlyMentioning: string[];
+};
+
+export type TopicDrop = {
+  rule: string;
+  title: string;
+  url: string;
 };
 
 // One RSS entry after cleaning. title and snippet are already safe as text,
@@ -72,7 +95,9 @@ export type FeedReport = {
   detail: string;
   fetched: number; // entries in the feed
   inWindow: number; // after the time filter
-  afterCleaning: number; // after removing ads and non-articles
+  afterCleaning: number; // after removing ads, non-articles and topic-rule drops
   kept: number; // entries of this feed in the final output (new and seen_before)
   flagged: FlaggedText[]; // texts that tripped the injection guard
+  topicDropped: TopicDrop[]; // entries removed by a topic rule
+  keptByKeepWords: TopicDrop[]; // entries a drop rule matched, kept because of a keepWord
 };

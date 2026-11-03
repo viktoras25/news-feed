@@ -71,6 +71,12 @@ export function normalizeTitle(title: string): string {
     .trim();
 }
 
+// The normalized title if it is long enough to identify an entry, otherwise '' (never remembered or matched).
+export function usableTitleKey(title: string): string {
+  const key = normalizeTitle(title);
+  return key.length >= MIN_TITLE_LENGTH ? key : '';
+}
+
 export function idFromKey(key: string, length: number = ID_LENGTH): string {
   return createHash('sha1').update(key).digest('hex').slice(0, length);
 }
@@ -82,8 +88,13 @@ export type MergeResult = {
 };
 
 // Merges items with the same normalized URL or the same normalized title into one entry with a source list.
-// `previousKeys` holds the normalized URLs of earlier exports: an entry with any of them is `seen_before`.
-export function mergeDuplicates(items: Item[], previousKeys: Set<string>): MergeResult {
+// `previousKeys` and `previousTitles` hold the normalized URLs and titles of earlier exports: an entry with any
+// of them is `seen_before`.
+export function mergeDuplicates(
+  items: Item[],
+  previousKeys: Set<string>,
+  previousTitles: Set<string> = new Set(),
+): MergeResult {
   // Earliest first: the earliest item gives the entry its title, URL and date.
   const sorted = [...items].sort((a, b) => a.published.getTime() - b.published.getTime());
 
@@ -117,12 +128,12 @@ export function mergeDuplicates(items: Item[], previousKeys: Set<string>): Merge
     }
   }
 
-  const entries = groups.map((group) => makeEntry(group, previousKeys));
+  const entries = groups.map((group) => makeEntry(group, previousKeys, previousTitles));
   assignIds(entries, groups);
   return { entries, removedByUrl, removedByTitle };
 }
 
-function makeEntry(group: Item[], previousKeys: Set<string>): Entry {
+function makeEntry(group: Item[], previousKeys: Set<string>, previousTitles: Set<string>): Entry {
   const head = group[0];
 
   // Snippet of the earliest item that has one.
@@ -134,7 +145,10 @@ function makeEntry(group: Item[], previousKeys: Set<string>): Entry {
   }
 
   const sources = group.map((item) => ({ name: item.source, url: item.url, published: item.published }));
-  const seenBefore = group.some((item) => previousKeys.has(item.key));
+  const seenBefore = group.some((item) => {
+    const titleKey = usableTitleKey(item.title);
+    return previousKeys.has(item.key) || (titleKey !== '' && previousTitles.has(titleKey));
+  });
 
   return {
     id: '',

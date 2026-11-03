@@ -1,6 +1,7 @@
 import { cpSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { sourceNames } from './dedupe.ts';
+import type { FeedWeekStats } from './history.ts';
 import { escapeMarkdown } from './sanitize.ts';
 import type { Entry, FeedReport } from './types.ts';
 
@@ -26,6 +27,18 @@ export function berlinDate(date: Date): string {
   return formatBerlin(date).slice(0, 10);
 }
 
+// The first instant of the next calendar day in Berlin (handles the daylight saving switch).
+export function nextBerlinMidnight(date: Date): Date {
+  const today = berlinDate(date);
+  // 22 to 26 hours ahead always lands on the next Berlin day; walk back to its midnight in whole hours.
+  let probe = new Date(date.getTime() + 26 * 60 * 60 * 1000);
+  probe = new Date(Math.floor(probe.getTime() / 3_600_000) * 3_600_000);
+  while (berlinDate(new Date(probe.getTime() - 3_600_000)) !== today) {
+    probe = new Date(probe.getTime() - 3_600_000);
+  }
+  return probe;
+}
+
 // Titles of the groups in feeds.yml, used as the heading of details/<group>.md.
 const GROUP_TITLES: Record<string, string> = {
   national: 'Germany: politics and general news',
@@ -34,6 +47,7 @@ const GROUP_TITLES: Record<string, string> = {
   tax_work: 'Taxes, work, pensions',
   tech_ai_labor: 'AI, tech, labor market',
   leipzig_saxony: 'Leipzig and Saxony',
+  good_news: 'Good news',
 };
 
 export function groupTitle(group: string): string {
@@ -185,6 +199,7 @@ export type HealthStats = {
   removedByTitle: number;
   entries: number;
   newEntries: number;
+  week?: FeedWeekStats[]; // per feed over the archive days and this run
 };
 
 function reportLine(report: FeedReport): string {
@@ -237,8 +252,64 @@ export function renderHealth(reports: FeedReport[], now: Date, hours: number, st
     lines.push(`| ${r.feed.name} | ${r.feed.group} | ${r.status} | ${r.fetched} | ${r.inWindow} | ${r.afterCleaning} | ${r.kept} |`);
   }
 
+  lines.push(...renderTopicFilter(reports));
+
+  if (stats.week !== undefined) {
+    lines.push('');
+    lines.push('## Last 7 days per feed');
+    lines.push('');
+    lines.push('Archive days and this run. Entries: distinct URLs from the feed; shared: merged with another feed (by URL or title).');
+    lines.push('');
+    lines.push('| Feed | Entries | Unique | Shared | Most shared with |');
+    lines.push('|---|---|---|---|---|');
+    for (const w of stats.week) {
+      lines.push(`| ${w.name} | ${w.entries} | ${w.unique} | ${w.shared} | ${escapeMarkdown(w.mostSharedWith)} |`);
+    }
+  }
+
   lines.push('');
   return lines.join('\n');
+}
+
+// Topic rules from markers.yml: how many entries each feed lost, and which entries a keepWord saved.
+function renderTopicFilter(reports: FeedReport[]): string[] {
+  const lines: string[] = [];
+  lines.push('');
+  lines.push('## Topic filter');
+  const affected = reports.filter((r) => r.topicDropped.length > 0 || r.keptByKeepWords.length > 0);
+  if (affected.length === 0) {
+    lines.push('\nNothing dropped.');
+    return lines;
+  }
+  lines.push('');
+  lines.push('Dropped per feed (rules in markers.yml), and entries a drop rule matched but a keepWord saved:');
+  lines.push('');
+  for (const r of affected) {
+    const byRule = new Map<string, number>();
+    for (const drop of r.topicDropped) {
+      byRule.set(drop.rule, (byRule.get(drop.rule) ?? 0) + 1);
+    }
+    const rules = [...byRule].map(([rule, count]) => `${rule} ${count}`).join(', ');
+    lines.push(`- ${r.feed.name}: dropped ${r.topicDropped.length}${rules ? ` (${rules})` : ''} · kept by keepWords ${r.keptByKeepWords.length}`);
+  }
+  const saved = reports.flatMap((r) => r.keptByKeepWords.map((hit) => ({ name: r.feed.name, hit })));
+  if (saved.length > 0) {
+    lines.push('');
+    lines.push('### Kept by keepWords');
+    lines.push('');
+    for (const { name, hit } of saved) {
+      lines.push(`- ${name} · ${escapeMarkdown(hit.title)} · ${hit.url}`);
+    }
+  }
+  lines.push('');
+  lines.push('### Dropped');
+  lines.push('');
+  for (const r of affected) {
+    for (const drop of r.topicDropped) {
+      lines.push(`- ${r.feed.name} · ${drop.rule} · ${escapeMarkdown(drop.title)} · ${drop.url}`);
+    }
+  }
+  return lines;
 }
 
 // ---- manifest.json ------------------------------------------------------------------------------------
@@ -262,6 +333,9 @@ export function renderManifest(
   const data = {
     generated_at: now.toISOString(),
     generated_at_berlin: formatBerlin(now),
+    // The data is today's while data_date is today's Berlin date, i.e. until stale_after.
+    data_date: berlinDate(now),
+    stale_after: nextBerlinMidnight(now).toISOString(),
     window_hours: hours,
     window_from: new Date(now.getTime() - hours * 60 * 60 * 1000).toISOString(),
     entries_total: allEntries.length,

@@ -7,7 +7,7 @@ import type { SeenStore } from '../src/seen.ts';
 import type { FeedConfig, Markers, RawEntry } from '../src/types.ts';
 
 const now = new Date('2026-10-27T10:00:00Z');
-const markers: Markers = { titlePrefixes: ['Anzeige'], urlParts: ['/video/'] };
+const markers: Markers = { titlePrefixes: ['Anzeige'], urlParts: ['/video/'], topicRules: [], keepWords: [] };
 
 function makeFeed(overrides: Partial<FeedConfig> = {}): FeedConfig {
   return { name: 'Test', url: 'https://test.example/rss', group: 'national', snippet: true, urlMustContain: [], ...overrides };
@@ -133,4 +133,31 @@ test('a second run right after the first finds nothing new', () => {
   const second = mergeDuplicates(secondItems, new Set(Object.keys(seen)));
   assert.equal(second.entries.filter((entry) => entry.status === 'new').length, 0);
   assert.equal(second.entries.filter((entry) => entry.status === 'seen_before').length, 3);
+});
+
+test('topic rules drop entries, count them in the report, and read the snippet of a snippet: false feed', () => {
+  const topicMarkers: Markers = {
+    ...markers,
+    keepWords: ['Rente'],
+    topicRules: [
+      { name: 'soft', feeds: ['Test'], dropUrlParts: ['/sport/'], dropTitlePrefixes: [], dropTitleWords: [], keepOnlyMentioning: [] },
+    ],
+  };
+  const entries = [
+    makeEntry(1, 2, { link: 'https://test.example/sport/1' }),
+    makeEntry(2, 2, { link: 'https://test.example/sport/2', description: 'Was Profis für die Rente tun' }),
+    makeEntry(3, 2),
+  ];
+  const result = processFeed(makeFeed({ snippet: false }), 'ok', '', entries, now, 24, topicMarkers, {});
+  assert.deepEqual(result.items.map((item) => item.url), ['https://test.example/sport/2', 'https://test.example/story-3']);
+  assert.equal(result.items[0].snippet, '');
+  assert.equal(result.report.afterCleaning, 2);
+  assert.deepEqual(result.report.topicDropped.map((drop) => [drop.rule, drop.url]), [['soft', 'https://test.example/sport/1']]);
+  assert.equal(result.report.keptByKeepWords.length, 1);
+});
+
+test('an undated feed reports the URLs it still lists', () => {
+  const result = run(makeFeed(), [makeEntry(1, null), makeEntry(2, null)]);
+  assert.deepEqual(result.undatedKeys, ['test.example/story-1', 'test.example/story-2']);
+  assert.deepEqual(run(makeFeed(), [makeEntry(1, 2)]).undatedKeys, []);
 });

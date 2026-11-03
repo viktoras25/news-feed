@@ -1,11 +1,13 @@
 # Group -> list of feeds. The group is a coarse label for the digest, not a classification.
 # Per feed: name, url; snippet: false (wide feeds: no snippet in the output); urlMustContain (scope to URL paths).
 # "ok" means the feed opened; "check" means the URL was taken from memory.
+# "off (reason)": disabled, kept as a comment so it can be turned back on.
 
 national:            # Germany: politics, general news
   - { name: Tagesschau,      snippet: false, url: https://www.tagesschau.de/index~rss2.xml }
   - { name: ZDFheute,        snippet: false, url: https://www.zdfheute.de/rss/zdf/nachrichten }   # ok
-  - { name: ZDFheute Politik,snippet: false, url: https://www.zdfheute.de/rss/zdf/nachrichten/politik }
+  # off (duplicate: 105 of 116 entries/week also in ZDFheute)
+  # - { name: ZDFheute Politik,snippet: false, url: https://www.zdfheute.de/rss/zdf/nachrichten/politik }
   - { name: ARD,             snippet: false, url: https://www.ard.de/index~rss2.xml }
   - { name: Spiegel,         url: https://www.spiegel.de/schlagzeilen/index.rss }
   - { name: Spiegel Politik, url: https://www.spiegel.de/politik/deutschland/index.rss }
@@ -23,10 +25,13 @@ national:            # Germany: politics, general news
   - { name: DW Deutsch,      url: https://rss.dw.com/rdf/rss-de-all }   # from memory, check
 
 ukraine_world:       # Ukraine, Middle East, world
-  - { name: Spiegel Ukraine, url: https://www.spiegel.de/thema/ukraine/index.rss }
-  - { name: Spiegel Russland,url: https://www.spiegel.de/thema/russland/index.rss }
+  # off (duplicate of Spiegel Ausland/Spiegel: ~25 of 26 entries/week)
+  # - { name: Spiegel Ukraine, url: https://www.spiegel.de/thema/ukraine/index.rss }
+  # off (duplicate of Spiegel Ausland/Spiegel: ~29 of 31 entries/week)
+  # - { name: Spiegel Russland,url: https://www.spiegel.de/thema/russland/index.rss }
   - { name: Spiegel Ausland, url: https://www.spiegel.de/ausland/index.rss }
-  - { name: t-online Ukraine,url: https://www.t-online.de/nachrichten/ukraine/feed.rss }
+  # off (duplicate: 20 of 20 entries/week also in t-online)
+  # - { name: t-online Ukraine,url: https://www.t-online.de/nachrichten/ukraine/feed.rss }
   - { name: Euractiv DE,     url: https://euractiv.com/de/?feed=mcfeed }
 
 economy:             # economy, markets, central banks, statistics
@@ -39,35 +44,46 @@ economy:             # economy, markets, central banks, statistics
   - { name: Bundesbank (research), url: https://www.bundesbank.de/service/rss/en/633292/feed.rss }   # ok
   - { name: BaFin Presse,    url: https://www.bafin.de/DE/service/rss/_function/RSS_Presse.xml?nn=150166 }
   - { name: BMWE Pressemitteilungen, url: https://www.bundeswirtschaftsministerium.de/SiteGlobals/BMWI/Functions/RSSFeed/DE/RSSFeed-Pressemitteilung.xml }
-  - { name: BMWE Energie,    url: https://www.bundeswirtschaftsministerium.de/SiteGlobals/BMWI/Functions/RSSFeed/DE/RSSFeed-Energie.xml }
+  # off (duplicate: 6 of 6 entries/week also in BMWE Pressemitteilungen)
+  # - { name: BMWE Energie,    url: https://www.bundeswirtschaftsministerium.de/SiteGlobals/BMWI/Functions/RSSFeed/DE/RSSFeed-Energie.xml }
 
 tax_work:            # taxes, self-employed, labor, pensions
   - { name: Bundesfinanzhof, url: https://www.bundesfinanzhof.de/de/news.rss }   # ok
   - { name: BFH Urteile,     url: https://www.bundesfinanzhof.de/de/precedent.rss }
   - { name: BMAS,            url: https://www.bmas.de/SiteGlobals/Functions/RSSFeed/DE/RSSNewsfeed/RSSNewsfeed.xml }
-  - { name: Deloitte Tax News, url: https://deloitte-tax-news.de/steuern/rss/steuern_rss.xml }
-  - { name: "Deloitte: Einkommensteuer", url: https://deloitte-tax-news.de/steuern/private-einkommensteuer/rss/private-einkommensteuer_rss.xml }
-  - { name: "Deloitte: Sozialversicherung", url: https://deloitte-tax-news.de/steuern/arbeitnehmerbesteuerung-sozialversicherung/rss/arbeitnehmerbesteuerung-sozialversicherung_rss.xml }
-  - { name: Bundeskanzler,   url: https://www.bundeskanzler.de/service/rss/bk-de/1859754/feed.xml }   # check which section this is
+  # off (no dates, first-seen times work; only ~2 new entries/week)
+  # - { name: Deloitte Tax News, url: https://deloitte-tax-news.de/steuern/rss/steuern_rss.xml }
+  # off (no dates, first-seen times work; only 0-2 new entries/week)
+  # - { name: "Deloitte: Einkommensteuer", url: https://deloitte-tax-news.de/steuern/private-einkommensteuer/rss/private-einkommensteuer_rss.xml }
+  # off (no dates, first-seen times work; only 0-2 new entries/week)
+  # - { name: "Deloitte: Sozialversicherung", url: https://deloitte-tax-news.de/steuern/arbeitnehmerbesteuerung-sozialversicherung/rss/arbeitnehmerbesteuerung-sozialversicherung_rss.xml }
+  # off (this is "Termine des Kanzlers": the appointment calendar, dated ahead, not speeches or events)
+  # - { name: Bundeskanzler,   url: https://www.bundeskanzler.de/service/rss/bk-de/1859754/feed.xml }   # check which section this is
   - { name: Manager Magazin ETF, url: https://www.manager-magazin.de/thema/etfs-exchange-traded-funds/index.rss }
 
 tech_ai_labor:       # AI, tech, labor market
   - { name: heise,           url: https://www.heise.de/rss/heise-atom.xml }
-  - { name: heise iX,        url: https://www.heise.de/ix/feed.xml }
+  # off (duplicate: 84 of 85 entries/week also in heise)
+  # - { name: heise iX,        url: https://www.heise.de/ix/feed.xml }
   - { name: Golem,           url: https://golem.de/rss }
   - { name: t3n,             url: https://t3n.de/rss.xml }   # ok
-  - { name: Manager Magazin KI, url: https://www.manager-magazin.de/thema/ki_kuenstliche_intelligenz/index.rss }
+  # off (duplicate: 12 of 12 entries/week also in Manager Magazin)
+  # - { name: Manager Magazin KI, url: https://www.manager-magazin.de/thema/ki_kuenstliche_intelligenz/index.rss }
   - { name: Manager Magazin Führung, url: https://www.manager-magazin.de/hbm/fuehrung/index.rss }
   - { name: Spiegel Netzwelt,url: https://www.spiegel.de/netzwelt/index.rss }
   - { name: Computerwoche,   url: https://www.computerwoche.de/feed/ }
-  - { name: Deutsche Startups, url: "http://deutsche-startups.de/feed" }
+  # off (dead: HTTP 403 since 2026-10-29)
+  # - { name: Deutsche Startups, url: "http://deutsche-startups.de/feed" }
   - { name: Basic Thinking,  url: https://www.basicthinking.de/blog/feed/ }
 
 leipzig_saxony:      # local: Leipzig + Saxony
   - { name: Leipzig.de (city), url: https://www.leipzig.de/newsfeed/rss.xml }   # ok
-  - { name: Leipzig.de Verkehr, url: https://www.leipzig.de/newsfeed/kategorie/verkehr/rss.xml }
-  - { name: Leipzig.de Bauen/Wohnen, url: https://www.leipzig.de/newsfeed/kategorie/bauen-und-wohnen/rss.xml }
-  - { name: Leipzig.de Wirtschaft, url: https://www.leipzig.de/newsfeed/kategorie/wirtschaft/rss.xml }
+  # off (0-3 entries/week, all also in Leipzig.de (city))
+  # - { name: Leipzig.de Verkehr, url: https://www.leipzig.de/newsfeed/kategorie/verkehr/rss.xml }
+  # off (0-3 entries/week, all also in Leipzig.de (city))
+  # - { name: Leipzig.de Bauen/Wohnen, url: https://www.leipzig.de/newsfeed/kategorie/bauen-und-wohnen/rss.xml }
+  # off (0-3 entries/week, 1 of them not in Leipzig.de (city))
+  # - { name: Leipzig.de Wirtschaft, url: https://www.leipzig.de/newsfeed/kategorie/wirtschaft/rss.xml }
   - { name: L-IZ,            url: https://www.l-iz.de/feed }   # ok
   - { name: Sachsen Fernsehen, url: https://www.sachsen-fernsehen.de/feed/ }   # ok
   - { name: LVZ Leipzig,     url: https://www.lvz.de/arc/outboundfeeds/rss/tags_slug/leipzig/ }
@@ -80,5 +96,8 @@ leipzig_saxony:      # local: Leipzig + Saxony
   - { name: Sächsische Wirtschaft, url: https://www.saechsische.de/arc/outboundfeeds/rss/category/wirtschaft/regional }
   - { name: MDR,             urlMustContain: ["/nachrichten/sachsen/"], url: https://www.mdr.de/home/mdr-home-index-100-rss.xml }
   - { name: Freie Presse Sachsen, url: https://www.freiepresse.de/rss/rss_sachsen.php }
-  - { name: DNN Politik,     snippet: false, url: https://www.dnn.de/arc/outboundfeeds/rss/category/politik/ }
+  # off (188 entries/week of national tickers and live boards, not Leipzig)
+  # - { name: DNN Politik,     snippet: false, url: https://www.dnn.de/arc/outboundfeeds/rss/category/politik/ }
 
+good_news:           # positive news, English
+  - { name: Good News Network, url: https://www.goodnewsnetwork.org/feed/ }   # ok; "Good News in History" is dropped by markers.yml

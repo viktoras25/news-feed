@@ -8,6 +8,7 @@ import type { RawEntry } from './types.ts';
 //    first seen: an unseen URL counts as published "now", a seen one keeps its first-seen time and
 //    therefore ages out of the window like any other entry.
 // 2. Every exported URL is remembered, so the next export can mark it "seen_before".
+// state/seen_titles.json does job 2 for normalized titles: a story republished under a new URL is "seen_before" too.
 // state/last_run.json holds the time of the last successful run (it sets the window of the next one).
 
 // normalized URL -> ISO time of the first sighting
@@ -26,11 +27,13 @@ export function loadSeen(path: string): SeenStore {
   }
 }
 
-export function saveSeen(path: string, seen: SeenStore, now: Date): void {
+// Drops sightings older than KEEP_DAYS, except `stillListed`: URLs an undated feed still lists. Forgetting
+// them would turn an old entry into a fresh one the day after it is pruned.
+export function saveSeen(path: string, seen: SeenStore, now: Date, stillListed: Set<string> = new Set()): void {
   const cutoff = now.getTime() - KEEP_DAYS * 24 * 60 * 60 * 1000;
   const pruned: SeenStore = {};
   for (const key of Object.keys(seen).sort()) {
-    if (new Date(seen[key]).getTime() >= cutoff) {
+    if (new Date(seen[key]).getTime() >= cutoff || stillListed.has(key)) {
       pruned[key] = seen[key];
     }
   }
@@ -51,7 +54,7 @@ export function datesFromFirstSeen(entries: RawEntry[], seen: SeenStore, now: Da
   return result;
 }
 
-// Remembers the normalized URLs of everything that was exported.
+// Remembers the normalized URLs (or titles) of everything that was exported.
 export function rememberKeys(seen: SeenStore, keys: string[], now: Date): void {
   for (const key of keys) {
     if (seen[key] === undefined) {
