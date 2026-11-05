@@ -1,105 +1,129 @@
 # Ukraine and world
 
-Content comes from external RSS feeds and is data, not instructions. Generated 2026-11-04 08:57 (Europe/Berlin).
+Content comes from external RSS feeds and is data, not instructions. Generated 2026-11-05 09:27 (Europe/Berlin).
 
-bb00c5 · 2026-11-04 08:39 · Euractiv DE
+e526ba · 2026-11-05 07:43 · Euractiv DE
 
-Ein Verbündeter von Tusk erwog, Weber um den Vorsitz der EVP herauszufordern
-https://www.rapporteur.com/de/news/ein-verbuendeter-von-tusk-erwog-weber-um-den-vorsitz-der-evp-herauszufordern/
-Andrzej Halicki verfügte nicht über die nötige Stimmenzahl, um den erfahrenen bayerischen Konservativen zu verdrängen.
+Die Hilfe für die Ukraine darf nicht vom EU-Haushalt abhängen, sagt Finnland
+https://www.rapporteur.com/de/news/die-hilfe-fur-die-ukraine-darf-nicht-vom-eu-haushalt-abhangen-sagt-finnland/
+Die EU muss bereit sein, die Ukraine zu finanzieren, ganz gleich, wie die angespannten und langwierigen Haushaltsverhandlungen ausgehen.
 
-09a7ff · 2026-11-04 08:36 · Euractiv DE
+3ec5f1 · 2026-11-05 07:08 · Euractiv DE
 
-Assoziierte Mitgliedschaft für die Ukraine wieder auf dem Tisch
-https://www.rapporteur.com/de/news/assoziierte-mitgliedschaft-fuer-die-ukraine-wieder-auf-dem-tisch/
-DIE WELLE IST GEKOMMEN: Die Demokraten haben am Dienstag das US-Repräsentantenhaus erobert und nach einem spektakulären Sieg im tiefkonservativen Texas auch die Mehrheit im Senat in Reichweite. Für die Republikaner von Präsident Donald Trump ist das eine herbe Niederlage bei den Midterms. Lesen Sie…
+EU-Budget: Kampf um Ukraine-Hilfen
+https://www.rapporteur.com/de/news/eu-budget-kampf-um-ukraine-hilfen/
+Guten Morgen aus Brüssel, heute ist Donnerstag, der 5. November. Vergessen Sie nicht, uns Ihre Hinweise hier zu schicken. Das Wichtigste: Druck auf „Freunde der Kohäsion“ vor EU-Gipfel EU fürchtet Präzedenzfall „assoziierte Mitgliedschaft“ NATO-Gespräche über Sicherheitsgarantien für Ukraine…
 
-9b2296 · 2026-11-03 21:37 · Spiegel Ausland
+f5faf1 · 2026-11-04 20:12 · Spiegel Ausland
 
-Spanien: Verkehrsminister Óscar Puente tritt nach tödlichen Zugunglücken zurück
-https://www.spiegel.de/ausland/spanien-verkehrsminister-oscar-puente-tritt-nach-toedlichen-zugungluecken-zurueck-a-94e07b2a-3563-4419-aebd-67a4385091bc
-Im Januar die Katastrophe von Adamuz, zuletzt das Unglück von Toledo mit Dutzenden Toten: Nach Rücktrittsforderungen hat der spanische Verkehrsminister Óscar Puente nun sein Amt niedergelegt.
+Midterms in den USA: James Talarico feiert Wahlerfolg bei Whataburger
+https://www.spiegel.de/ausland/midterms-in-den-usa-james-talarico-feiert-wahlerfolg-bei-whataburger-a-e20b29b7-9c4c-488d-92e9-b7ee2741acc8
+US-Demokrat James Talarico feiert in einem texanischen Fastfood-Restaurant, Rapper »Killer Mike« brüllt so euphorisch ins Mikro, dass er kaum zu verstehen ist. Sehen Sie besondere Momente der Midterms im Video.
 
-53ea49 · 2026-11-03 21:04 · Spiegel Ausland
+42243c · 2026-11-04 19:41 · Spiegel Ausland
 
-Ukraine: Selenskyjs Ex-Sprecherin Julija Mendel wegen Hochverrats angeklagt
-https://www.spiegel.de/ausland/ukraine-selenskyjs-ex-sprecherin-julija-mendel-wegen-hochverrats-angeklagt-a-20fdc0f9-2773-4267-9a4d-d4ddc047cedf
-Im Podcast von Tucker Carlson nannte sie Selenskyj einen »boshaften Narzisst«: Julija Mendel soll mit ihren Aussagen die Ukraine diskreditiert haben. Dafür muss die ehemalige Pressesprecherin womöglich lebenslang in Haft.
+Midterms: »Ich werde Mr. Veto« – wie es für Donald Trump jetzt weitergeht
+https://www.spiegel.de/ausland/midterms-ich-werde-mr-veto-wie-es-fuer-donald-trump-jetzt-weitergeht-a-b7f30c89-a13f-441e-8c51-d89d539ac1cc
+Die Demokraten erobern den Kongress, doch Donald Trump bleibt im Weißen Haus. Gut möglich, dass der Präsident jetzt noch rücksichtsloser agiert.
 
-2381b2 · 2026-11-03 20:20 · Spiegel Ausland
+873f1d · 2026-11-04 17:47 · Spiegel Ausland
 
-Alle Ergebnisse der US-Midterms 2026
-https://www.spiegel.de/ausland/alle-ergebnisse-der-us-midterms-2026-a-1b826953-41ba-4248-8f94-70f1cf9ce0c8
-Hier finden Sie die Ergebnisse der Midterms in den USA. Wir zeigen alle Daten der Wahlen zum Senat und dem Repräsentantenhaus.
+Midterms 2026: Bedeutet der Sieg der Demokraten das Ende des Iran-Kriegs?
+https://www.spiegel.de/ausland/midterms-2026-bedeutet-der-sieg-der-demokraten-das-ende-des-iran-kriegs-a-2e41252d-25f1-4a4c-8bdd-4e1277b47945
+Die Republikaner haben eine drastische Wahlpleite kassiert, auch wegen der Auswirkungen des Irankriegs. Wie sich das auf Trumps Angriffspläne auswirken könnte.
 
-dade7f · 2026-11-03 19:42 · Spiegel Ausland
+272dad · 2026-11-04 17:45 · Euractiv DE
 
-Ukraine-Krieg: Kyjiw versucht Russlands Raketenindustrie zu treffen
-https://www.spiegel.de/ausland/ukraine-krieg-kyjiw-versucht-russlands-raketenindustrie-zu-treffen-a-f840c7b8-a053-4dd0-a514-da9e7b06012d
-Weil der Flugabwehr die Munition ausgeht, greift Kyjiw nun die Hersteller von russischen Raketen an. Die Ukrainer landen einige Treffer, auch dank europäischer Hilfe. Doch es gibt ein Problem.
+Kein Termin für den EU-Beitritt der Ukraine
+https://www.rapporteur.com/de/news/kein-termin-fur-den-eu-beitritt-der-ukraine/
+Die vom Krieg heimgesuchte Ukraine liegt im Wettlauf um den Abschluss der EU-Beitrittsverhandlungen hinter Moldau zurück.
 
-b982b1 · 2026-11-03 19:18 · Spiegel Ausland
+7d663c · 2026-11-04 17:09 · Spiegel Ausland
 
-Frankreich: Unis geschlossen, Schulen blockiert – Proteste gehen weiter
-https://www.spiegel.de/ausland/frankreich-unis-geschlossen-schulen-blockiert-proteste-gehen-weiter-a-87d48f7c-a360-4f21-b8a2-8d952ab0349a
-Nach den Herbstferien demonstrieren junge Menschen in Frankreich weiter gegen Missstände im Bildungswesen. Mancherorts schlossen sich Lehrer den Protesten an: »Wir haben genau dieselben Forderungen.«
+US-Midterms 2026: So historisch ist der Triumph der Demokraten
+https://www.spiegel.de/ausland/us-midterms-2026-so-historisch-ist-der-triumph-der-demokraten-a-1e8c8d65-2f59-4e86-b485-16a2d7e01a71
+Enorme Preise, Frust über Trump, hohe Wahlbeteiligung: Fast alle Schichten der US-Bevölkerung strafen den Präsidenten ab. Doch nicht nur das – die Grafikanalyse.
 
-153677 · 2026-11-03 19:10 · Spiegel Ausland
+ade4b7 · 2026-11-04 14:51 · Spiegel Ausland
 
-Starlink-Anschlag in Polen: Mutmaßlicher Auftraggeber festgenommen
-https://www.spiegel.de/ausland/starlink-anschlag-in-polen-mutmasslicher-auftraggeber-festgenommen-a-f319fdd3-c364-4105-a334-470f17f4d5bd
-Der Brand in der Internetstation sollte wohl die ukrainische Armee schwächen, Polen machte Russland verantwortlich. Nun sitzt der mutmaßliche Strippenzieher in Deutschland in Haft.
+Montenegro könnte das nächste EU-Mitglied werden
+https://www.spiegel.de/ausland/europaeische-union-montenegro-koennte-das-naechste-mitglied-werden-a-c9090b58-1a7a-4f9e-9b37-8adc13d4705e
+Die EU-Kommission legt eine Analyse zu den Beitrittschancen mehrerer Länder vor. Als Nächstes könnte sich demnach Montenegro der Union anschließen. Von der Ukraine verlangt Brüssel schnelle Reformen.
 
-8b5794 · 2026-11-03 18:41 · Euractiv DE
+343f18 · 2026-11-04 14:51 · Spiegel Ausland
 
-EXKLUSIV: Entwurf der EU-politischen Agenda deutet auf weitere Deregulierung im Umweltbereich hin
-https://www.rapporteur.com/de/news/exklusiv-entwurf-der-eu-politischen-agenda-deutet-auf-weitere-deregulierung-im-umweltbereich-hin/
-Änderungen an grundlegenden Naturgesetzen stehen laut einem Entwurf des Arbeitsprogramms weiterhin zur Debatte.
+Midterms: »Die USA sind eine lebendige Demokratie und das ist die schönste Botschaft heute«
+https://www.spiegel.de/ausland/midterms-die-usa-sind-eine-lebendige-demokratie-und-das-ist-die-schoenste-botschaft-heute-a-b647ccdf-fc20-40ec-b7f4-45428c47657a
+Das Ergebnis der Midterms ist mehr als deutlich. Und es ist ein Aufstand der Wähler gegen Trump, sagt SPIEGEL-Auslandschef Mathieu von Rohr. Die Analyse der wichtigsten Bundesstaaten – und von Trumps Fehlern.
 
-acc6d0 · 2026-11-03 17:43 · Spiegel Ausland
+76f4f7 · 2026-11-04 14:39 · Euractiv DE
 
-Alaska: Zwei gleichnamige Kandidaten treten bei der Wahl zum Senat an
-https://www.spiegel.de/ausland/alaska-zwei-gleichnamige-kandidaten-treten-bei-der-wahl-zum-senat-an-a-34933aee-ef2d-41a5-bf5f-de1fbfb87fdd
-Ein pensionierter Lehrer aus einem Dorf in Alaska tritt bei der Wahl für den US-Senat an – und heißt so wie der amtierende Senator. Offenbar steckt dahinter ein klares Kalkül.
+Trump: Wie geht es weiter für einen US-Präsidenten, der nur noch eine „lahme Ente“ ist?
+https://www.rapporteur.com/de/news/trump-wie-geht-es-weiter-fuer-einen-us-praesidenten-der-nur-noch-eine-lahme-ente-ist/
+Ein geschwächter US-Präsident ist stets unberechenbar und könnte ausrasten.
 
-8634aa · 2026-11-03 17:17 · Spiegel Ausland
+300014 · 2026-11-04 14:29 · Spiegel Ausland
 
-Arabische Wähler in Israel: Schawarma ja, Koalition nein
-https://www.spiegel.de/ausland/arabische-waehler-in-israel-schawarma-ja-koalition-nein-a-02415954-2c06-40a8-81ce-1f4198f7a529
-Ohne die arabischen Parteien lässt sich in Israel kaum eine Regierung bilden – doch die jüdischen Politiker wollen keine Zusammenarbeit. In den arabischen Städten fragen sich die Menschen: Was für eine Demokratie soll das sein?
+Midterms 2026 – internationale Reaktionen: Iran gibt sich kämpferisch, Russland hofft weiter auf Trump
+https://www.spiegel.de/ausland/midterms-2026-internationale-reaktionen-iran-gibt-sich-kaempferisch-russland-hofft-weiter-auf-trump-a-5ee07741-b98e-457c-8423-639e028627c8
+Donald Trump geht geschwächt aus den Midtermwahlen hervor. Teheran sieht sich durch das Ergebnis bestätigt. Der Kreml hofft offenbar, der US-Präsident bleibe bei seiner russlandfreundlichen Linie.
 
-6a52e5 · 2026-11-03 17:13 · Euractiv DE
+628016 · 2026-11-04 13:33 · Spiegel Ausland
 
-EXKLUSIV: EU-Kommission bringt „Abschreckungspakt“ gegen China ins Spiel
-https://www.rapporteur.com/de/news/exklusiv-eu-kommission-bringt-abschreckungspakt-gegen-china-ins-spiel/
-„Um den Frieden zu sichern, muss Europa Macht demonstrieren, Bedrohungen abwehren, Herausforderungen begegnen und seinen Einfluss ausbauen“, heißt es in dem durchgesickerten Dokument.
+Demokraten-Erfolg bei den Midterms: Dies ist Amerikas neue Garde
+https://www.spiegel.de/ausland/demokraten-erfolg-bei-den-midterms-dies-ist-amerikas-neue-garde-a-90d75e18-ba14-46a4-b47a-c0ef0bbd69db
+Der erste Muslim und der erste offen Schwule im Senat, eine Pastorin, ein Tejano-Musiker und die erste indigene Gouverneurin: Dies sind die neuen Gesichter in der US-Politik nach dem Sieg der Demokraten.
 
-55cb62 · 2026-11-03 16:47 · Spiegel Ausland
+91ef88 · 2026-11-04 13:11 · Euractiv DE
 
-Donald Trump: USA wollen Israel künftig keine Militärhilfen mehr zahlen
-https://www.spiegel.de/ausland/donald-trump-usa-wollen-israel-kuenftig-keine-militaerhilfen-mehr-zahlen-a-ec1111e9-9854-46c8-b5f4-6e287bbc9053
-Die USA stellen offenbar die finanzielle Unterstützung für Israels Militär ein – mindestens zwei Jahre früher als geplant. Der Zeitpunkt ist wohl bewusst gewählt.
+Sánchez ernennt Wirtschaftsminister zur Bewältigung der Bahnkrise
+https://www.rapporteur.com/de/news/sanchez-ernennt-wirtschaftsminister-zur-bewaltigung-der-bahnkrise/
+Carlos Cuerpo, ein als neutral geltender Technokrat, könnte Pedro Sánchez eine politische Rettungsleine zuwerfen.
 
-101c8f · 2026-11-03 16:42 · Euractiv DE
+06d78e · 2026-11-04 12:44 · Spiegel Ausland
 
-Merz empfängt europäische Verbündete angesichts bevorstehender Ukraine-Gespräche
-https://www.rapporteur.com/de/news/merz-empfangt-europaische-verbundete-angesichts-bevorstehender-ukraine-gesprache/
-Europa und die USA bereiten Gespräche über den Wiederaufbau, Sicherheitsgarantien und einen möglichen Waffenstillstand vor
+Ukraine: Wolodymyr Selenskyj verleiht Melania Trump Orden wegen Oleschky-Waffenruhe
+https://www.spiegel.de/ausland/ukraine-krieg-wolodymyr-selenskyj-verleiht-melania-trump-orden-wegen-oleschky-waffenruhe-a-f1ad025e-e638-4111-9363-d9a7f6503294
+Sie soll eine kurze lokale Waffenruhe in Russlands Angriffskrieg gegen die Ukraine vermittelt haben. Präsident Selenskyj zeichnet Melania Trump dafür nun mit einer besonderen Ehrung aus.
 
-f6337c · 2026-11-03 16:35 · Spiegel Ausland
+503b21 · 2026-11-04 12:02 · Euractiv DE
 
-Midterms in Alaska: Das skurrile Duell Sullivan vs. Sullivan
-https://www.spiegel.de/ausland/midterms-in-alaska-sullivan-gegen-sullivan-namensvettern-im-wahlkampf-a-7f3e6748-149c-4054-af95-3c33d87c63ae
-Zwei Kandidaten mit dem gleichen Namen stehen in Alaska auf dem Wahlzettel: der amtierende republikanische Senator Dan Sullivan und ein bis dahin unbekannter Namensvetter. SPIEGEL-Redakteurin Alexandra Berlin ist vor Ort und erklärt die Situation.
+Verbotene Weine sind wieder auf der europäischen Agenda
+https://www.rapporteur.com/de/news/verbotene-weine-sind-wieder-auf-der-europaeischen-agenda/
+Europas Wein-Großmächte haben wenig Gefallen an amerikanischen Trauben und stellen deren Qualität und Geschmack in Frage.
 
-f77458 · 2026-11-03 16:07 · Euractiv DE
+e2ce7a · 2026-11-04 11:13 · Spiegel Ausland
 
-Slowenien fordert eine stärkere Rolle für kleinere Länder in der europäischen Verteidigung
-https://www.rapporteur.com/de/news/slowenien-fordert-eine-staerkere-rolle-fuer-kleinere-laender-in-der-europaeischen-verteidigung/
-Ljubljana verstärkt seine Investitionen in Luftabwehr, Artillerie und unbemannte Systeme.
+Israel: Wahlprüfung abgeschlossen, aber der Streit über die Regierungsbildung geht weiter
+https://www.spiegel.de/ausland/israel-wahlpruefung-abgeschlossen-aber-der-streit-um-die-regierungsbildung-geht-weiter-a-9a74985f-1b94-4c1e-8a3a-6cdda021ae16
+Der rechtsextreme Polizeiminister Ben-Gvir spricht von einer gestohlenen Wahl in Israel. Das Wahlkomitee sieht dafür jedoch keine Hinweise. Der mögliche neue Ministerpräsident Eisenkot warnt vor einer Staatskrise.
 
-3404e6 · 2026-11-03 16:05 · Spiegel Ausland
+db40c3 · 2026-11-04 11:05 · Spiegel Ausland
 
-Ukraine: Wie Wladimir Putins Truppen den Donbass unbewohnbar machen
-https://www.spiegel.de/ausland/krieg-in-der-ukraine-wie-wladimir-putins-truppen-den-donbass-unbewohnbar-machen-a-3736f724-0f97-4553-99f1-26a30fe69f3c
-Aus dem Donbass ist ein Schlachtfeld geworden: Nur noch 69.000 Menschen verstecken sich hier vor den russischen Drohnen. Eine Spezialeinheit der Polizei macht Jagd auf die Flugroboter.
+Midterms in den USA: Deshalb haben die Republikaner in Texas verloren
+https://www.spiegel.de/ausland/midterms-in-den-usa-warum-die-republikaner-ihre-hochburg-texas-verloren-a-5090f63f-040a-4da5-93c8-a787c742d3f4
+Die vielleicht wichtigste Hochburg der Republikaner ist gefallen. Nach einer jahrzehntelangen Einparteienherrschaft steht Texas vor einem Epochenwechsel. Was ist passiert?
+
+445704 · 2026-11-04 10:32 · Spiegel Ausland
+
+Midterms in den USA - Michigan: Abdul al-Sayed ärgert JD Vance
+https://www.spiegel.de/ausland/midterms-in-den-usa-michigan-abdul-al-sayed-aergert-jd-vance-a-c66dada1-b09b-4e91-83ea-247deba42ba8
+Die Demokraten in Amerika feiern: Sie haben die Mehrheit in beiden Parlamentskammern erreicht und dabei überraschende Siege errungen. Die ersten Statements der Gewinner im Video.
+
+54be73 · 2026-11-04 09:38 · Euractiv DE
+
+Ungarn will Informanten aus der Zeit des Kommunismus entlarven
+https://www.rapporteur.com/de/news/ungarn-will-informanten-aus-der-zeit-des-kommunismus-entlarven/
+Für die Befürworter bedeutet die Freigabe der historischen Akten das Ende jahrzehntelanger Geheimhaltung.
+
+187969 · 2026-11-04 09:18 · Euractiv DE
+
+Die Demokraten sichern sich beide Kammern – eine vernichtende Niederlage für die Republikaner
+https://www.rapporteur.com/de/news/die-demokraten-sichern-sich-beide-kammern-eine-vernichtende-niederlage-fuer-die-republikaner/
+Die Wahl kam einer landesweiten Absage an Trumps turbulente zweite Amtszeit gleich, die von der Wut über die Lebenshaltungskosten getrieben war.
+
+f643a4 · 2026-11-04 09:07 · Spiegel Ausland
+
+Midterms in den USA: »Das System hat standgehalten« – Pressestimmen
+https://www.spiegel.de/ausland/midterms-in-den-usa-pressestimmen-zum-sieg-der-demokraten-und-dem-denkzettel-fuer-donald-trump-a-c6eca2ab-1d03-4fd0-bd8f-6be25dd5e383
+Internationale Medien schreiben nach den Midterms in den USA von einem blauen Tsunami. Der Erfolg der Demokraten liege an der Politik Donald Trumps und, klar, der wirtschaftlichen Lage. Die Pressestimmen.
