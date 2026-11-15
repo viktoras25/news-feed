@@ -1,7 +1,7 @@
-# Health 2026-11-14 08:58 (Europe/Berlin)
+# Health 2026-11-15 09:24 (Europe/Berlin)
 
-Window: 24 h · feeds: 53 · dead: 0 · empty: 0
-Items: 625 · merged duplicates: by URL 24, by title 7 · entries: 594 (new 546, seen_before 48)
+Window: 25 h · feeds: 53 · dead: 0 · empty: 0
+Items: 428 · merged duplicates: by URL 26, by title 2 · entries: 400 (new 383, seen_before 17)
 
 ## Dead feeds
 
@@ -19,138 +19,131 @@ Nothing triggered.
 
 | Feed | Group | Status | In feed | In window | After cleaning | In output |
 |---|---|---|---|---|---|---|
-| Tagesschau | national | ok | 63 | 51 | 41 | 41 |
-| ZDFheute | national | ok | 180 | 63 | 38 | 38 |
-| ARD | national | ok | 21 | 1 | 1 | 1 |
-| Spiegel | national | ok | 30 | 30 | 23 | 23 |
-| Spiegel Politik | national | ok | 20 | 9 | 9 | 9 |
+| Tagesschau | national | ok | 60 | 42 | 33 | 33 |
+| ZDFheute | national | ok | 196 | 46 | 22 | 22 |
+| ARD | national | quiet | 21 | 0 | 0 | 0 |
+| Spiegel | national | ok | 30 | 30 | 28 | 28 |
+| Spiegel Politik | national | ok | 20 | 8 | 8 | 8 |
 | Zeit | national | ok | 15 | 15 | 15 | 15 |
-| SZ Topthemen | national | ok | 15 | 15 | 15 | 15 |
-| SZ Eilmeldungen | national | ok | 15 | 2 | 2 | 2 |
-| SZ Politik | national | ok | 15 | 15 | 13 | 13 |
-| FAZ | national | ok | 155 | 77 | 52 | 52 |
-| Welt | national | ok | 30 | 30 | 23 | 22 |
-| taz | national | ok | 50 | 41 | 40 | 40 |
+| SZ Topthemen | national | ok | 15 | 14 | 14 | 14 |
+| SZ Eilmeldungen | national | ok | 15 | 4 | 4 | 4 |
+| SZ Politik | national | ok | 15 | 12 | 12 | 12 |
+| FAZ | national | ok | 154 | 71 | 45 | 45 |
+| Welt | national | ok | 30 | 30 | 20 | 20 |
+| taz | national | ok | 49 | 35 | 34 | 34 |
 | t-online | national | ok | 21 | 16 | 16 | 16 |
-| n-tv Politik | national | ok | 30 | 28 | 28 | 28 |
-| Bundestag aktuell | national | ok | 15 | 8 | 8 | 8 |
-| Deutschlandfunk | national | no_dates | 25 | 15 | 15 | 15 |
-| DW Deutsch | national | ok | 91 | 12 | 12 | 12 |
-| Spiegel Ausland | ukraine_world | ok | 20 | 13 | 13 | 13 |
-| Euractiv DE | ukraine_world | ok | 10 | 6 | 6 | 6 |
-| Spiegel Wirtschaft | economy | ok | 20 | 14 | 14 | 14 |
-| SZ Wirtschaft | economy | ok | 15 | 13 | 13 | 13 |
-| Manager Magazin | economy | ok | 32 | 12 | 12 | 12 |
-| n-tv Wirtschaft | economy | ok | 30 | 20 | 20 | 20 |
-| Stern Wirtschaft | economy | ok | 20 | 19 | 19 | 19 |
+| n-tv Politik | national | ok | 30 | 27 | 27 | 27 |
+| Bundestag aktuell | national | quiet | 15 | 0 | 0 | 0 |
+| Deutschlandfunk | national | no_dates | 33 | 15 | 15 | 15 |
+| DW Deutsch | national | ok | 94 | 10 | 10 | 10 |
+| Spiegel Ausland | ukraine_world | ok | 20 | 16 | 16 | 16 |
+| Euractiv DE | ukraine_world | ok | 10 | 3 | 3 | 3 |
+| Spiegel Wirtschaft | economy | ok | 20 | 6 | 6 | 6 |
+| SZ Wirtschaft | economy | ok | 15 | 2 | 2 | 2 |
+| Manager Magazin | economy | ok | 30 | 7 | 7 | 7 |
+| n-tv Wirtschaft | economy | ok | 30 | 9 | 9 | 9 |
+| Stern Wirtschaft | economy | ok | 20 | 6 | 6 | 6 |
 | Destatis | economy | quiet | 10 | 0 | 0 | 0 |
-| Bundesbank (research) | economy | ok | 10 | 1 | 1 | 1 |
-| BaFin Presse | economy | ok | 20 | 2 | 2 | 2 |
-| BMWE Pressemitteilungen | economy | ok | 20 | 1 | 1 | 1 |
+| Bundesbank (research) | economy | quiet | 10 | 0 | 0 | 0 |
+| BaFin Presse | economy | quiet | 20 | 0 | 0 | 0 |
+| BMWE Pressemitteilungen | economy | quiet | 20 | 0 | 0 | 0 |
 | Bundesfinanzhof | tax_work | quiet | 30 | 0 | 0 | 0 |
 | BFH Urteile | tax_work | quiet | 11 | 0 | 0 | 0 |
-| BMAS | tax_work | ok | 30 | 4 | 4 | 4 |
+| BMAS | tax_work | quiet | 30 | 0 | 0 | 0 |
 | Manager Magazin ETF | tax_work | quiet | 50 | 0 | 0 | 0 |
-| heise | tech_ai_labor | ok | 150 | 47 | 43 | 43 |
-| Golem | tech_ai_labor | ok | 40 | 37 | 29 | 29 |
+| heise | tech_ai_labor | ok | 151 | 16 | 13 | 13 |
+| Golem | tech_ai_labor | ok | 40 | 14 | 11 | 11 |
 | t3n | tech_ai_labor | ok | 20 | 20 | 20 | 20 |
 | Manager Magazin Führung | tech_ai_labor | quiet | 20 | 0 | 0 | 0 |
-| Spiegel Netzwelt | tech_ai_labor | ok | 20 | 5 | 5 | 5 |
-| Computerwoche | tech_ai_labor | ok | 20 | 2 | 2 | 2 |
-| Basic Thinking | tech_ai_labor | ok | 10 | 4 | 4 | 4 |
-| Leipzig.de (city) | leipzig_saxony | ok | 30 | 2 | 2 | 2 |
-| L-IZ | leipzig_saxony | ok | 50 | 11 | 11 | 11 |
-| Sachsen Fernsehen | leipzig_saxony | ok | 10 | 3 | 2 | 2 |
-| LVZ Leipzig | leipzig_saxony | ok | 24 | 13 | 13 | 13 |
-| LVZ Stadtpolitik | leipzig_saxony | ok | 6 | 4 | 4 | 4 |
-| LVZ Bauen/Wohnen | leipzig_saxony | ok | 3 | 2 | 2 | 2 |
-| LVZ Politik regional | leipzig_saxony | ok | 13 | 5 | 5 | 5 |
-| LVZ Wirtschaft regional | leipzig_saxony | ok | 10 | 3 | 3 | 3 |
-| Sächsische Sachsen | leipzig_saxony | ok | 34 | 19 | 4 | 4 |
-| Sächsische Leipzig | leipzig_saxony | ok | 6 | 4 | 4 | 4 |
-| Sächsische Wirtschaft | leipzig_saxony | ok | 20 | 7 | 7 | 7 |
-| MDR | leipzig_saxony | ok | 46 | 29 | 3 | 3 |
-| Freie Presse Sachsen | leipzig_saxony | ok | 30 | 6 | 2 | 2 |
-| Good News Network | good_news | ok | 50 | 5 | 4 | 4 |
+| Spiegel Netzwelt | tech_ai_labor | ok | 20 | 2 | 2 | 2 |
+| Computerwoche | tech_ai_labor | quiet | 20 | 0 | 0 | 0 |
+| Basic Thinking | tech_ai_labor | quiet | 10 | 0 | 0 | 0 |
+| Leipzig.de (city) | leipzig_saxony | quiet | 30 | 0 | 0 | 0 |
+| L-IZ | leipzig_saxony | ok | 50 | 7 | 7 | 7 |
+| Sachsen Fernsehen | leipzig_saxony | ok | 10 | 5 | 2 | 2 |
+| LVZ Leipzig | leipzig_saxony | ok | 12 | 4 | 4 | 4 |
+| LVZ Stadtpolitik | leipzig_saxony | ok | 3 | 1 | 1 | 1 |
+| LVZ Bauen/Wohnen | leipzig_saxony | quiet | 1 | 0 | 0 | 0 |
+| LVZ Politik regional | leipzig_saxony | ok | 7 | 4 | 4 | 4 |
+| LVZ Wirtschaft regional | leipzig_saxony | quiet | 1 | 0 | 0 | 0 |
+| Sächsische Sachsen | leipzig_saxony | ok | 21 | 6 | 2 | 2 |
+| Sächsische Leipzig | leipzig_saxony | quiet | 2 | 0 | 0 | 0 |
+| Sächsische Wirtschaft | leipzig_saxony | ok | 8 | 2 | 2 | 2 |
+| MDR | leipzig_saxony | ok | 46 | 23 | 3 | 3 |
+| Freie Presse Sachsen | leipzig_saxony | ok | 30 | 2 | 2 | 2 |
+| Good News Network | good_news | ok | 50 | 6 | 3 | 3 |
 
 ## Topic filter
 
 Dropped per feed (rules in markers.yml), and entries a drop rule matched but a keepWord saved:
 
 - ZDFheute: dropped 10 (soft sections 10) · kept by keepWords 0
-- Spiegel: dropped 7 (soft sections 7) · kept by keepWords 0
-- FAZ: dropped 20 (soft sections 20) · kept by keepWords 0
-- Welt: dropped 7 (soft sections 7) · kept by keepWords 0
-- Sachsen Fernsehen: dropped 1 (outside Leipzig / state politics 1) · kept by keepWords 0
-- Sächsische Sachsen: dropped 15 (outside Leipzig / state politics 15) · kept by keepWords 0
-- Freie Presse Sachsen: dropped 4 (outside Leipzig / state politics 4) · kept by keepWords 0
+- Spiegel: dropped 2 (soft sections 2) · kept by keepWords 1
+- FAZ: dropped 21 (soft sections 21) · kept by keepWords 0
+- Welt: dropped 10 (soft sections 10) · kept by keepWords 0
+- taz: dropped 1 (soft sections 1) · kept by keepWords 0
+- Sachsen Fernsehen: dropped 3 (outside Leipzig / state politics 3) · kept by keepWords 0
+- Sächsische Sachsen: dropped 4 (outside Leipzig / state politics 4) · kept by keepWords 0
+- Good News Network: dropped 1 (soft sections 1) · kept by keepWords 0
+
+### Kept by keepWords
+
+- Spiegel · Eurovision Song Contest Asia: Philippinische Sängerin Carmelle gewinnt erste Ausgabe · https://www.spiegel.de/kultur/musik/eurovision-song-contest-asia-philippinische-saengerin-carmelle-gewinnt-erste-ausgabe-a-f12ec3fd-897e-46a9-9e48-258f18cd889b
 
 ### Dropped
 
-- ZDFheute · soft sections · DFB-Elf mit wichtigem Sieg gegen Serbien · https://www.zdfheute.de/sport/fussball-nations-league-serbien-deutschland-tore-ergebnis-100.html
-- ZDFheute · soft sections · BVB und Rheinmetall: Aus für umstrittenen Sponsoring-Deal · https://www.zdfheute.de/sport/bvb-rheinmetall-sponsoring-deal-ende-100.html
-- ZDFheute · soft sections · Wölfinnen wollen Bayerns Serie knacken · https://www.zdfheute.de/sport/fussball-bundesliga-frauen/bundesliga-frauen-vfl-wolfsburg-fc-bayern-muenchen-vorschau-100.html
-- ZDFheute · soft sections · Was man zum München-Spiel der NFL wissen muss · https://www.zdfheute.de/sport/nfl-saison-2026-2027-faq-american-football-100.html
-- ZDFheute · soft sections · Traum von WM-Medaille für DEB-Team geplatzt · https://www.zdfheute.de/sport/eishockey-wm-frauen-viertelfinale-deutschland-finnland-100.html
-- ZDFheute · soft sections · Klopp: Habe kein Problem damit · https://www.zdfheute.de/sport/fussball-nations-league-dfb-deutschland-serbien-klopp-nmecha-jubel-100.html
-- ZDFheute · soft sections · Sport-Wochenende: DFB-Geisterspiel und "kleines" Revierderby · https://www.zdfheute.de/briefing/zdfsportstudio-update/sport-wochenende-dfb-team-juergen-klopp-nations-league-nfl-munich-game-dortmund-schalke-bayern-wolfsburg-yog-news-100.html
-- ZDFheute · soft sections · Russland droht Gastgeber Deutschland · https://www.zdfheute.de/sport/eishockey-wm-russland-putin-deutschland-streit-100.html
-- ZDFheute · soft sections · AfD will Fußball-Weltmeister als Bundespräsidenten nominieren · https://www.zdfheute.de/politik/deutschland/wahl-bundespraesident-afd-kandidat-thomas-berthold-100.html
-- ZDFheute · soft sections · Rosalía schreibt Geschichte bei Latin Grammys · https://www.zdfheute.de/panorama/prominente/stars-promi-news-bilder-november-2026-100.html
-- Spiegel · soft sections · Mode-Trends: Warum GenX- und Boomer-Männer noch auf Skinny Jeans setzen · https://www.spiegel.de/stil/mode-trends-warum-genx-und-boomer-maenner-noch-auf-skinny-jeans-setzen-a-766e3d45-154b-4fa0-a588-dd01be87331e
-- Spiegel · soft sections · Nations League: Deutschland gewinnt in Serbien – Brajan Gruda trifft bei Debüt · https://www.spiegel.de/sport/fussball/nations-league-deutschland-gewinnt-in-serbien-brajan-gruda-trifft-bei-debuet-a-f3e8c5e0-da5a-4d31-8711-8fc4b4dce49a
-- Spiegel · soft sections · DFB-Einzelkritik gegen Serbien: Brajan Gruda beeindruckt beim Debüt, Florian Wirtz erfüllt die Führungsrolle · https://www.spiegel.de/sport/fussball/dfb-einzelkritik-gegen-serbien-brajan-gruda-beeindruckt-beim-debuet-florian-wirtz-erfuellt-die-fuehrungsrolle-a-a1e3c16d-628a-40ea-944c-95022f809248
-- Spiegel · soft sections · Nations League: Drei Erkenntnisse zu Deutschlands Sieg in Serbien · https://www.spiegel.de/sport/fussball/nations-league-deutschland-gegen-serbien-im-liveticker-a-326c5e73-0078-4453-a674-74f4b8a81771
-- Spiegel · soft sections · Jesús de Miguel: Zwölf Spiele Sperre für Torwart Owono nach Todesfall in Spanien · https://www.spiegel.de/sport/fussball/jesus-de-miguel-zwoelf-spiele-sperre-fuer-torwart-owono-nach-todesfall-in-spanien-a-31308e21-c436-44f9-acad-29bd49f60c3a
-- Spiegel · soft sections · Norwegen, Schweden und Estland sperren russische Sportler aus · https://www.spiegel.de/sport/norwegen-schweden-und-estland-sperren-russische-sportler-aus-a-cbad5051-c510-4df1-a4d9-88b099d8a5a2
-- Spiegel · soft sections · Sylvie Meis über »Die Friesenjunkies«: »Alle Genitalien waren abgeklebt und auch beim Masturbieren bewegt sich nur meine Schulter« · https://www.spiegel.de/kultur/sylvie-meis-ueber-die-friesenjunkies-alle-genitalien-waren-abgeklebt-und-auch-beim-masturbieren-bewegt-sich-nur-meine-schulter-a-91f7a1e9-6dff-4b19-93b4-c63728e52596
-- FAZ · soft sections · Joachim Sauer: „Wir hatten auch in der DDR ein richtiges Leben“ · https://www.faz.net/aktuell/gesellschaft/menschen/joachim-sauer-im-interview-der-mann-an-angela-merkels-seite-accg-201669514.html
-- FAZ · soft sections · Russland und der CAS: Sie machen Putin den Weg frei · https://www.faz.net/aktuell/sport/sportpolitik/eishockey-wm-2027-sportschiedsgericht-cas-staerkt-das-team-putin-accg-201679638.html
-- FAZ · soft sections · Ermittlungen gegen Houellebecq: Der Prophet in seinem eigenen Land · https://www.faz.net/aktuell/feuilleton/buecher/autoren/juergen-kaube-kommentiert-die-ermittlungen-gegen-houellebecq-201680756.html
-- FAZ · soft sections · James Bond: Es wird ein Junge · https://www.faz.net/aktuell/feuilleton/medien-und-film/kino/wer-wird-der-neue-james-bond-201679589.html
-- FAZ · soft sections · RBB-Skandal vor Gericht: Wer im Schlesinger-Prozess verliert · https://www.faz.net/aktuell/feuilleton/medien-und-film/medienpolitik/rbb-pleite-wer-im-schlesinger-prozess-auf-jeden-fall-verliert-201680998.html
-- FAZ · soft sections · 3:1 in Serbien: Die Men in Black stürzen sich in ihre Mission Rückeroberung · https://www.faz.net/aktuell/sport/fussball/nations-league-dfb-team-gewinnt-3-1-in-serbien-201305745.html
-- FAZ · soft sections · Fußball-Liveblog: Niederlande mit 7:0-Spektakel gegen Griechenland · https://www.faz.net/aktuell/sport/fussball/liveticker-nationalmannschaft-niederlande-mit-7-0-spektakel-gegen-griechenland-faz-201651368.html
-- FAZ · soft sections · Tod von De Miguel: Zwölf Spiele Sperre für Torhüter Owono · https://www.faz.net/aktuell/sport/fussball/nach-tod-von-de-miguel-zwoelf-spiele-sperre-fuer-torhueter-owono-201682373.html
-- FAZ · soft sections · Denkmalschutz in italien: Zeitreise zu Mönchen, Edelleuten und Buchhaltern · https://www.faz.net/aktuell/reise/verborgenes-italien-der-fai-bewahrt-orte-fern-der-touristenpfade-201117918.html
-- FAZ · soft sections · Hamburg Ballet: Es ist die Bewegung, die alles vorantreibt · https://www.faz.net/aktuell/feuilleton/musik-und-buehne/tanz/hamburg-ballet-wunderland-von-alexei-ratmansky-201680327.html
-- FAZ · soft sections · Komiker und Autor: Polizei ermittelt gegen Little-Britain-Star Walliams · https://www.faz.net/aktuell/feuilleton/medien-und-film/polizei-ermittelt-gegen-little-britain-star-walliams-201682163.html
-- FAZ · soft sections · Nicolas Winding Refn: Sein Herz stand eine halbe Stunde lang still · https://www.faz.net/aktuell/feuilleton/medien-und-film/kino/nicolas-winding-refn-praesentiert-her-private-hell-nach-nahtoderfahrung-201283595.html
-- FAZ · soft sections · Roman „Ochsenkopf“: Dieser Fleischer braucht kein Gemüse · https://www.faz.net/aktuell/feuilleton/buecher/literatur/der-roman-ochsenkopf-von-manik-sarkar-201598353.html
-- FAZ · soft sections · Russische Sportler: „Müssen entschlossener handeln, und darauf bereiten wir uns vor“ · https://www.faz.net/aktuell/sport/sportpolitik/weitere-laender-wollen-russischen-sportlern-visa-verweigern-201682215.html
-- FAZ · soft sections · Eishockey-WM: DEB-Frauen scheitern im Viertelfinale · https://www.faz.net/aktuell/sport/mehr-sport/eishockey-wm-deutschland-scheitert-im-viertelfinale-an-finnland-201682004.html
-- FAZ · soft sections · Michael Olise: „Er ist völlig außergewöhnlich, irgendwie speziell“ · https://www.faz.net/aktuell/sport/fussball/michael-olise-begeistert-frankreich-und-trainer-zinedine-zidane-201680183.html
-- FAZ · soft sections · Klopp und Kompany: Der Preis der Präsenz · https://www.faz.net/aktuell/sport/fussball/klopp-kompany-glasner-warum-cheftrainer-trotz-hilfe-unersetzlich-wirken-201674142.html
-- FAZ · soft sections · Jensen Huangs Look: In der Lederjacke in die Krise · https://www.faz.net/aktuell/besser-leben/stil/jensen-huang-und-die-lederjacke-was-sein-stil-verraet-201680558.html
-- FAZ · soft sections · Van-Gogh-Auktion in New York: Das 180-Millionen-Dollar-Los · https://www.faz.net/aktuell/feuilleton/kunstmarkt/bricht-dieses-bild-von-vincent-van-gogh-alle-rekorde-auktionen-bei-sotheby-s-christie-s-und-phillips-in-new-york-accg-201643212.html
-- FAZ · soft sections · Literaturrätsel im November: Sieben Aufgaben, ein Lösungswort · https://www.faz.net/aktuell/feuilleton/buecher/literatur-raetsel/literaturraetsel-von-juergen-kaube-im-november-2026-201677546.html
-- Welt · soft sections · Zehn kurze Fragen, die beweisen, wie gut dein Allgemeinwissen wirklich ist · https://www.welt.de/kmpkt/article6af429e7c45061d752ba5db8/quiz-zehn-kurze-fragen-die-beweisen-wie-gut-dein-allgemeinwissen-wirklich-ist.html
-- Welt · soft sections · Nach Nvidia brauchen wir ordentliche Mätressen statt gschlamperte Verhältnisse · https://www.welt.de/kultur/stuetzen-der-gesellschaft/plus6af72eb57f8bbad09ea627eb/sex-und-der-westen-nach-nvidia-brauchen-wir-ordentliche-maetressen-statt-gschlamperte-verhaeltnisse.html
-- Welt · soft sections · „Das war schon recht gut, was die deutsche Mannschaft gemacht hat“ · https://www.welt.de/sport/fussball/video6af7fcf64495f9bd85b7f747/sieg-in-der-nations-league-das-war-schon-recht-gut-was-die-deutsche-mannschaft-gemacht-hat.html
-- Welt · soft sections · „Länder sind wie Menschen. Auch sie können Selbstmord begehen“ · https://www.welt.de/kultur/plus6af6b5ca5a72dceba1d60fde/bernard-henri-levy-laender-sind-wie-menschen-auch-sie-koennen-selbstmord-begehen.html
-- Welt · soft sections · Er kann sie nicht umarmen, er kann seine Arme nicht mehr heben. Dann weinen beide · https://www.welt.de/kultur/plus6af5be555596369bf0edd330/als-opfer-eric-dane-es-ist-was-wir-befuerchtet-haben.html
-- Welt · soft sections · Unser Land traut sich etwas zu – langfristige Vorhaben sind in Deutschland noch möglich · https://www.welt.de/sport/olympia/article6af6ec245a72dceba1d614ba/olympia-in-deutschland-unser-land-traut-sich-etwas-zu-langfristige-vorhaben-sind-moeglich.html
-- Welt · soft sections · „Lasst uns wieder stolz auf Deutschland sein“ · https://www.welt.de/sport/article6af726877f8bbad09ea626ed/staatsminister-ronald-rauhe-lasst-uns-wieder-stolz-auf-deutschland-sein.html
-- Sachsen Fernsehen · outside Leipzig / state politics · Gewinne Tickets für die Wiener Operetten Weihnacht · https://www.sachsen-fernsehen.de/gewinne-tickets-fuer-die-wiener-operetten-weihnacht-2326515/
-- Sächsische Sachsen · outside Leipzig / state politics · A14 bei Grimma: Sperrung und Sprengung der Muldebrücke am 15. November · https://www.saechsische.de/lokales/leipzig-lk/14-bei-grimma-sperrung-und-sprengung-der-muldebruecke-am-15-november-OHG7X7QGNVAQFNZO7LECG6B74Q.html
-- Sächsische Sachsen · outside Leipzig / state politics · Mädchen aus Bad Schandau sanieren Spielplatz mit Geld aus Straßenverkauf · https://www.saechsische.de/sachsen/maedchen-aus-bad-schandau-sanieren-spielplatz-mit-geld-aus-strassenverkauf-XNCN7QXW4BGWVE47N6MLTUKJ2A.html
-- Sächsische Sachsen · outside Leipzig / state politics · Staatsanwaltschaft Görlitz: Neue Chefin Kerstin Nowotny über Diesel-Diebstahl und Nachwuchs-Juristen · https://www.saechsische.de/lokales/goerlitz-lk/staatsanwaltschaft-goerlitz-neue-chefin-kerstin-nowotny-ueber-diesel-diebstahl-und-nachwuchs-FCWAAEEBZRGI7GLR32PYGHDJSA.html
-- Sächsische Sachsen · outside Leipzig / state politics · Aschenbrödel-Kultfilm läuft ab 15. November – alle Sendetermine im Überblick · https://www.saechsische.de/lokales/meissen-lk/aschenbroedel-kultfilm-laeuft-ab-15-november-alle-sendetermine-im-ueberblick-HJ2MUU234ZBFDLTFLX6QZXXRLY.html
-- Sächsische Sachsen · outside Leipzig / state politics · Mit 30 neu angefangen: Dresdnerin wird Winzerin – und ist die Beste im Elbland · https://www.saechsische.de/lokales/meissen-lk/meissen/mit-30-neu-angefangen-dresdnerin-wird-winzerin-und-ist-die-beste-im-elbland-3GI44UYFUBDGBFKF6DMDYRIAMQ.html
-- Sächsische Sachsen · outside Leipzig / state politics · Transporter überschlägt sich auf der S 173 – Fahrer schwer verletzt · https://www.saechsische.de/lokales/saechsische-schweiz-osterzgebirge/pirna/transporter-ueberschlaegt-sich-auf-der-s-173-fahrer-schwer-verletzt-KLHPIMLZABHVDGQOPZ2O4TEKBE.html
-- Sächsische Sachsen · outside Leipzig / state politics · Neuwahl in Lommatzsch: Das wurde im Stadtrat besprochen · https://www.saechsische.de/lokales/meissen-lk/lommatzsch/neuwahl-in-lommatzsch-das-wurde-im-stadtrat-besprochen-BWHVHITM75HUNJJEH4GEWZRJKQ.html
-- Sächsische Sachsen · outside Leipzig / state politics · Paar aus dem Vogtland wegen Millionenbetrugs auf Mallorca festgenommen · https://www.saechsische.de/lokales/vogtland/paar-aus-dem-vogtland-wegen-millionenbetrugs-auf-mallorca-festgenommen-GJ3VT6TWDRHHJALEKACO44GAZI.html
-- Sächsische Sachsen · outside Leipzig / state politics · Keine Hexe, kein Wald: Dresden macht aus Hänsel und Gretel ein Computerspiel · https://www.saechsische.de/kultur/regional/keine-hexe-kein-wald-dresden-macht-aus-haensel-und-gretel-ein-computerspiel-BFJE4DMMH5FXXEJ6ZTYTHL2GVY.html
-- Sächsische Sachsen · outside Leipzig / state politics · Ostdeutsche Städte sind notfalls für höhere Ausweisgebühren · https://www.saechsische.de/politik/regional/ostdeutsche-staedte-sind-notfalls-fuer-hoehere-ausweisgebuehren-U76GFMJPYVA6NFDZCFKPMKGGUY.html
-- Sächsische Sachsen · outside Leipzig / state politics · So könnte sich Dresdens Zentrum bis 2045 verändern – erste Pläne liegen vor · https://www.saechsische.de/lokales/dresden/so-koennte-sich-dresdens-zentrum-bis-2045-veraendern-erste-plaene-liegen-vor-IJIUTOH2HFFL7CZUKFOZJREZZ4.html
-- Sächsische Sachsen · outside Leipzig / state politics · Winterzauber Lichtenau startet – eine Million LEDs zeigen Europa-Sehenswürdigkeiten · https://www.saechsische.de/lokales/mittelsachsen/winterzauber-lichtenau-startet-eine-million-leds-zeigen-europa-sehenswuerdigkeiten-IV6YEVD6SBDTVOVFJVVDSOYKUQ.html
-- Sächsische Sachsen · outside Leipzig / state politics · Lausitzer Fischwochen 2027: Tourismusverband will mehr Gäste und plant Reise-Pakete · https://www.saechsische.de/lokales/bautzen-lk/lausitzer-fischwochen-2027-tourismusverband-will-mehr-gaeste-und-plant-reise-pakete-N4FUUNLNUBCIBE7V2PTM2YQKYQ.html
-- Sächsische Sachsen · outside Leipzig / state politics · Neue Ausstellung in Zwickau: Als Künstler im Erzgebirge die Stasi ins Schwitzen brachten · https://www.saechsische.de/kultur/regional/neue-ausstellung-in-zwickau-als-kuenstler-im-erzgebirge-die-stasi-ins-schwitzen-brachten-YWLSEB6B55EOHN3AESTBGSGY3A.html
-- Sächsische Sachsen · outside Leipzig / state politics · Kaisermania in Dresden kostet bis zu 129,90 Euro – immer noch nicht ausverkauft · https://www.saechsische.de/kultur/regional/dresden-kaisermania-tickets-bis-zu-129-90-euro-verkauf-startete-schleppend-O6QXNYLFCVDMXG3TTJ6O63PD7A.html
-- Freie Presse Sachsen · outside Leipzig / state politics · „Informationen könnten für Einbrüche genutzt werden“: Die wichtigsten Fragen und Antworten zum Datenleck beim Rettungsdienst · https://www.freiepresse.de/nachrichten/sachsen/informationen-koennten-fuer-einbrueche-genutzt-werden-die-wichtigsten-fragen-und-antworten-zum-datenleck-beim-rettungsdienst-artikel14482924
-- Freie Presse Sachsen · outside Leipzig / state politics · Traditionsfirma Steiff hat ersten Shop in Sachsen eröffnet · https://www.freiepresse.de/nachrichten/sachsen/traditionsfirma-steiff-hat-ersten-shop-in-sachsen-eroeffnet-artikel14482875
-- Freie Presse Sachsen · outside Leipzig / state politics · 14 Tonnen illegale Feuerwerkskörper: Ermittler aus Sachsen kommen Pyro-Bande auf die Spur · https://www.freiepresse.de/nachrichten/sachsen/14-tonnen-illegale-feuerwerkskoerper-ermittler-aus-sachsen-kommen-pyro-bande-auf-die-spur-artikel14482404
-- Freie Presse Sachsen · outside Leipzig / state politics · Panne bei Rettungsdiensten in Südwestsachen: Sensible Daten aus Notrufen landeten im Netz · https://www.freiepresse.de/nachrichten/sachsen/panne-bei-rettungsdiensten-in-suedwestsachen-sensible-daten-aus-notrufen-landeten-im-netz-artikel14482145
+- ZDFheute · soft sections · Wieso American Football in Deutschland immer beliebter wird · https://www.zdfheute.de/sport/nfl-football-munich-game-american-football-beliebtheit-100.html
+- ZDFheute · soft sections · FC Bayern lässt auch Wolfsburg abblitzen · https://www.zdfheute.de/sport/fussball-frauen-bundesliga-vfl-wolfsburg-fc-bayern-muenchen-26-27-100.html
+- ZDFheute · soft sections · Portugal ehrt Ronaldo - und unterliegt Dänemark deutlich · https://www.zdfheute.de/sport/fussball-nations-league-portugal-daenemark-ronaldo-abschied-100.html
+- ZDFheute · soft sections · Emma Aicher gewinnt jetzt auch im Slalom · https://www.zdfheute.de/sport/wintersport/wintersport-ski-alpin-slalom-levi-emma-aicher-100.html
+- ZDFheute · soft sections · Showdown gegen Niederlande: Klopps Wunsch geht in Erfüllung · https://www.zdfheute.de/sport/fussball-nations-league-serbien-deutschland-nachbericht-100.html
+- ZDFheute · soft sections · Zverev zwischen Müdigkeit und Titeltraum · https://www.zdfheute.de/sport/tennis-atp-finals-2026-alexander-zverev-100.html
+- ZDFheute · soft sections · Jugendspiele in Dakar 2026 - was bleibt · https://www.zdfheute.de/sport/youth-olympic-games-fazit-dakar-2026-100.html
+- ZDFheute · soft sections · Diabetes im Spitzensport: Wie Höchstleistungen gelingen · https://www.zdfheute.de/sport/diabetes-weltdiabetestag-sport-bewegung-100.html
+- ZDFheute · soft sections · Diabetes und Sport: Bewegung als Chance · https://www.zdfheute.de/sport/diabetes-weltdiabetestag-sport-bewegung-im-alltag-100.html
+- ZDFheute · soft sections · Taylor Swift kehrt in Nashville auf die Bühne zurück · https://www.zdfheute.de/panorama/prominente/stars-promi-news-bilder-november-2026-100.html
+- Spiegel · soft sections · SPIEGEL Buchpreis 2026: Wie man unter Tausenden Romanen die fünf besten des Jahres findet · https://www.spiegel.de/kultur/literatur/spiegel-buchpreis-2026-wie-man-unter-tausenden-romanen-die-fuenf-besten-des-jahres-findet-a-ed8b308f-38aa-4509-bdc1-05a81c28ed3f
+- Spiegel · soft sections · Bundesliga der Frauen: Bayern München dominiert den VfL Wolfsburg beim 4:1 im Topspiel · https://www.spiegel.de/sport/fussball/bundesliga-der-frauen-bayern-muenchen-dominiert-den-vfl-wolfsburg-beim-4-1-im-topspiel-a-e8f7d76f-0899-47b5-9e0d-7e7fd06c38ea
+- FAZ · soft sections · Wolf Biermann wird 90: Die Charakterschiefheit seiner Selbstbegeisterung · https://www.faz.net/aktuell/feuilleton/musik-und-buehne/wolf-biermann-zum-90-geburtstag-accg-201678011.html
+- FAZ · soft sections · DFB wechselt zu Nike: Das sind die zehn schönsten DFB-Trikots · https://www.faz.net/aktuell/sport/fussball/ausruesterwechsel-zu-nike-dfb-trikots-aus-70-jahren-adidas-in-der-stilkritik-accg-201665264.html
+- FAZ · soft sections · Kindererziehung: „Wenn die Enkel im Haus der Großeltern sind, gelten deren Regeln“ · https://www.faz.net/aktuell/besser-leben/familie/enkel-bei-den-grosseltern-was-duerfen-oma-und-opa-entscheiden-accg-201625158.html
+- FAZ · soft sections · Fußball-Liveblog: Portugal erlebt „Albtraum von Braga“ ohne Ronaldo · https://www.faz.net/aktuell/sport/fussball/liveticker-nationalmannschaft-portugal-geht-ohne-cristiano-ronaldo-unter-faz-201651368.html
+- FAZ · soft sections · Wie bei den Muppets: Neues von den Seifenopas · https://www.faz.net/aktuell/sport/mehr-sport/sepp-maier-und-boris-becker-die-seifenopas-des-sports-glosse-201676311.html
+- FAZ · soft sections · FIFA-Wahlkampf: Infantinos Trump-Vorteil · https://www.faz.net/aktuell/sport/sportpolitik/gianni-infantino-und-die-fifa-wer-kann-ihn-noch-stoppen-201676727.html
+- FAZ · soft sections · WTA Finals im Tennis: „Ich war frustriert“: Sabalenka gibt verbale Entgleisung zu · https://www.faz.net/aktuell/sport/mehr-sport/aryna-sabalenka-gegen-elina-switolina-entschuldigung-nach-fluchen-accg-201684176.html
+- FAZ · soft sections · „The Weight“: Ein anständiger Mann gegen den Rest der Welt · https://www.faz.net/aktuell/feuilleton/medien-und-film/kino/ethan-hawke-spielt-in-the-weight-einen-anstaendigen-mann-201664061.html
+- FAZ · soft sections · Live-Standort teilen: Schadet es der Liebe, wenn Paare sich orten? · https://www.faz.net/aktuell/besser-leben/liebe/live-ortung-in-beziehungen-wie-viel-kontrolle-vertraegt-die-liebe-accg-201033362.html
+- FAZ · soft sections · Skate America: „Ich bin total erschöpft“: Hase/Volodin siegen in den USA · https://www.faz.net/aktuell/sport/wintersport/minerva-hase-und-nikita-volodin-mit-sieg-bei-skate-america-in-usa-accg-201684274.html
+- FAZ · soft sections · FRauen-BUndesliga: FC Bayern demontiert Wolfsburg · https://www.faz.net/aktuell/sport/fussball/bundesliga/fc-bayern-muenchen-siegt-in-frauen-fussball-bundesliga-beim-vfl-wolfsburg-accg-201683820.html
+- FAZ · soft sections · Niederlande-Spiel: So kommt das DFB-Team ins Nations-League-Viertelfinale · https://www.faz.net/aktuell/sport/fussball/deutschland-gegen-niederlande-so-geht-es-ins-nations-league-viertelfinale-accg-201683296.html
+- FAZ · soft sections · Kritik an Leclerc: Formel 1 schließt Reporter nach „Mistkerl“-Kommentar aus · https://www.faz.net/aktuell/sport/formel-1/formel-1-schliesst-reporter-aus-der-charles-leclerc-mistkerl-nennt-accg-201683459.html
+- FAZ · soft sections · Nahrung aus dem Wald: „Brennnesseln lassen sich wie Spinat verwerten“ · https://www.faz.net/aktuell/besser-leben/essen/waldkueche-fuer-kinder-wie-man-aus-tannennadeln-etwas-leckeres-kochen-kann-accg-201644015.html
+- FAZ · soft sections · Forderungen vor Auktion in Köln: Zwei Bilder, eine Tafel, eine Restitution · https://www.faz.net/aktuell/feuilleton/kunstmarkt/restitutionsstreit-bei-lempertz-accg-201677511.html
+- FAZ · soft sections · Alben in Kurzkritiken: Bloß keine grauhaarige Didaktik · https://www.faz.net/aktuell/feuilleton/musik-und-buehne/album/haydn-haynes-bogdanovic-und-vesi-alben-in-kurzkritiken-201629470.html
+- FAZ · soft sections · Séraphine Louis in Metz: Dieses Malobst könnte auch von Cézanne stammen · https://www.faz.net/aktuell/feuilleton/kunst-und-architektur/ausstellung/die-malerin-seraphine-louis-im-centre-pompidou-metz-201669249.html
+- FAZ · soft sections · Heinrich Wiepking: Der Landschaftsarchitekt der Nazis · https://www.faz.net/aktuell/feuilleton/buecher/sachbuch/heinrich-wiepking-war-der-landschaftsarchitekt-der-nazis-201137327.html
+- FAZ · soft sections · Nicht nur schönen Schmuck: Das tragen Pariser Designerinnen selbst · https://www.faz.net/aktuell/besser-leben/stil/das-tragen-pariser-schmuckdesignerinnen-selbst-201667186.html
+- FAZ · soft sections · Ruhesuche an Flughäfen: Schlaf, Menschlein schlaf · https://www.faz.net/aktuell/reise/fotos-von-schlafenden-an-flughaefen-accg-201665207.html
+- FAZ · soft sections · So isst Politik: Avocado-Häppchen zur Apokalypse · https://www.faz.net/aktuell/besser-leben/essen/so-isst-politik-avocado-haeppchen-zur-apokalypse-accg-201668921.html
+- Welt · soft sections · Sabalenka entschuldigt sich nach Wutausbruch im Spiel gegen Ukrainerin Switolina · https://www.welt.de/sport/tennis/article6af958df4495f9bd85b8071b/tennis-eklat-sabalenka-entschuldigt-sich-nach-wutausbruch-gegen-ukrainerin-switolina.html
+- Welt · soft sections · Letzter Auftritt im Adidas-Trikot – DFB-Elf trifft im Gruppenfinale auf die Niederlande · https://www.welt.de/sport/fussball/video6af95eb1c0d5c56ce704c894/nations-league-letzter-auftritt-im-adidas-trikot-dfb-elf-trifft-im-gruppenfinale-auf-die-niederlande.html
+- Welt · soft sections · Witzischkeit kennt Grenzen · https://www.welt.de/kultur/article6af422f5e22aeb948141f68c/so-wird-der-tatort-witzischkeit-kennt-grenzen.html
+- Welt · soft sections · Der Ur-Deutsche · https://www.welt.de/kultur/article6af31fbfb9cef129a20e10a0/wolf-biermann-zum-90-der-ur-deutsche.html
+- Welt · soft sections · 10 Länder – weißt du, welche Sprachen dort gesprochen werden? · https://www.welt.de/kmpkt/article6ac6308eb87614811a357a61/sprach-quiz-10-laender-weisst-du-welche-sprachen-dort-gesprochen-werden.html
+- Welt · soft sections · Bällebäder sind die neuen Spielwiesen für Erwachsene · https://www.welt.de/reise/article6af4676750175c81de7a1a7f/freizeittrend-baellebaeder-sind-die-neuen-spielwiesen-fuer-erwachsene.html
+- Welt · soft sections · Wäre die Kirche noch katholisch, würde ich Katholik werden · https://www.welt.de/kultur/plus6af41bcf33e14c03b6e8c80b/sehnsucht-nach-spiritualitaet-waere-die-kirche-noch-katholisch-wuerde-ich-katholik-werden.html
+- Welt · soft sections · Nach 72 Jahren endet die deutsche Adidas-Ära · https://www.welt.de/sport/fussball/article6af6d6fc5a72dceba1d6123f/im-trikot-von-nike-statt-adidas-der-waesche-wechsel-der-nationalmannschaft.html
+- Welt · soft sections · „Das Amerika von heute ähnelt immer mehr dem Deutschland der 30er-Jahre“ · https://www.welt.de/sport/article6af81fbe4495f9bd85b7f92c/nfl-robert-kraft-das-amerika-von-heute-aehnelt-immer-mehr-dem-deutschland-der-30er-jahre.html
+- Welt · soft sections · Mit diesen Tipps gelingt die Workation · https://www.welt.de/reise/article6accb8f38776d79fbd9ca148/mobiles-arbeiten-mit-diesen-tipps-gelingt-die-workation.html
+- taz · soft sections · Die Wahrheit: Rote Daunenjacke trifft auf schöne Frisur · https://taz.de/Die-Wahrheit/!6224397/
+- Sachsen Fernsehen · outside Leipzig / state politics · Frontalzusammenstoß auf B175 in Döbeln: Drei Schwerverletzte und zwei Autos mit Totalschaden · https://www.sachsen-fernsehen.de/frontalzusammenstoss-auf-b175-in-doebeln-drei-schwerverletzte-und-zwei-autos-mit-totalschaden-2327079/
+- Sachsen Fernsehen · outside Leipzig / state politics · Mann im rosa Bademantel bedrängt Schulmädchen in Chemnitz: Polizei sucht Zeugen · https://www.sachsen-fernsehen.de/mann-im-rosa-bademantel-bedraengt-schulmaedchen-in-chemnitz-polizei-sucht-zeugen-2327070/
+- Sachsen Fernsehen · outside Leipzig / state politics · Sachsen-CDU berät über Zukunftskurs: Mindestlohn, Wirtschaft und Videoüberwachung · https://www.sachsen-fernsehen.de/sachsen-cdu-beraet-ueber-zukunftskurs-mindestlohn-wirtschaft-und-videoueberwachung-2327016/
+- Sächsische Sachsen · outside Leipzig / state politics · „Drei Haselnüsse für Aschenbrödel“ im TV: Warum der Film kein Ost-West-Problem hat · https://www.saechsische.de/lokales/meissen-lk/radebeul/drei-haselnuesse-fuer-aschenbroedel-im-tv-warum-der-film-kein-ost-west-problem-hat-GZ4XM7R6RNEPVO7ZKYYWLINVFI.html
+- Sächsische Sachsen · outside Leipzig / state politics · Sachsen: Im Erzgebirge werden immer noch DDR-Kittelschürzen hergestellt · https://www.saechsische.de/lokales/erzgebirgskreis/sachsen-im-erzgebirge-werden-immer-noch-ddr-kittelschuerzen-hergestellt-XMW3AH7BI5G2TOTSDYQFKCWQGY.html
+- Sächsische Sachsen · outside Leipzig / state politics · Matthias Domaschk starb 1981 in Stasi-Haft – Familie zweifelt bis heute · https://www.saechsische.de/kultur/regional/matthias-domaschk-starb-1981-in-stasi-haft-familie-zweifelt-bis-heute-24I7GXBOJJBJZAZXWEMUIGAT4M.html
+- Sächsische Sachsen · outside Leipzig / state politics · Soldatenfriedhof Ullersdorf: 100 Rechtsextreme bei Heldengedenken – Gemeinde schweigt · https://www.saechsische.de/lokales/goerlitz-lk/goerlitz/soldatenfriedhof-ullersdorf-100-rechtsextreme-bei-heldengedenken-gemeinde-schweigt-DDYYVRY6W5BABM7YTCVLATYVMA.html
+- Good News Network · soft sections · Your Positive Weekly Horoscope: ‘Free Will Astrology’ by Rob Brezsny · https://www.goodnewsnetwork.org/horoscope-from-rob-brezsnys-free-will-astrology-11-14-2026/
 
 ## Last 7 days per feed
 
@@ -158,56 +151,56 @@ Archive days and this run. Entries: distinct URLs from the feed; shared: merged 
 
 | Feed | Entries | Unique | Shared | Most shared with |
 |---|---|---|---|---|
-| Tagesschau | 281 | 279 | 2 | MDR (1) |
-| ZDFheute | 250 | 249 | 1 | Tagesschau (1) |
+| Tagesschau | 276 | 275 | 1 | ZDFheute (1) |
+| ZDFheute | 229 | 227 | 2 | Tagesschau (1) |
 | ARD | 2 | 2 | 0 |  |
-| Spiegel | 188 | 65 | 123 | Spiegel Ausland (69) |
-| Spiegel Politik | 77 | 53 | 24 | Spiegel (24) |
+| Spiegel | 192 | 72 | 120 | Spiegel Ausland (67) |
+| Spiegel Politik | 74 | 53 | 21 | Spiegel (21) |
 | Zeit | 112 | 110 | 2 | Stern Wirtschaft (2) |
-| SZ Topthemen | 110 | 50 | 60 | SZ Politik (39) |
-| SZ Eilmeldungen | 26 | 2 | 24 | SZ Topthemen (23) |
-| SZ Politik | 110 | 71 | 39 | SZ Topthemen (39) |
-| FAZ | 413 | 413 | 0 |  |
-| Welt | 191 | 190 | 1 | SZ Topthemen (1) |
-| taz | 345 | 345 | 0 |  |
+| SZ Topthemen | 109 | 51 | 58 | SZ Politik (40) |
+| SZ Eilmeldungen | 25 | 1 | 24 | SZ Topthemen (23) |
+| SZ Politik | 108 | 68 | 40 | SZ Topthemen (40) |
+| FAZ | 406 | 406 | 0 |  |
+| Welt | 187 | 187 | 0 |  |
+| taz | 336 | 336 | 0 |  |
 | t-online | 149 | 149 | 0 |  |
-| n-tv Politik | 227 | 227 | 0 |  |
-| Bundestag aktuell | 40 | 40 | 0 |  |
+| n-tv Politik | 224 | 224 | 0 |  |
+| Bundestag aktuell | 35 | 35 | 0 |  |
 | Deutschlandfunk | 120 | 120 | 0 |  |
-| DW Deutsch | 97 | 97 | 0 |  |
-| Spiegel Ausland | 138 | 69 | 69 | Spiegel (69) |
-| Euractiv DE | 50 | 50 | 0 |  |
-| Spiegel Wirtschaft | 99 | 72 | 27 | Spiegel (26) |
-| SZ Wirtschaft | 91 | 70 | 21 | SZ Topthemen (20) |
-| Manager Magazin | 109 | 108 | 1 | Spiegel Wirtschaft (1) |
-| n-tv Wirtschaft | 112 | 112 | 0 |  |
-| Stern Wirtschaft | 130 | 128 | 2 | Zeit (2) |
+| DW Deutsch | 95 | 95 | 0 |  |
+| Spiegel Ausland | 135 | 68 | 67 | Spiegel (67) |
+| Euractiv DE | 46 | 46 | 0 |  |
+| Spiegel Wirtschaft | 96 | 69 | 27 | Spiegel (27) |
+| SZ Wirtschaft | 82 | 63 | 19 | SZ Topthemen (18) |
+| Manager Magazin | 99 | 99 | 0 |  |
+| n-tv Wirtschaft | 108 | 108 | 0 |  |
+| Stern Wirtschaft | 116 | 114 | 2 | Zeit (2) |
 | Destatis | 14 | 14 | 0 |  |
-| Bundesbank (research) | 4 | 4 | 0 |  |
-| BaFin Presse | 30 | 30 | 0 |  |
-| BMWE Pressemitteilungen | 6 | 6 | 0 |  |
+| Bundesbank (research) | 3 | 3 | 0 |  |
+| BaFin Presse | 24 | 24 | 0 |  |
+| BMWE Pressemitteilungen | 5 | 5 | 0 |  |
 | Bundesfinanzhof | 2 | 2 | 0 |  |
-| BFH Urteile | 18 | 18 | 0 |  |
-| BMAS | 6 | 6 | 0 |  |
+| BFH Urteile | 11 | 11 | 0 |  |
+| BMAS | 5 | 5 | 0 |  |
 | Manager Magazin ETF | 0 | 0 | 0 |  |
-| heise | 312 | 312 | 0 |  |
-| Golem | 190 | 190 | 0 |  |
+| heise | 292 | 292 | 0 |  |
+| Golem | 175 | 175 | 0 |  |
 | t3n | 160 | 160 | 0 |  |
 | Manager Magazin Führung | 4 | 4 | 0 |  |
-| Spiegel Netzwelt | 22 | 18 | 4 | Spiegel (4) |
-| Computerwoche | 30 | 30 | 0 |  |
-| Basic Thinking | 22 | 22 | 0 |  |
-| Leipzig.de (city) | 22 | 20 | 2 | L-IZ (2) |
-| L-IZ | 87 | 85 | 2 | Leipzig.de (city) (2) |
-| Sachsen Fernsehen | 17 | 17 | 0 |  |
-| LVZ Leipzig | 76 | 58 | 18 | LVZ Stadtpolitik (8) |
-| LVZ Stadtpolitik | 12 | 3 | 9 | LVZ Leipzig (8) |
+| Spiegel Netzwelt | 21 | 16 | 5 | Spiegel (5) |
+| Computerwoche | 27 | 27 | 0 |  |
+| Basic Thinking | 19 | 19 | 0 |  |
+| Leipzig.de (city) | 15 | 13 | 2 | L-IZ (2) |
+| L-IZ | 83 | 81 | 2 | Leipzig.de (city) (2) |
+| Sachsen Fernsehen | 18 | 18 | 0 |  |
+| LVZ Leipzig | 70 | 54 | 16 | LVZ Stadtpolitik (7) |
+| LVZ Stadtpolitik | 12 | 4 | 8 | LVZ Leipzig (7) |
 | LVZ Bauen/Wohnen | 8 | 3 | 5 | Sächsische Wirtschaft (3) |
-| LVZ Politik regional | 46 | 26 | 20 | LVZ Wirtschaft regional (13) |
-| LVZ Wirtschaft regional | 32 | 5 | 27 | Sächsische Wirtschaft (24) |
-| Sächsische Sachsen | 22 | 9 | 13 | LVZ Politik regional (8) |
-| Sächsische Leipzig | 13 | 5 | 8 | LVZ Leipzig (6) |
-| Sächsische Wirtschaft | 58 | 33 | 25 | LVZ Wirtschaft regional (24) |
-| MDR | 24 | 23 | 1 | Tagesschau (1) |
-| Freie Presse Sachsen | 13 | 13 | 0 |  |
-| Good News Network | 33 | 33 | 0 |  |
+| LVZ Politik regional | 46 | 25 | 21 | LVZ Wirtschaft regional (13) |
+| LVZ Wirtschaft regional | 29 | 4 | 25 | Sächsische Wirtschaft (22) |
+| Sächsische Sachsen | 21 | 8 | 13 | LVZ Politik regional (8) |
+| Sächsische Leipzig | 12 | 4 | 8 | LVZ Leipzig (6) |
+| Sächsische Wirtschaft | 55 | 31 | 24 | LVZ Wirtschaft regional (22) |
+| MDR | 24 | 24 | 0 |  |
+| Freie Presse Sachsen | 12 | 12 | 0 |  |
+| Good News Network | 32 | 32 | 0 |  |
