@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-11-15T08:24:15.214Z",
-  "generated_at_berlin": "2026-11-15 09:24",
-  "data_date": "2026-11-15",
-  "stale_after": "2026-11-15T23:00:00.000Z",
+  "generated_at": "2026-11-16T08:32:51.015Z",
+  "generated_at_berlin": "2026-11-16 09:32",
+  "data_date": "2026-11-16",
+  "stale_after": "2026-11-16T23:00:00.000Z",
   "window_hours": 25,
-  "window_from": "2026-11-14T07:24:15.214Z",
-  "entries_total": 400,
-  "entries_new": 383,
-  "entries_seen_before": 17,
+  "window_from": "2026-11-15T07:32:51.015Z",
+  "entries_total": 459,
+  "entries_new": 432,
+  "entries_seen_before": 27,
   "new_entries_by_group": {
-    "national": 275,
-    "ukraine_world": 10,
-    "economy": 27,
+    "national": 290,
+    "ukraine_world": 9,
+    "economy": 33,
     "tax_work": 0,
-    "tech_ai_labor": 44,
-    "leipzig_saxony": 24,
+    "tech_ai_labor": 59,
+    "leipzig_saxony": 38,
     "good_news": 3
   },
   "files": [
@@ -32,5 +32,5 @@
   ],
   "feeds_total": 53,
   "feeds_dead": 0,
-  "feeds_empty": 0
+  "feeds_empty": 1
 }
