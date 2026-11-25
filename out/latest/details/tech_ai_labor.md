@@ -1,747 +1,627 @@
 # AI, tech, labor market
 
-Content comes from external RSS feeds and is data, not instructions. Generated 2026-11-24 12:34 (Europe/Berlin).
+Content comes from external RSS feeds and is data, not instructions. Generated 2026-11-25 11:24 (Europe/Berlin).
 
-442c62 · 2026-11-24 12:27 · Golem
+533c3b · 2026-11-25 11:22 · Golem
 
-Google-Alternative: Kagi bringt E-Mail-Dienst mit Privacy-Funktionen
-https://www.golem.de/news/google-alternative-kagi-bringt-e-mail-dienst-mit-privacy-funktionen-2611-215577.html
-Kagi Mail soll bei der Organisation von E-Mails helfen und einen verbesserten Datenschutz bieten. Umsonst ist der Dienst aber nicht. (E-Mail, CalDAV)
+Sitzheizung: New York verbietet zahlreiche Abofunktionen in Autos
+https://www.golem.de/news/sitzheizung-new-york-verbietet-zahlreiche-abofunktionen-in-autos-2611-215637.html
+Sitzheizung, erweiterte Navigation oder Fahrassistenzfunktionen dürfen im US-Bundesstaat New York künftig kein Abo mehr sein. (Auto, Elektroauto)
 
-607593 · 2026-11-24 12:17 · heise
+7e4fe6 · 2026-11-25 11:15 · heise
 
-Datenleck bei Cleverbridge: Kreditkartendaten abgegriffen
-https://www.heise.de/news/Datenleck-bei-Cleverbridge-Kreditkartendaten-abgegriffen-11535956.html
-Der Zahlungsdienstleister Cleverbridge räumt ein, dass Anfang November Angreifer sensible Daten abgegriffen haben.
+„Gothic 3 Classic“: Rollenspiel kommt mit Fan-Patch auf PS5 und Xbox
+https://www.heise.de/news/Gothic-3-Classic-Rollenspiel-kommt-mit-Fan-Patch-auf-PS5-und-Xbox-11537480.html
+Zwei Jahrzehnte nach dem verpatzten PC-Start erscheint „Gothic 3“ erstmals für Konsolen. Technisch fußt die Umsetzung auf jahrelanger Arbeit der Community.
 
-254575 · 2026-11-24 12:14 · Golem
+d7ad3d · 2026-11-25 11:10 · t3n
 
-Nvidia-Aktie: Trump wird durch Huangs Rückkehr 15 Millionen US-Dollar reicher
-https://www.golem.de/news/nvidia-aktie-trump-wird-durch-huangs-rueckkehr-15-millionen-us-dollar-reicher-2611-215575.html
-Der US-Präsident hat stolz verkündet: "Ich habe den Deal gemacht." Von anderen Seiten kommen weitere Korruptionsvorwürfe. (Jensen Huang, Nvidia)
+Antrag, Dauer, Gehalt: Was ihr über den Bildungsurlaub wissen müsst
+https://t3n.de/news/bildungsurlaub-antrag-dauer-gehalt-1775180/
+Im Bildungsurlaub können sich Beschäftigte während der Arbeitszeit weiterbilden. Doch wer hat Anspruch darauf und welche Kurse sind erlaubt? Eine Übersicht über geltende Regeln und Rechte. weiterlesen auf t3n.de
 
-ab6715 · 2026-11-24 12:14 · heise
+4d6d0b · 2026-11-25 11:00 · Basic Thinking
 
-Von Grund auf neu: Ladybird fordert das Browser-Trio heraus
-https://www.heise.de/news/Von-Grund-auf-neu-Ladybird-fordert-das-Browser-Trio-heraus-11535808.html
-Einfach installieren statt selbst kompilieren: Der Browser Ladybird mit eigener Engine startet in die Alpha und liefert fertige Pakete für Linux und macOS.
+Schrott oder Schnäppchen? Gebrauchte E-Autos sind besser als ihr Ruf
+https://www.basicthinking.de/blog/2026/11/25/gebrauchte-e-autos-sind-besser-als-ihr-ruf/
+Der Beitrag Schrott oder Schnäppchen? Gebrauchte E-Autos sind besser als ihr Ruf erschien zuerst beim Online-Magazin BASIC thinking. Über unseren Newsletter UPDATE startest du jeden Morgen bestens informiert in den Tag. Gebrauchte Elektroautos galten lange als eine riskante Wette: zu hohe…
 
-190557 · 2026-11-24 12:12 · heise
+0a08d5 · 2026-11-25 10:48 · Golem
 
-Shirudo: OpenAI und Cisco stellen KI-Schutzschild für Linux-Server vor
-https://www.heise.de/news/Shirudo-OpenAI-und-Cisco-stellen-KI-Schutzschild-fuer-Linux-Server-vor-11535772.html
-Shirudo ermöglicht KI-Agenten, temporäre Schutzprogramme zu entwickeln, die Linux-Systeme bis zur Installation von Sicherheitspatches schützen sollen.
+Spielebranche: CD Projekt Red und Sony tun sich für The Witcher 4 zusammen
+https://www.golem.de/news/spielebranche-cd-projekt-red-und-sony-tun-sich-fuer-the-witcher-4-zusammen-2611-215634.html
+Sony unterstützt das polnische Studio bei der Werbung für das Rollenspiel. Eine ähnliche Zusammenarbeit gab es bereits bei GTA 6. (The Witcher 4, Rollenspiel)
 
-739cb0 · 2026-11-24 12:07 · Golem
+590b81 · 2026-11-25 10:40 · heise
 
-Serie Blade Runner 2099: Was bleibt vom Menschen, wenn er sich selbst überflüssig macht?
-https://www.golem.de/news/serie-blade-runner-2099-was-bleibt-vom-menschen-wenn-er-sich-selbst-ueberfluessig-macht-2611-215576.html
-50 Jahre nach Blade Runner 2049 sind es die Menschen, die gejagt werden - und die Replikanten herrschen. Die neue Serie führt das Erbe der Kultfilme fort, und zwar brillant. Eine Rezension von Peter Osteried (Blade Runner, KI)
+Angriffswarnung: Drupal Core, AntiCsrf und Optimizely
+https://www.heise.de/news/Angriffswarnung-Drupal-Core-AntiCsrf-und-Optimizely-11537363.html
+Teils sind die Exploits schon bekannt, aber nun warnt die CISA vor beobachteten Attacken auf Drupal Core, AntiCsrf und Optimizely.
 
-e911d0 · 2026-11-24 12:00 · t3n
+18b2c4 · 2026-11-25 10:34 · heise
 
-Black Friday: Diese Samsung-Angebote bei Amazon und Mediamarkt lohnen sich
-https://t3n.de/news/black-friday-diese-samsung-angebote-bei-amazon-und-media-markt-lohnen-sich-1774977/
-Zum Black Friday locken Onlinehändler mit hohen Rabatten. Auch viele Samsung-Smartphones sind reduziert. Trotzdem lohnt sich ein Preisvergleich: Dieser zeigt oft, dass die Ersparnis niedriger ausfällt als angegeben. weiterlesen auf t3n.de
+Suzuki Ignis vorgestellt: E-Kleinstwagen für die Stadt
+https://www.heise.de/news/Suzuki-Ignis-vorgestellt-E-Kleinstwagen-fuer-die-Stadt-11537235.html
+Kleine Autos sind rar. Der Suzuki Ignis soll diesem Mangel etwas entgegensetzen – mit den kompakten Abmessungen eines Kei Car und kleiner Batterie.
 
-a418ad · 2026-11-24 11:48 · Golem
+a49c37 · 2026-11-25 10:27 · Golem
 
-Photovoltaik: Windrad aus Fahrradfelgen steigert Stromertrag um 14 Prozent
-https://www.golem.de/news/photovoltaik-windrad-aus-fahradfelgen-steigert-stromertrag-um-14-prozent-2611-215573.html
-Ein mit einfachsten Mitteln konstruiertes Kühlsystem erhöht den Stromertrag aus Solarzellen. In der Spitze ist es ein Fünftel mehr. (Solarenergie, Wissenschaft)
+US-Geheimdienst: Cyberangriff trifft Analysesystem der CIA
+https://www.golem.de/news/us-geheimdienst-cyberangriff-trifft-analysesystem-der-cia-2611-215631.html
+Berichten zufolge haben Angreifer Zugriff auf ein Analysesystem der CIA erlangt. Die Daten könnten Prioritäten von US-Geheimdiensten offenlegen. (Geheimdienste, KI)
 
-3c7812 · 2026-11-24 11:37 · heise
+5fcfda · 2026-11-25 10:23 · t3n
 
-Cyberattacken auf N-able Mail Assure und Monai Label
-https://www.heise.de/news/Cyberattacken-auf-N-able-Mail-Assure-und-Monai-Label-11535820.html
-Bösartige Akteure missbrauchen Sicherheitslücken in N-able Mail Assure und der medizinischen KI-Bildanalyse Monai Label.
+Mit Daten von Infostealern: Datenbanken mit 3,5 Milliarden Zugangsdaten offen im Netz gefunden
+https://t3n.de/news/datenbanken-zugangsdaten-1775127/
+Sicherheitsforscher haben zwei ungesicherte Datenbanken mit über 3,5 Milliarden Zugangsdaten entdeckt. Besonders gefährlich waren Hunderttausende Dokumente, mit denen Angreifer:innen das „digitale Leben“ der Opfer übernehmen könnten.weiterlesen auf t3n.de
 
-6ea043 · 2026-11-24 11:35 · Golem
+4ee336 · 2026-11-25 10:21 · Computerwoche
 
-OLEDTextFix: Tool soll Schrift auf OLED-Monitoren schärfer darstellen
-https://www.golem.de/news/oledtextfix-tool-soll-schrift-auf-oled-monitoren-schaerfer-darstellen-2611-215572.html
-OLEDTextFix verschiebt Subpixel auf OLED-Panels so, dass möglichst keine störenden Farbränder auftreten. (OLED, Display)
+Kontext und Kontrolle entscheiden über den Erfolg von KI
+https://www.computerwoche.de/article/4252118/kontext-und-kontrolle-entscheiden-uber-den-erfolg-von-ki.html
+Verwertbare Ergebnisse hängen von mehr als nur dem verwendeten Modell ab. Dazu gehören relevante Inhalte, Kontext und eine klare Kontrolle über deren Nutzung. Stock 4you \| shutterstock.com Viele Diskussionen rund um KI konzentrieren sich noch immer auf die Qualität der Antworten. Und natürlich ist…
 
-e38c85 · 2026-11-24 11:30 · t3n
+bc9d19 · 2026-11-25 10:15 · Golem
 
-Europäische KI fördern: So lassen sich die Vorteile des Standorts nutzen
-https://t3n.de/news/europaeische-ki-foerdern-so-lassen-sich-die-vorteile-des-standorts-nutzen-1773742/
-Im globalen KI-Wettrennen scheint Europa weit abgeschlagen. Dabei sind die Standortbedingungen besser, als es auf den ersten Blick aussieht. Mit Tempo und Furchweiterlesen auf t3n.de
+Probefahrt mit dem Slate Truck: Der Billig-Pick-up für 25.000 US-Dollar
+https://www.golem.de/news/probefahrt-mit-dem-slate-truck-der-billig-pick-up-fuer-25-000-us-dollar-2611-215536.html
+Ein Elektro-Pick-up für nur 25.000 Dollar, fast ohne Komfort: Das von Jeff Bezos mitfinanzierte Start-up Slate will mit einem Billigmodell punkten. Golem ist den Truck gefahren. Ein Bericht von Stefan Grundhoff (Elektroauto, Auto)
 
-6267fb · 2026-11-24 11:26 · heise
+1ead59 · 2026-11-25 10:10 · heise
 
-Bastelarbeit: iPhone Duo als Windows-11-„Laptop“
-https://www.heise.de/news/Bastelarbeit-iPhone-Duo-als-Windows-11-Laptop-11535118.html
-Ein Bastler hat Windows 11 24H2 mit KI-Hilfe aufs iPhone Duo gebracht. Im Klappmodus sieht es aus wie ein sehr kleiner Rechner.
+Darum hört Nvidias Verwaltungsrat so gerne auf Donald Trump
+https://www.heise.de/hintergrund/Darum-hoert-Nvidias-Verwaltungsrat-so-gerne-auf-Donald-Trump-11536985.html
+Jensen Huangs Rückkehr in den Nvidia-Chefsessel liegt auch am Haftungsrisiko. „Ich gab ihnen genug Zusicherung“, bestätigt US-Präsident Trump.
 
-bd01dd · 2026-11-24 11:25 · heise
+c54774 · 2026-11-25 10:07 · Golem
 
-Nach Tod von Zugbegleiter: Bahn setzt ab Dezember auf Bodycams mit Ton
-https://www.heise.de/news/Ab-Dezember-DB-Regio-weitet-Einsatz-von-Bodycams-mit-Tonaufzeichnung-aus-11535830.html
-Ab Dezember sollen Zugbegleiter in Regionalzügen bundesweit Bodycams mit Tonaufzeichnung erhalten.
+Letzter Durchschlag: Bohrungen für Brennerbasistunnel komplettiert
+https://www.golem.de/news/letzter-durchschlag-bohrungen-fuer-brennerbasistunnel-komplettiert-2611-215629.html
+Insgesamt 230 km mussten in das Gestein unter den Alpen gebohrt werden. Ein Bereich von nur 100 m war entscheidend. (Infrastruktur, Wirtschaft)
 
-433e62 · 2026-11-24 11:23 · Golem
+911dfc · 2026-11-25 10:00 · Golem
 
-KI in der Cloud: Neue US-Exportregeln erzeugen Chaos in Asien
-https://www.golem.de/news/ki-in-der-cloud-neue-us-exportregeln-erzeugen-chaos-in-asien-2611-215571.html
-Die neuen US-Regeln sollen chinesische Firmen daran hindern, exportbeschränkte Hardware in der Cloud zu nutzen. Vorerst stiftet sie viel Verwirrung. (China, Nvidia)
+Quantum Act: EU will Hunderte Milliarden Euro für Quantentechnologie mobilisieren
+https://www.golem.de/news/quantum-act-eu-will-hunderte-milliarden-euro-fuer-quantentechnologie-mobilisieren-2611-215630.html
+Die EU-Kommission sieht Quantencomputer als das nächste große Ding nach KI. Durch ein neues Programm soll Europa hier führend werden. (EU-Kommission, Technologie)
 
-2bbf9c · 2026-11-24 11:10 · t3n
+185594 · 2026-11-25 09:58 · heise
 
-Neues Modell: Gibt es einen neunten Planeten in unserem Sonnensystem?
-https://t3n.de/news/neue-theorie-neunter-planet-in-unserem-sonnensystem-1774972/
-Besteht das Sonnensystem nicht aus acht, sondern aus neun Planeten? Neue Computermodelle bringen diese Theorie ins Spiel. Die Forscher:innen sprechen von einem doppelt so großen Planeten wie die Erde. weiterlesen auf t3n.de
+KI ermittelt in 22 Minuten den unbekannten Zeichner eines Skizzenbuchs von 1808
+https://www.heise.de/news/KI-ermittelt-in-22-Minuten-den-unbekannten-Zeichner-eines-Skizzenbuchs-von-1808-11537049.html
+Ein Historiker hat GPT-6.2 Astra nach dem unbekannten Autor eines über 200 Jahre alten Skizzenbuchs fahnden lassen – und nach Minuten die Antwort bekommen.
 
-bbfa55 · 2026-11-24 11:08 · heise
+30654a · 2026-11-25 09:49 · Golem
 
-Der erste Pakistaner fliegt zur chinesischen Raumstation Tiangong
-https://www.heise.de/news/Der-erste-Pakistaner-fliegt-zur-chinesischen-Raumstation-Tiangong-11535846.html
-Erstmals nimmt ein chinesisches Raumfahrzeug einen Ausländer mit zur Raumstation Tiangong. Muhammad Zeeshan Ali wird der erste Pakistaner im Weltraum.
+Nvidia: Jensen Huang lehnt Nachfolgeregelung ab
+https://www.golem.de/news/nvidia-jensen-huang-lehnt-nachfolgeregelung-ab-2611-215628.html
+In seinem ersten Mitarbeiter-Meeting entschuldigt sich Jensen Huang bei den Nvidia-Mitarbeitern - und findet, dass es keine Nachfolgeregelung braucht. (Nvidia, KI)
 
-891e4c · 2026-11-24 11:04 · Golem
+1f9fd6 · 2026-11-25 09:46 · heise
 
-Bulgarien: Cyberspione wüteten fünf Jahre lang im Regierungsnetz
-https://www.golem.de/news/bulgarien-cyberspione-wueteten-fuenf-jahre-lang-im-regierungsnetz-2611-215570.html
-Angreifer haben seit 2021 Bulgariens Regierungsnetz ausspioniert. Fünf Jahre lang konnten sie Daten abgreifen, ohne dass es jemandem auffiel. (Spionage, Cyberwar)
+Kommentar: Ende des Unsicherheits-Mythos – LLM-Anbieter entdecken Sicherheit
+https://www.heise.de/meinung/Kommentar-Ende-des-Unsicherheits-Mythos-LLM-Anbieter-entdecken-Sicherheit-11537147.html
+Gerade eben noch feierten die LLM-Anbieter die grenzenlose Gefährlichkeit ihrer Modelle, nun entdecken sie kleinlaut das Thema Sicherheit.
 
-281088 · 2026-11-24 11:00 · Basic Thinking
+458524 · 2026-11-25 09:38 · Golem
 
-Anthropic: Auf Rekord-Börsengang folgt Ernüchterung – und jetzt?
-https://www.basicthinking.de/blog/2026/11/24/anthropic-rekord-boersengang/
-Der Beitrag Anthropic: Auf Rekord-Börsengang folgt Ernüchterung – und jetzt? erschien zuerst beim Online-Magazin BASIC thinking. Über unseren Newsletter UPDATE startest du jeden Morgen bestens informiert in den Tag. 107,3 Milliarden US-Dollar, eine zwischenzeitliche Bewertung von rund zwei…
+Energiewende: Deutschland erzeugt mit Solarenergie erstmals 100 Terawattstunden
+https://www.golem.de/news/energiewende-deutschland-erzeugt-mit-solarenergie-erstmals-100-terawattstunden-2611-215627.html
+Noch nie ist mehr Solarstrom in Deutschland erzeugt worden als in diesem Jahr. Eine andere erneuerbare Energiequelle liegt jedoch weiterhin in Führung. (Solarenergie, Erneuerbare Energien)
 
-301284 · 2026-11-24 10:56 · Spiegel Netzwelt
+534630 · 2026-11-25 09:30 · t3n
 
-Laptops und Spielkonsolen: wegen KI deutlich teurer
-https://www.spiegel.de/netzwelt/gadgets/laptops-und-spielkonsolen-wegen-ki-deutlich-teurer-a-44b96b25-c4b4-441d-a592-c9e4bc6cf5d1
-Die Preise für Computer, Konsolen und andere Elektronikartikel sind im Vergleich zum vergangenen Jahr erheblich gestiegen. Laptops kosten fast 15 Prozent mehr. Ein Grund ist der Boom künstlicher Intelligenz.
+Streit um KFC: Kann man Gemini durch gezielte Nachfragen zum Durchdrehen bringen?
+https://t3n.de/news/streit-um-kfc-kann-man-gemini-durch-gezielte-nachfragen-zum-durchdrehen-bringen-1775132/
+Die wiederholte Nachfrage nach frittiertem Hühnchen soll Googles Gemini dazu gebracht haben, einem Nutzer mit Folter zu drohen. Lässt sich der Bot wirklich so leicht zum Ausrasten bringen? Ein Selbstversuch. weiterlesen auf t3n.de
 
-3156c0 · 2026-11-24 10:51 · Golem
+369d50 · 2026-11-25 09:21 · heise
 
-Call of Duty: Activision will NPCs den richtigen Trash Talk beibringen
-https://www.golem.de/news/call-of-duty-activision-will-npcs-den-richtigen-trash-talk-beibringen-2611-215569.html
-Eine KI soll Sprachchats auswerten und daraus glaubwürdige Reaktionen für computergesteuerte Charaktere generieren. (Call of Duty, KI)
+Euphorie verpufft: Anthropic-Papier fällt unter 83 Dollar
+https://www.heise.de/news/Anthropic-Aktie-faellt-unter-Ausgabepreis-11537185.html
+Anthropic startete an der Börse mit einem Kurssprung von 34 Prozent und einer Bewertung von zwei Billionen Dollar. Doch die Euphorie währte nur kurz.
 
-571be3 · 2026-11-24 10:26 · Golem
+18958b · 2026-11-25 09:17 · heise
 
-Jensen Huang: Er ist Nvidias größte Stärke - und größte Schwäche
-https://www.golem.de/news/jensen-huang-er-ist-nvidias-groesste-staerke-und-groesste-schwaeche-2611-215568.html
-Jensen Huangs Odyssee zeigt nicht nur, wie sehr Nvidia von ihm abhängt, sondern eine ganze Industrie. Das kann nicht gesund sein. Ein IMHO von Tobias Költzsch (Jensen Huang, Nvidia)
+Bahn und Flixtrain kooperieren bei Ticketverkauf
+https://www.heise.de/news/Neue-Kooperation-Flixtrain-Tickets-bald-bei-der-Deutschen-Bahn-buchbar-11537143.html
+Bislang zeigt die Bahn Flixtrain-Verbindungen zwar auf ihren Plattformen an, für die Buchung müssen Reisende aber die Flixtrain-Website nutzen. Das ändert sich.
 
-4e9c2c · 2026-11-24 10:16 · heise
+cd7a2a · 2026-11-25 09:15 · Golem
 
-3D-Filme auf Quest: Meta startet eigenen Verleih mit James-Cameron-Produktion
-https://www.heise.de/news/3D-Filme-auf-Quest-Meta-startet-eigenen-Verleih-mit-James-Cameron-Produktion-11535752.html
-Meta öffnet die TV-App seiner Headsets für 3D-Filme zum Leihen und Kaufen. Zum Start gibt es einen exklusiven Konzertfilm, an dem James Cameron mitgewirkt hat.
+Raumfahrt: Perseverance und Odyssey stellen die Forschung vorerst ein
+https://www.golem.de/news/raumfahrt-perseverance-und-odyssey-stellen-die-forschung-vorerst-ein-2611-215626.html
+Perseverance hat Funkprobleme und bei Odyssey fällt ein Reaktionsrad aus. Die Nasa pausiert beide Missionen, hofft aber auf eine Rückkehr. (Mars, Nasa)
 
-2009fc · 2026-11-24 10:12 · heise
+71ad18 · 2026-11-25 09:13 · heise
 
-Für ein Drittel des Werts von vor fünf Jahren: Bending Spoons kauft Mailchimp
-https://www.heise.de/news/Fuer-ein-Drittel-des-Werts-von-vor-fuenf-Jahren-Bending-Spoons-kauft-Mailchimp-11535724.html
-Als Mailchimp vor fünf Jahren den Eigentümer wechselte, flossen noch 12 Milliarden US-Dollar. Bending Spoons bekommt den Dienst jetzt für weniger als vier.
+Claude Ship soll Review-Engpässe bei Pull-Requests lösen
+https://www.heise.de/news/Claude-Ship-soll-Review-Engpaesse-bei-Pull-Requests-loesen-11536568.html
+Mit Claude Ship automatisiert Anthropic Pull-Requests, von der Codeprüfung über Korrekturen bis hin zur Freigabe.
 
-26d7ef · 2026-11-24 10:09 · heise
+59b669 · 2026-11-25 09:07 · Golem
 
-Zstandard 1.6.0 schließt Sicherheitslücke
-https://www.heise.de/news/Zstandard-1-6-0-schliesst-Sicherheitsluecke-11535732.html
-Wegen einer Sicherheitslücke veröffentlicht das Zstd-Team Version 1.6.0 früher. Das Release bringt zudem mehr Tempo für Arm und RISC-V.
+Vorwurf der Geldwäsche: US-Gericht spricht Huawei schuldig
+https://www.golem.de/news/vorwurf-der-geldwaesche-huawei-wurde-vom-us-gericht-fuer-schuldig-befunden-2611-215624.html
+In anderen Anklagepunkten hat es für Huawei von den Geschworenen einen Freispruch gegeben, weil die Vorwürfe als nicht erwiesen eingestuft wurden. (Huawei, Rechtsstreitigkeiten)
 
-9bc735 · 2026-11-24 10:04 · Golem
+acf49b · 2026-11-25 09:07 · heise
 
-Videostreaming und Black Friday: Apple TV ein halbes Jahr lang zum halben Preis auch auf Amazon
-https://www.golem.de/news/videostreaming-und-black-friday-apple-tv-ein-halbes-jahr-lang-zum-halben-preis-auch-auf-amazon-2611-215567.html
-Apples hauseigenes Streamingabo Apple TV gibt es ein halbes Jahr lang zum halben Preis. Dieser Rabatt ist auch bei Amazon erhältlich. (Apple TV+, Apple)
+Tidal verbannt KI-Musik und löscht 27 Millionen Tracks
+https://www.heise.de/news/Tidal-Vollstaendig-KI-generierte-Musik-fliegt-raus-11537113.html
+Tidal nimmt ab dem 9. Dezember keine vollständig KI-generierte Musik mehr an. Auch rund 27 Millionen bereits markierte Tracks sollen verschwinden.
 
-a8e572 · 2026-11-24 10:00 · t3n
+fbd484 · 2026-11-25 09:00 · heise
 
-Chipkrise: So stark sind Preise für PCs, Konsolen und Speicher gestiegen
-https://t3n.de/news/chipkrise-pc-konsolen-speicher-preise-gestiegen-1774965/
-Laptops, Desktop-PCs und Spielekonsolen kosten Verbraucher spürbar mehr als vor einem Jahr. Das hat das Statistische Bundesamt ermittelt. Es gibt aber auch Geräte, die trotz KI-Boom günstiger werden. weiterlesen auf t3n.de
+„Passwort“ Folge 71: Passw\*rt4Rootßhell
+https://www.heise.de/news/Passwort-Folge-71-Passw-rt4Rootsshell-11484075.html
+Die IT-Security schwimmt weiter in Sicherheitslücken. Der Podcast nimmt es mit Humor, planscht in der Flut und sieht sich die interessanten Bugs genauer an.
 
-616860 · 2026-11-24 09:50 · Golem
+fa1ed7 · 2026-11-25 08:49 · Golem
 
-Erneuerbare Energie: Wie ein Stromnetz ohne Großkraftwerk hochfährt
-https://www.golem.de/news/erneuerbare-energie-wie-ein-stromnetz-ohne-grosskraftwerk-hochfaehrt-2611-215566.html
-Unter realen Bedingungen wird in Bayern ein Stromnetz wieder in Gang gesetzt. Das soll ausschließlich per Wechselrichter gelingen. (Energiewende, Windkraft)
+Cyberangriff auf Schuhhändler: Hacker erbeuten Kundendaten von Deichmann
+https://www.golem.de/news/cyberangriff-auf-schuhhaendler-hacker-erbeuten-kundendaten-von-deichmann-2611-215623.html
+Deichmann informiert seine Kundschaft über einen IT-Sicherheitsvorfall im eigenen Onlineshop. Die Angreifer sind an persönliche Daten gelangt. (Datenleck, Cyberwar)
 
-ddbe9a · 2026-11-24 09:39 · Golem
+ece801 · 2026-11-25 08:43 · Golem
 
-Personalisiertes Fernsehen: Google plant KI-Fernsehen mit Publikum als Hauptfigur
-https://www.golem.de/news/personalisiertes-fernsehen-google-plant-ki-fernsehen-mit-publikum-als-hauptfigur-2611-215565.html
-Eine Patentanmeldung beschreibt KI-Videos mit Zuschauerinnen und Zuschauern als Stars. Auch Werbung ist vorgesehen. (Streaming, Google)
+Vehicle-to-Grid: VW zahlt bis zu 720 Euro fürs Einstecken des E-Autos
+https://www.golem.de/news/vehicle-to-grid-vw-zahlt-bis-zu-720-euro-fuers-einstecken-des-e-autos-2611-215622.html
+Elli startet im Dezember V2G für VW, Cupra und Skoda. Der Bonus beträgt bis zu 720 Euro, die Wallbox kostet 1.995 Euro. (Wallbox, Elektroauto)
 
-28e94c · 2026-11-24 09:30 · t3n
+d68567 · 2026-11-25 08:28 · Golem
 
-Der KI-Masterplan ist veraltet, bevor er beschlossen wird – was Unternehmen stattdessen tun sollten
-https://t3n.de/news/der-ki-masterplan-ist-veraltet-bevor-er-beschlossen-wird-was-unternehmen-stattdessen-tun-sollten-1774944/
-Die meisten Unternehmen setzen inzwischen KI ein, aber nur jedes neunte schult alle Beschäftigten darin. Volker Oshege hält den Ruf nach dem großen KI-Plan für wenig zielführend: Ein solcher Plan sichert vor allem die ab, die ihn schreiben, und ist bei KI veraltet, bevor er beschlossen…
+Käuferschutz und One-Click-Bestellungen: Diese neuen Wero-Funktionen gibt es für Sparkassenkunden
+https://www.golem.de/news/kaeuferschutz-und-one-click-bestellungen-diese-neuen-wero-funktionen-gibt-es-fuer-sparkassenkunden-2611-215621.html
+Mit neuen Wero-Funktionen will die Sparkasse den Einkauf in Onlineshops bequemer und sicherer machen. (Wero, Paypal)
 
-0d1f51 · 2026-11-24 09:28 · heise
+d8dc80 · 2026-11-25 08:12 · Golem
 
-Nothing stellt am 8. Dezember KI-Ohrhörer Ear (note) mit Aufnahmefunktion vor
-https://www.heise.de/news/Nothing-stellt-am-8-Dezember-KI-Ohrhoerer-Ear-note-mit-Aufnahmefunktion-vor-11535554.html
-Nothing will am 8. Dezember sein erstes KI-natives Produkt vorstellen: Die „Ear (note)“ sind Ohrhörer mit Ladecase für Aufnahmen und Transkriptionen.
+Sportwagen: Elektrischer Porsche 718 Boxster kurz vor der Serienreife
+https://www.golem.de/news/sportwagen-elektrischer-porsche-718-boxster-kurz-vor-der-serienreife-2611-215620.html
+Porsche steht mit dem elektrischen 718 Boxster kurz vor der Premiere. Der E-Sportwagen soll nicht höher sein als der Verbrenner. (Porsche, Auto)
 
-71ef70 · 2026-11-24 09:28 · heise
+b3860b · 2026-11-25 08:12 · heise
 
-Entra: Microsoft warnt vor Datenabfluss in „Connect Health“
-https://www.heise.de/news/Microsoft-Entra-Datenabfluss-bei-Connect-Health-11535576.html
-Microsoft informiert über unbefugte Zugriffe durch eine Sicherheitslücke in der Entra-Connect-Health-API. Daten sind abgeflossen.
+Erstmals über 100 Terawattstunden Solarstrom in Deutschland erzeugt
+https://www.heise.de/news/Solarstrom-knackt-erstmals-die-Marke-von-100-Terawattstunden-11537125.html
+Noch nie wurde mehr Solarstrom in Deutschland erzeugt als in diesem Jahr. Darum lässt der Sonnenstrom bisherige Rekorde so weit hinter sich.
 
-694b47 · 2026-11-24 09:22 · Golem
+64d79f · 2026-11-25 08:10 · heise
 
-Prüfung von Pull Requests: Anthropic lässt KI-Agenten Code freigeben
-https://www.golem.de/news/pruefung-von-pull-requests-anthropic-laesst-ki-agenten-code-freigeben-2611-215564.html
-Claude Ship prüft Pull Requests, behebt Fehler und entscheidet anhand festgelegter Regeln, wann noch ein Mensch zustimmen muss. (KI, Unternehmenssoftware)
+MINT-Fachkräftelücke: Die Facharbeiter fehlen
+https://www.heise.de/news/MINT-Fachkraefteluecke-Die-Facharbeiter-fehlen-11536884.html
+Der Fachkräftemangel in MINT-Berufen steigt laut einer aktuellen Erhebung wieder an. Vor allem fehlt es an Leuten mit Berufsausbildung.
 
-167bab · 2026-11-24 09:18 · heise
+c5ab32 · 2026-11-25 08:09 · heise
 
-Verhandlungen über Killer-Roboter: 163 Staaten wollen Verbot, Russland blockiert
-https://www.heise.de/news/Streit-um-Killer-Roboter-Zivilgesellschaft-fordert-eine-Koalition-der-Willigen-11535604.html
-Weitere zwei Jahre sollen Experten bei den Vereinten Nationen über abgestufte Regeln im Umgang mit autonomen Waffensystemen verhandeln, mit offenem Ergebnis.
+Entwurf für Spritpreisdeckel bekommt harsche Kritik
+https://www.heise.de/news/Entwurf-fuer-Spritpreisdeckel-bekommt-harsche-Kritik-11537057.html
+Ein erster Entwurf zum Spritpreisdeckel wird nach Einschätzungen von Experten nur geringe Auswirkungen haben. Ein Grund dafür sind zahlreiche Ausnahmen.
 
-b516a7 · 2026-11-24 09:09 · Golem
+2c552e · 2026-11-25 07:57 · Golem
 
-Satellitenkommunikation: Europa zahlt für Starlink-Alternativen doppelt
-https://www.golem.de/news/satellitenkommunikation-europa-zahlt-fuer-starlink-alternativen-doppelt-2611-215563.html
-Laut Kiel Institut kosten Iris² und Satcombw 4 pro Satellit ein Vielfaches von Starlink. Europa zahlt die Fixkosten demnach doppelt. (Satelliten, Bundeswehr)
+Jira-Nachfolge: Bund setzt beim Issue-Tracking auf Openproject
+https://www.golem.de/news/jira-nachfolge-bund-setzt-beim-issue-tracking-auf-openproject-2611-215616.html
+Das ITZBund hat einen Auftrag an Openproject vergeben, der die Migration bestehender Jira-Umgebungen einschließt. (Atlassian, Softwareentwicklung)
 
-c6b3da · 2026-11-24 09:00 · heise
+f058b0 · 2026-11-25 07:52 · heise
 
-Tipp: Alternative zu eingestelltem Arc-Browser finden
-https://www.heise.de/ratgeber/Tipp-Alternative-zu-eingestelltem-Arc-Browser-finden-11516643.html
-Der besonders unter Mac-Nutzern beliebte Spezialbrowser Arc von der Browser Company sagt bald Tschüss. Was tun, wenn man eine ähnliche App haben will?
+Speicherkrise: Festplatten kosten 41 Prozent mehr als vor einem Jahr
+https://www.heise.de/news/Destatis-Laptops-und-Spielekonsolen-deutlich-teurer-11537081.html
+Laptops kosteten im Oktober 14,9 Prozent mehr als ein Jahr zuvor, Festplatten sogar 40,8 Prozent. Destatis nennt KI-Rechenzentren als einen Grund.
 
-905539 · 2026-11-24 08:45 · t3n
+3349f1 · 2026-11-25 07:46 · heise
 
-Besser arbeiten, weniger bezahlen: Die besten Homeoffice-Deals zum Black Friday
-https://t3n.de/news/besser-arbeiten-weniger-bezahlen-die-besten-homeoffice-deals-zum-black-friday-1774925/
-Die Black-Friday-Week hat gerade erst angefangen – und bietet schon jetzt Angebote für Menschen im Homeoffice – angefangen bei Tastaturen und Mäusen über höhenverstellbare Schreibtische bis hin zu Headsets und sonstigem Zubehör.weiterlesen auf t3n.de
+Cyberangriff auf US-Geheimdienst CIA
+https://www.heise.de/news/Cyberangriff-auf-US-Geheimdienst-CIA-11537061.html
+In jüngerer Zeit gab es bereits mehrere Datenlecks in US-Behörden. Auch der Auslandsgeheimdienst CIA soll betroffen gewesen sein.
 
-27d469 · 2026-11-24 08:43 · Golem
+7256fe · 2026-11-25 07:44 · heise
 
-Netbeat: Hoster setzt nach Cyberangriff Passwörter seiner Kundschaft zurück
-https://www.golem.de/news/cyberangriff-auf-netbeat-hoster-setzt-passwoerter-seiner-kundschaft-zurueck-2611-215561.html
-Der Hoster Netbeat hat unbefugte Zugriffe auf seine Systeme festgestellt. Dabei könnten etwa Zugangsdaten und API-Schlüssel abgeflossen sein. (Datenleck, API)
+Take-Two lässt 3007 „GTA 6“-Repositories sperren, die Modder machen weiter
+https://www.heise.de/news/GTA-6-Take-Two-laesst-inoffiziellen-PC-Port-von-GitHub-entfernen-11537065.html
+Das Projekt Leonida sollte die geleakte Xbox-Version von „GTA 6“ nativ auf Windows bringen. Nach einem DMCA-Antrag von Take-Two ist es verschwunden.
 
-a52bd8 · 2026-11-24 08:40 · heise
+9032cf · 2026-11-25 07:41 · Golem
 
-Weniger Autos in Deutschland gestohlen
-https://www.heise.de/news/Weniger-Autos-in-Deutschland-gestohlen-11535508.html
-Die Zahl der Pkw-Diebstähle ist im vergangenen Jahr gesunken. Warum die Hoffnungen auf sinkende Beiträge für die Kfz‑Versicherung dennoch vergeblich sind.
+Smartphone: Xiaomi will Handydisplay an allen Kanten umbiegen
+https://www.golem.de/news/smartphone-xiaomi-will-handydisplay-an-allen-kanten-umbiegen-2611-215619.html
+Xiaomi soll an zwei neuen Smartphone-Displays forschen, die die Form der Geräte ändern werden. (Xiaomi, Patent)
 
-a70feb · 2026-11-24 08:38 · heise
+70db45 · 2026-11-25 07:31 · Golem
 
-Asynchrone Programmierung – Teil 5: Nebenläufigkeit effizient mit Rust und Tokio
-https://www.heise.de/hintergrund/Asynchrone-Programmierung-Teil-5-Nebenlaeufigkeit-effizient-mit-Rust-und-Tokio-11530471.html
-Rust bietet mit der Bibliothek Tokio sichere asynchrone Funktionen, die sich gegenüber anderen Sprachen durch schnelle Laufzeiten auszeichnet.
+Sicherheit: Amazon-Drohne stürzt nach Lieferung auf Garage
+https://www.golem.de/news/sicherheit-amazon-drohne-stuerzt-nach-lieferung-auf-garage-2611-215617.html
+Eine Amazon-Lieferdrohne hat eine Glasfaserleitung getroffen und ist in ein Wohnviertel in Michigan gestürzt. Die FAA prüft den Vorfall. (Prime-Air, Amazon)
 
-59b9c1 · 2026-11-24 08:30 · heise
+5803b4 · 2026-11-25 07:30 · t3n
 
-„GTA 6“: Community will PC-Port selbst bauen
-https://www.heise.de/news/Nach-Exe-Leak-Modder-arbeiten-an-inoffizieller-PC-Version-von-GTA-6-11535528.html
-Der Leaker Cyberleek hat die fehlende Exe zum Xbox-Build von „GTA 6“ veröffentlicht. Modder arbeiten an einer PC-Version, spielbar ist sie noch nicht.
+Trotz Millionen auf dem Konto unglücklich: Wie dieser Gründer neuen Mut fasst – und anderen hilft
+https://t3n.de/news/trotz-millionen-auf-dem-konto-ungluecklich-wie-dieser-gruender-neuen-mut-fasst-und-anderen-hilft-1774865/
+Mit Invincible Brands schaffte Björn Keune einen Millionen-Exit. Glücklich wurde er danach nicht. Ein Gespräch über 18-Stunden-Tage und die Grenzen der Belastbarkeit.weiterlesen auf t3n.de
 
-ca31a8 · 2026-11-24 08:19 · heise
+a92328 · 2026-11-25 07:15 · Golem
 
-Cloud- und KI-Gesetz: Positionsentwurf des Europaparlaments liegt endlich vor
-https://www.heise.de/news/Cloud-und-KI-Gesetz-Positionsentwurf-des-Europaparlaments-liegt-endlich-vor-11535512.html
-Eigentlich sollte er seit Tagen da sein: der Entwurf der Berichterstatter des Europaparlaments zum „Cloud and AI Development Act“ (CADA) liegt endlich vor.
+Haushalt 2027: Grüne fordern Digitalabgabe und Geld für dezentrale Dienste
+https://www.golem.de/news/haushalt-2027-gruene-fordern-digitalabgabe-und-geld-fuer-dezentrale-dienste-2611-215618.html
+Der Bund darf 2027 mehr als fünf Milliarden Euro für Digitalisierung ausgeben. Die Opposition fordert mehr Widerstand gegen die US-IT-Konzerne. (Deutscher Bundestag, Datenschutz)
 
-77eab4 · 2026-11-24 08:00 · heise
+b384b4 · 2026-11-25 06:55 · heise
 
-OpenAI veröffentlicht GPT-6.2 für ChatGPT
-https://www.heise.de/news/OpenAI-veroeffentlicht-GPT-6-2-fuer-ChatGPT-11535524.html
-OpenAI aktualisiert ChatGPT für Nutzer ab dem Plus-Tarif. GPT-6.2 Sol soll komplexe Anfragen zuverlässiger bearbeiten und besser im Internet recherchieren.
+Huawei droht Milliardenstrafe: US-Jury spricht Konzern in 10 Punkten schuldig
+https://www.heise.de/news/Geldwaesche-Betrug-Luegen-US-Jury-spricht-Huawei-in-10-Anklagepunkten-schuldig-11537031.html
+Huawei habe wissentlich US-Sanktionen gegen die Islamische Republik verletzt und dafür Banken betrogen. Zu diesem Schluss sind US-Geschworene jetzt gekommen.
 
-ee34bd · 2026-11-24 08:00 · heise
+cf0d72 · 2026-11-25 06:00 · t3n
 
-„Sehr talentierter junger Mann“: „GTA 6“-Hacker bekommt sieben Jahre Haft
-https://www.heise.de/news/GTA-6-Leak-Hacker-verurteilt-und-noch-am-selben-Tag-frei-11535502.html
-Der Brite, der 2022 Videos aus „GTA 6“ geleakt hat, ist zu sieben Jahren Haft verurteilt worden. Er kam trotzdem direkt frei.
+Kosmisches Erbe: Forscher finden Kohlenstoff aus dem Erdkern auf Hawaii
+https://t3n.de/news/kohlenstoff-erdkern-hawaii-entdeckung-1774738/
+Rund 2.900 Kilometer Gestein trennen die Erdoberfläche vom metallischen Kern des Planeten, in dem der Großteil des irdischen Kohlenstoffs lagert. Keine Bohrung erreicht diese Tiefe, doch vulkanische Kristalle zeigen nun Werte, die nicht zum Erdmantel passen. weiterlesen auf t3n.de
 
-d20b5d · 2026-11-24 07:42 · heise
+f2098a · 2026-11-25 06:00 · Computerwoche
 
-ESA-Sonde BepiColombo erreicht Merkur trotz Softwarefehler in stabilem Orbit
-https://www.heise.de/news/ESA-Sonde-BepiColombo-erreicht-Merkur-trotz-Softwarefehler-in-stabilem-Orbit-11535480.html
-Wegen eines Softwareproblems hat BepiColombo am Merkur ihre Triebwerke zu früh abgeschaltet. Der Orbit könne problemlos korrigiert werden, versichert die ESA.
+Java-Sicherheitspatches: Deutsche Firmen brauchen zu lange
+https://www.computerwoche.de/article/4252607/java-sicherheitspatches-deutsche-firmen-brauchen-zu-lange.html
+KI-gestützte Cyberangriffe erhöhen den Druck auf Unternehmen, Sicherheits-Updates schneller einzuspielen. Shutterstock/TippaPatt Künstliche Intelligenz (KI) ermöglicht es Kriminellen, Lücken in Cyberinfrastruktur schneller denn je aufzuspüren und auszunutzen. Viele Unternehmen sind sich dieser…
 
-940bc4 · 2026-11-24 07:34 · Golem
+6cefdf · 2026-11-25 05:45 · Basic Thinking
 
-Krypto-Geschäfte: Donald Trump im Bitcoin-Dilemma
-https://www.golem.de/news/krypto-geschaefte-donald-trump-im-bitcoin-dilemma-2611-215559.html
-US-Präsident Trump hat Milliarden mit Kryptogeschäften verdient. Doch nun bringt der Bitcoin-Verfall eine seiner Firmen in die Bredouille. (Donald Trump, Politik)
+Umweltcheck: Diese KI-Modelle sind die größten Klimakiller
+https://www.basicthinking.de/blog/2026/11/25/umweltcheck-diese-ki-modelle-sind-die-groessten-klimakiller/
+Der Beitrag Umweltcheck: Diese KI-Modelle sind die größten Klimakiller erschien zuerst beim Online-Magazin BASIC thinking. Über unseren Newsletter UPDATE startest du jeden Morgen bestens informiert in den Tag. Künstliche Intelligenz kann viel optimieren und reichlich verderben. So auch im Hinblick…
 
-f03b32 · 2026-11-24 07:30 · t3n
+c9ced1 · 2026-11-25 05:02 · heise
 
-Überlebensrekord: Leber blieb sieben Wochen außerhalb des Körpers fit
-https://t3n.de/news/ueberlebensrekord-leber-blieb-sieben-wochen-ausserhalb-des-koerpers-fit-1774809/
-Neue Versorgungsmaschinen für Spenderorgane erweitern das Zeitfenser für Transplantationen deutlich. Ein australisches Team konnte damit bei einer Leber einen nweiterlesen auf t3n.de
+NASA soll 2 Milliarden US-Dollar mehr für Artemis-Mondprogramm bekommen
+https://www.heise.de/news/NASA-soll-2-Milliarden-US-Dollar-mehr-fuer-Artemis-Mondprogramm-bekommen-11537003.html
+Die US-Regierung schlägt dem Kongress eine massive NASA-Budgeterhöhung für das neue Haushaltsjahr vor. Anderenfalls würden weitere Verzögerungen drohen.
 
-fb2566 · 2026-11-24 07:30 · heise
+41286f · 2026-11-25 05:00 · Basic Thinking
 
-Dataforce: Skoda Elroq überholt im Oktober kurzzeitig Teslas Model Y
-https://www.heise.de/news/Dataforce-Skoda-Elroq-ueberholt-im-Oktober-kurzzeitig-Teslas-Model-Y-11534964.html
-Im Oktober war der Skoda Elroq laut vorläufigen Dataforce-Daten Europas kurz meistzugelassenes Elektroauto. Den Ausschlag gab vor allem Teslas Quartalsrhythmus.
+Amazon Black Friday Woche 2026: Die besten Tech-Angebote an Tag 3
+https://www.basicthinking.de/blog/2026/11/25/amazon-black-friday-woche-2026-die-besten-tech-angebote-an-tag-3/
+Der Beitrag Amazon Black Friday Woche 2026: Die besten Tech-Angebote an Tag 3 erschien zuerst beim Online-Magazin BASIC thinking. Über unseren Newsletter UPDATE startest du jeden Morgen bestens informiert in den Tag. Bei Amazon\* gibt es in der Amazon Black Friday Woche 2026 Blitzangebote, also…
 
-678e98 · 2026-11-24 07:15 · Golem
+c1d184 · 2026-11-25 05:00 · Computerwoche
 
-Xbox: Leaker veröffentlicht EXE-Datei von GTA 6
-https://www.golem.de/news/xbox-leaker-veroeffentlicht-exe-datei-von-gta-6-2611-215558.html
-Die bislang fehlende Programmdatei von GTA 6 ist offenbar im Netz. Mehrere Teams versuchen, die Xbox-Version auf PCs zum Laufen zu bringen. (GTA 6, Rockstar)
+So bleibt Ihre IT weiter Kostenstelle
+https://www.computerwoche.de/article/4248981/so-bleibt-ihre-it-weiter-kostenstelle.html
+Sie wollen, dass die Geschäftsführung bei IT-Projekten nur die Kosten und nicht die Vorteile und Chancen sieht? Dann machen Sie ruhig so weiter. Joyseulay – shutterstock.com In fast jeder Budgetrunde, die ich in über 20 Jahren begleitet habe, gab es diesen Moment: Die IT-Leitung zeigt Verfügbarkeit…
 
-2af2d3 · 2026-11-24 07:15 · heise
+2a4a4b · 2026-11-24 22:15 · heise
 
-Neues CachyOS mit Easy Anti-Cheat v2 und aufgehübschtem Paketmanager
-https://www.heise.de/news/Neues-CachyOS-mit-Easy-Anti-Cheat-v2-und-aufgehuebschtem-Paketmanager-11535274.html
-Bald Fortnite auf CachyOS? Die Linux-Distribution unterstützt jetzt Easy Anti-Cheat v2. Der Package Installer hat eine frische grafische Oberfläche erhalten.
+Deutsche Steuerverwaltung hat „strukturelles Problem“
+https://www.heise.de/news/Deutsche-Steuerverwaltung-hat-strukturelles-Problem-11536961.html
+Deutschland hat ein „strukturelles Problem“ bei der digitalen Steuerverwaltung, konstatiert die Europäische Kommission. Das öffne Schlupflöcher.
 
-120a75 · 2026-11-24 07:02 · Manager Magazin Führung
+2666b3 · 2026-11-24 22:03 · t3n
 
-Führung: Was Superteams von anderen Teams unterscheidet
-https://www.manager-magazin.de/hbm/fuehrung/fuehrung-was-superteams-von-anderen-teams-unterscheidet-a-be840e03-b912-4b64-b4a5-8f402e592bc5
-Eine Truppe, die mehr schafft und kontinuierlich immer besser wird – gibt es das? Aber ja! Mit diesen sieben Ideen holen Sie Ihr Team aus dem Durchschnitt.
+Kartoffeln aus dem Mondstaub: Studie zeigt Chancen und Hürden für künftige Mondbasen
+https://t3n.de/news/kartoffeln-mondstaub-anbau-nasa-studie-1775119/
+Bewohnte Stationen im All lassen sich langfristig kaum allein per Frachtrakete von der Erde mit Essen versorgen. Vor Ort bietet die Mondoberfläche zwar reichlich lockeres Gestein, doch dem grauen Boden fehlen wichtige Nährstoffe für Nutzpflanzen. weiterlesen auf t3n.de
 
-d6b385 · 2026-11-24 06:53 · heise
+246c8f · 2026-11-24 21:40 · t3n
 
-Die Crews bedroht: USA vermuten Iran hinter Cyberangriffen auf Schiffe
-https://www.heise.de/news/Bis-zu-50-Schiffe-USA-vermuten-Iran-hinter-Cyberangriffen-auf-Frachtschiffe-11535470.html
-Frachtschiffe und Tanker sind weiterhin das Ziel von Cyberangriffen. Laut einem Zeitungsbericht werden dafür Lücken in Fortinet-Routern ausgenutzt.
+Alarm nach weltweitem IT-Ausfall: Microsoft ruft intern Code Red aus
+https://t3n.de/news/it-ausfall-microsoft-code-red-1775106/
+Ein rund 24 Stunden dauernder weltweiter Ausfall von zentralen Diensten wie Outlook, Teams oder Copilot hat bei Microsoft die Alarmglocken schrillen lassen. Der Softwarekonzern löste Code Red aus und will Störungen künftig schneller beheben.weiterlesen auf t3n.de
 
-c9be5a · 2026-11-24 06:15 · heise
+b17789 · 2026-11-24 21:26 · t3n
 
-Kommentar: Jensen Huang ist Nvidia – und das darf nicht so bleiben
-https://www.heise.de/meinung/Kommentar-Jensen-Huang-ist-Nvidia-und-das-darf-nicht-so-bleiben-11535160.html
-Huang ist wieder da, es gibt noch ein Gremium zur Untersuchung, also alles gut? Mitnichten, findet heise-online-Redakteur Nico Ernst.
+Studie zum Tankrabatt: Im Mittel bleiben 13 Euro im Monat – 61 Prozent merken kaum Entlastung
+https://t3n.de/news/tankrabatt-studie-spritpreise-entlastung-1775115/
+Seit dem Frühjahr verteuert der Krieg im Nahen Osten Benzin und Diesel an deutschen Tankstellen deutlich. Bund und Länder senken schon zum zweiten Mal in diesem Jahr die Energiesteuer, während Ökonom:innen nun die Folgen für Haushalte bilanzieren. weiterlesen auf t3n.de
 
-87cf34 · 2026-11-24 06:15 · t3n
+1e9ef1 · 2026-11-24 21:03 · heise
 
-Von Obst bis Gewebe: US-Startup analysiert Gerüche – und will sie der KI beibringen
-https://t3n.de/news/obst-gewebe-startup-gerueche-ki-1774212/
-Das Geruchsmodell von Osmo wird bereits in der Parfümindustrie eingesetzt. Künftig soll sie auch für medizinische Diagnostik und das Erschnüffeln von Gefahren gweiterlesen auf t3n.de
+Nach 365-Ausfall: Höchste Alarmstufe bei Microsoft
+https://www.heise.de/news/Nach-365-Ausfall-Hoechste-Alarmstufe-bei-Microsoft-11536918.html
+Bei Microsoft gilt jetzt „Code Red”, die höchste Alarmstufe. Vieles muss geändert werden, damit sich die weltweite Störung der Clouddienste nicht wiederholt.
 
-382130 · 2026-11-24 06:00 · t3n
+7d530d · 2026-11-24 21:02 · t3n
 
-iPad-Wahl: So sparst du beim Weihnachtsgeschenk für dein Kind
-https://t3n.de/news/ipad-kaufberatung-weihnachten-sparen-1772570/
-Ein eigenes iPad dürfte jährlich ganz oben auf der Wunschliste vieler Kinder stehen. Für die Schule muss es aber nicht zwingend das teuerste und leistungsfähigste Modell von Apple sein. Welches lohnt sich wirklich? weiterlesen auf t3n.de
+„Kartoffelchips“ auf dem Mars: Was hinter den ungewöhnlichen Gesteinsfunden der Nasa steckt
+https://t3n.de/news/mars-kartoffelchips-nasa-rover-curiosity-1775110/
+Auf Kamerabildern vom Mars erinnern verwitterte Felsen mitunter an vertraute Alltagsgegenstände von der Erde. Erst Bohrungen und Laserbeschuss durch zwei ferngesteuerte Labore vor Ort klären, was den Boden tatsächlich geformt hat. weiterlesen auf t3n.de
 
-60a9e0 · 2026-11-24 05:45 · Basic Thinking
+3a7292 · 2026-11-24 20:20 · heise
 
-Aufblasbar: Michelin bläst Schiffen den Wind in die Segel
-https://www.basicthinking.de/blog/2026/11/24/aufblasbares-segel/
-Der Beitrag Aufblasbar: Michelin bläst Schiffen den Wind in die Segel erschien zuerst beim Online-Magazin BASIC thinking. Über unseren Newsletter UPDATE startest du jeden Morgen bestens informiert in den Tag. Ein Reifenhersteller, der Schiffe mit Windkraft antreibt? Das klingt ungewöhnlich, wird…
+Bundesnetzagentur: Müller soll zweite Amtszeit bekommen
+https://www.heise.de/news/Bundesnetzagentur-Mueller-soll-zweite-Amtszeit-bekommen-11536896.html
+Die Politik schätzt den Pragmatiker Klaus Müller und schlägt ihn für eine weitere Amtszeit vor. Auf den alten und neuen Chefregulierer warten große Aufgaben.
 
-ed180f · 2026-11-24 05:45 · heise
+657fdc · 2026-11-24 20:00 · heise
 
-Digitalsteuer, Frequenzen und Elektroschrott sollen EU-Ambitionen finanzieren
-https://www.heise.de/news/Digitalsteuer-Frequenzen-und-Elektroschrott-sollen-EU-Ambitionen-finanzieren-11535458.html
-Die EU soll mehr tun. Das Geld dafür soll aus neuen Steuern und von den Mitgliedsstaaten kommen. Ratspräsident Costa hat Ideen, darunter Frequenzgebühren.
+Black-Friday-Deals: PC-Monitore in der Black Week günstig ergattern
+https://www.heise.de/bestenlisten/deals/black-friday-deals-pc-monitore-in-der-black-week-guenstig-abstauben/jgw720f
+Neuer PC-Monitor gesucht? Wir sammeln die besten Black-Friday-Deals und prüfen, ob es echte Schnäppchen sind – laufend aktualisiert.
 
-dff2ae · 2026-11-24 05:15 · heise
+1d4f70 · 2026-11-24 19:38 · Golem
 
-Nvidia-Affäre: USA verhängen Handelsverbot über Megaspeed
-https://www.heise.de/news/Nvidia-Affaere-USA-verhaengen-Handelsverbot-ueber-Megaspeed-11535434.html
-Megaspeed soll Nvidia-Chips für China organisiert haben. Spät reagieren die USA mit einem Handelsembargo. Das trifft auch eine Alibaba-Tochter.
+Leo: Starlink-Konkurrent der Bundeswehr kostet 15 Milliarden Euro
+https://www.golem.de/news/leo-starlink-konkurrent-der-bundeswehr-kostet-15-milliarden-euro-2611-215614.html
+Für ihr militärisches Starlink bekommt die Bundeswehr Milliarden. Die Verträge für SATCOMBw Stufe 4 stehen kurz vor der Unterzeichnung. (Satelliten, Telekommunikation)
 
-20c6e3 · 2026-11-24 05:00 · Basic Thinking
+22af20 · 2026-11-24 19:20 · t3n
 
-Amazon Black Friday Woche 2026: Die besten Tech-Angebote an Tag 2
-https://www.basicthinking.de/blog/2026/11/24/amazon-black-friday-woche-2026-die-besten-tech-angebote-an-tag-2/
-Der Beitrag Amazon Black Friday Woche 2026: Die besten Tech-Angebote an Tag 2 erschien zuerst beim Online-Magazin BASIC thinking. Über unseren Newsletter UPDATE startest du jeden Morgen bestens informiert in den Tag. Bei Amazon\* gibt es in der Amazon Black Friday Woche 2026 Blitzangebote, also…
+Boomer holen bei KI-Nutzung auf: Sorge vor nicht abschätzbaren Risiken steigt
+https://t3n.de/news/boomer-ki-nutzung-risiken-1775096/
+Vier Jahre nach dem Start von ChatGPT nutzen 81 Prozent der Deutschen generative KI-Tools. Besonders stark angestiegen ist die KI-Nutzung bei älteren Menschen ab 65 Jahren. Deutlich gewachsen ist aber auch die Sorge vor nicht abschätzbaren Risiken.weiterlesen auf t3n.de
 
-221b3c · 2026-11-24 05:00 · Computerwoche
+9ff919 · 2026-11-24 18:59 · Golem
 
-Welche Cybersicherheits-KPIs CISOs und CIOs wirklich brauchen
-https://www.computerwoche.de/article/4193645/welche-cybersicherheits-kpis-cisos-und-cios-wirklich-brauchen.html
-Nicht jede Messgröße ist geeignet, um herauszufinden, wie effektiv IT-Sicherheitsmaßnahmen wirklich sind. Underawesternsky – shutterstock.com Häufig sind Unternehmen noch damit beschäftigt, Sicherheitsvorfälle zu dokumentieren, während Angreifer bereits ihre nächste Kampagne planen. Auf…
+Netz 33: Finanzierung von neuem bundesweiten Glasfasernetz fortgeschritten
+https://www.golem.de/news/netz-33-finanzierung-von-neuem-bundesweiten-glasfasernetz-fortgeschritten-2611-215612.html
+Die Gespräche von Niedax mit Investoren sind laut Unternehmen fortgeschritten. Und auch die erste Teststrecke in Brandenburg soll noch ab Ende November gebaut werden. (Festnetz, Deutsche Bahn)
 
-12704f · 2026-11-24 05:00 · Computerwoche
+244111 · 2026-11-24 18:40 · Golem
 
-7 KI-Don’ts für Entscheider
-https://www.computerwoche.de/article/4248962/7-ki-donts-fur-entscheider.html
-Im Umgang mit KI gibt es zahlreiche Fettnäpfchen, in die IT-Entscheider treten können. Machen Sie weiter wie bisher – oder lesen Sie, was stattdessen hilft. Volodymyr TVERDOKHLIB \| shutterstock.com Unser Team führt seit drei Jahren ein strukturiertes KI-Experiment durch: Wir setzen Modelle…
+Nicht legal nutzbar: Verbraucherzentrale verklagt Meta und Ray-Ban wegen Smart Glasses
+https://www.golem.de/news/nicht-legal-nutzbar-verbraucherzentrale-verklagt-meta-und-ray-ban-wegen-smart-glasses-2611-215607.html
+Unauffällige Kamera-LEDs und fehlende Warnhinweise vor dem Kauf: Die Verbraucherzentrale geht gerichtlich gegen die Anbieter der Ray-Ban Meta Smart Glasses vor. (VZBV, Datenschutz)
 
-60085e · 2026-11-23 23:39 · Spiegel Netzwelt
+85adbd · 2026-11-24 18:14 · heise
 
-Künstliche Intelligenz: António Guterres fordert globalen Pakt gegen KI-Risiken
-https://www.spiegel.de/netzwelt/netzpolitik/kuenstliche-intelligenz-antonio-guterres-fordert-globalen-pakt-gegen-ki-risiken-a-06273369-59a6-42fc-a9b6-91338e0f4122
-UN-Generalsekretär António Guterres dringt auf eine globale Vereinbarung zum Umgang mit den Risiken künstlicher Intelligenz. Innerhalb eines Jahres sollen sich die Staaten einigen.
+NASA will Atomkraftwerk für den Mond entwickeln lassen
+https://www.heise.de/news/NASA-will-Atomkraftwerk-fuer-den-Mond-entwickeln-lassen-11536848.html
+Die NASA lässt ein Atomkraftwerk für den Mond entwickeln. Bis Ende Dezember können Unternehmen Konzepte für den Lunar Reactor-1 einreichen.
 
-7b7efd · 2026-11-23 22:18 · heise
+3a5db5 · 2026-11-24 18:14 · heise
 
-Binance-Kryptodiebstahl: USA wollen eine Milliarde US-Dollar zurück
-https://www.heise.de/news/Binance-Kryptodiebstahl-USA-wollen-eine-Milliarde-US-Dollar-zurueck-11535386.html
-Das US-Justizministerium jagt die Gelder aus dem Binance-Hack und will mehr als eine Milliarde Dollar in USDC-Stablecoin auf diversen Blockchains einziehen.
+Kamerabrillen: Verbraucherschützer ziehen gegen Meta und Ray-Ban vor Gericht
+https://www.heise.de/news/Kamerabrillen-Verbraucherschuetzer-ziehen-gegen-Meta-und-Ray-Ban-vor-Gericht-11536854.html
+Der Verbraucherschutzverband geht juristisch gegen Meta und Luxottica vor. Im Fokus stehen die Vermarktung und die Bauweise ihrer Kamerabrillen.
 
-35f504 · 2026-11-23 21:54 · t3n
+a85f90 · 2026-11-24 18:08 · heise
 
-5,4 Billionen Teilchen: Wie KI die Milchstraße auf drei Supercomputern nachbildet
-https://t3n.de/news/milchstrasse-simulation-ki-supercomputer-1774940/
-Blicke von der Erde in den Nachthimmel zeigen immer nur eine kurze Momentaufnahme aus Milliarden Jahren Kosmosgeschichte. Wer diesen Wandel im Computer nachstellen will, wurde bislang regelmäßig von explodierenden Sternen ausgebremst. weiterlesen auf t3n.de
+TeamViewer: Sorge vor Präsenzpflicht nach Kündigung von Vereinbarung
+https://www.heise.de/news/TeamViewer-kuendigt-Homeoffice-Regelung-Beschaeftigte-fuerchten-Praesenzpflicht-11536222.html
+TeamViewer kündigt die Betriebsvereinbarung zu mobiler Arbeit. Beschäftigte befürchten künftig Präsenzpflicht – das Unternehmen äußert sich zurückhaltend.
 
-39572b · 2026-11-23 21:17 · heise
+cde1a4 · 2026-11-24 18:00 · Basic Thinking
 
-Mega-Deal: CrowdStrike übernimmt Zscaler
-https://www.heise.de/news/Mega-Deal-CrowdStrike-uebernimmt-Zscaler-11535354.html
-Zwei Schwergewichte der Cybersicherheitsbranche gehen zusammen. CrowdStrike kauft den Wettbewerber Zscaler in einer 44-Milliarden-Dollar-Transaktion.
+Google stopft Gemini in Karten-App: Das musst du über Ask Maps wissen
+https://www.basicthinking.de/blog/2026/11/24/google-stopft-gemini-in-karten-app-das-musst-du-ueber-ask-maps-wissen/
+Der Beitrag Google stopft Gemini in Karten-App: Das musst du über Ask Maps wissen erschien zuerst beim Online-Magazin BASIC thinking. Über unseren Newsletter UPDATE startest du jeden Morgen bestens informiert in den Tag. Ask Maps kommt nach Deutschland. Google weitet das größte Maps-Update seit…
 
-7f4dfd · 2026-11-23 21:01 · Basic Thinking
+f33d05 · 2026-11-24 18:00 · Golem
 
-Historisches Urteil gegen DAZN: So holst du dir dein Geld zurück
-https://www.basicthinking.de/blog/2026/11/23/historisches-urteil-gegen-dazn-so-holst-du-dir-dein-geld-zurueck/
-Der Beitrag Historisches Urteil gegen DAZN: So holst du dir dein Geld zurück erschien zuerst beim Online-Magazin BASIC thinking. Über unseren Newsletter UPDATE startest du jeden Morgen bestens informiert in den Tag. Eigentor für DAZN, denn der Sport-Streamingdienst muss Abonnenten Geld…
+(g+) Nvidia, OpenAI und Co.: Spione nehmen die Techkonzerne ins Visier
+https://www.golem.de/news/nvidia-openai-und-co-spione-nehmen-die-techkonzerne-ins-visier-2611-215596.html
+Die Financial Times zeigt anhand aktueller Spionagefälle und Gesprächen mit ehemaligen Geheimdienstmitarbeitern, wie verwundbar die Techkonzerne sind. Von Patrick McGee (Jensen Huang, Mark Zuckerberg)
 
-c820df · 2026-11-23 20:00 · Basic Thinking
+0678cc · 2026-11-24 17:55 · Golem
 
-B2B E-Commerce mit Shopware 6: Führende Shopware-Agenturen in Deutschland
-https://www.basicthinking.de/blog/2026/11/23/b2b-e-commerce-mit-shopware-6-fuehrende-shopware-agenturen-in-deutschland/
-Der Beitrag B2B E-Commerce mit Shopware 6: Führende Shopware-Agenturen in Deutschland erschien zuerst beim Online-Magazin BASIC thinking. Über unseren Newsletter UPDATE startest du jeden Morgen bestens informiert in den Tag. Ein B2B-Shop kann schon bei einer simplen Bestellung kompliziert werden…
+Kilow La Bagnole: Elektrischer Mini-Jeep aus Frankreich kostet ab 10.800 Euro
+https://www.golem.de/news/kilow-la-bagnole-elektrischer-mini-jeep-aus-frankreich-kostet-ab-10-800-euro-2611-215603.html
+Der La Bagnole von Kilow ist ein vielseitiger kleiner Elektro-Jeep, der als Pritschen- oder als Kastenwagen genutzt werden kann. (Elektroauto, Auto)
 
-5f455c · 2026-11-23 20:00 · heise
+e742b3 · 2026-11-24 17:35 · Golem
 
-Black-Friday-Deals: Tastaturen, Mäuse & Gaming-Zubehör bis 40 % reduziert
-https://www.heise.de/bestenlisten/deals/black-friday-deals-tastaturen-maeuse-und-gaming-zubehoer-bis-40-prozent-reduziert/52x2pw2
-Zum Black Friday gibt es auch Gaming-Peripherien wie Mäuse, Tastaturen, Headsets und Controller im Angebot. Teilweise sogar bis zu 40 Prozent reduziert.
+Odyssey G6 GH60: Samsungs neuer Monitor kann 1.100 Hz darstellen
+https://www.golem.de/news/odyssey-g6-gh60-samsungs-neuer-monitor-kann-1-100-hz-darstellen-2611-215602.html
+Allerdings muss die Auflösung des Samsung-Monitors für die schnelle Bildfrequenz stark reduziert werden. (Display, Samsung)
 
-d6e0cc · 2026-11-23 19:33 · heise
+0c81b4 · 2026-11-24 17:26 · heise
 
-Teure Doppelstrukturen im All: Europas Starlink-Alternativen werden zu teuer
-https://www.heise.de/news/Teure-Doppelstrukturen-im-All-Europas-Starlink-Alternativen-werden-zu-teuer-11535252.html
-Um unabhängig von Musks Starlink zu werden, bauen EU und Bundeswehr zwei Satellitennetze nebeneinander auf. Forscher warnen vor hohen Kosten und Lücken.
+Firefox 161: Ein Klick auf die Flamme tilgt alle Spuren
+https://www.heise.de/news/Firefox-161-Das-Gratis-VPN-schaltet-sich-jetzt-pro-Website-ein-11536744.html
+Firefox 161 ist da: Das integrierte VPN erhält Regeln für einzelne Websites. Außerdem gibt es einen neuen Schnellzugriff zum Löschen von Browserdaten.
 
-650829 · 2026-11-23 19:07 · heise
+1d618c · 2026-11-24 17:23 · heise
 
-KI-Migrationsgesetz: Experten fürchten mehr Klagen statt kürzerer Verfahren
-https://www.heise.de/news/KI-Migrationsgesetz-Experten-fuerchten-mehr-Klagen-statt-kuerzerer-Verfahren-11535154.html
-Bei der KIMVG-Anhörung forderten Sachverständige klare Einsatzgrenzen und unabhängige Prüfungen. Sonst drohten mehr Fehler, Klagen und längere Verfahren.
+ARM verlängert mit CEO Rene Haas
+https://www.heise.de/news/ARM-verlaengert-mit-CEO-Rene-Haas-11536454.html
+Nachdem der Topjob bei Nvidia nun doch nicht mehr frei ist, verlängert Rene Haas seinen Einsatz bei Arbeitgeber ARM und steigt auch bei Softbank auf.
 
-0aa4fa · 2026-11-23 19:00 · Golem
+b4df1a · 2026-11-24 17:20 · Golem
 
-AWS Trainium: Amazon kauft KI-Chip-Optimierung von Decart AI für 7,5 Milliarden US-Dollar
-https://www.golem.de/news/aws-trainium-amazon-kauft-ki-chip-optimierung-von-decart-ai-fuer-7-5-milliarden-us-dollar-2611-215557.html
-Statt einer klassischen Firmenübernahme holt sich Amazon die Kern-Software und rund 100 Entwickler des KI-Startups Decart AI ins Haus. (Amazon, Cuda)
+AT&T: US-Regulierer macht Weg für Kupferabschaltung in Kalifornien frei
+https://www.golem.de/news/at-t-us-regulierer-macht-weg-fuer-kupferabschaltung-in-kalifornien-frei-2611-215601.html
+Gegen Widerstand erlaubt die FCC dem Netzbetreiber AT&T, sein Kupfernetz ab Sommer 2027 abzuschalten. (AT&T, VoIP)
 
-72e01b · 2026-11-23 18:53 · heise
+5776c6 · 2026-11-24 17:05 · Golem
 
-Dänemark will Mobilfunknutzung in der Schule verbieten
-https://www.heise.de/news/Daenemark-will-Mobilfunknutzung-in-der-Schule-verbieten-11535292.html
-Keine Bildschirme in der Schule: In Dänemark sollen Smartphones ab dem kommenden Schuljahr bis zur 10. Klasse verboten sein.
+Einfuhrkontrolle: EU legt Importzahlen für chinesische Hybrid-Autos fest
+https://www.golem.de/news/einfuhrkontrolle-eu-legt-importzahlen-fuer-chinesische-hybride-fest-2611-215599.html
+Hybridfahrzeuge aus chinesischer Produktion überschwemmen den europäischen Markt. Das soll im kommenden Jahr anders werden. (Plugin-Hybrid, Elektroauto)
 
-d2449b · 2026-11-23 18:47 · heise
+17dc3c · 2026-11-24 16:50 · Golem
 
-DLR-Bericht: Der Radverkehr in Deutschland gewinnt Bedeutung
-https://www.heise.de/news/DLR-Bericht-Der-Radverkehr-in-Deutschland-gewinnt-Bedeutung-11535222.html
-Der Anteil der Fahrradverkehrs am Gesamtverkehr ist konstant geblieben. Die Fahrleistung auf zwei Rädern sei aber gestiegen, schreibt das DLR.
+KI-gestützter Angriff: EU-Kommission bestätigt Datendiebstahl
+https://www.golem.de/news/ki-gestuetzter-angriff-eu-kommission-bestaetigt-datendiebstahl-2611-215598.html
+Beim KI-gestützten Cyberangriff auf die EU-Kommission sind personenbezogene Daten von Nutzern der Bildungsplattform EU Academy entwendet worden. (KI, Datenschutz)
 
-ebc0e4 · 2026-11-23 18:25 · heise
+cb6fa4 · 2026-11-24 16:45 · t3n
 
-NameDrop: US-Start-up verklagt Apple in Indien auf 160 Millionen Dollar
-https://www.heise.de/news/NameDrop-US-Start-up-verklagt-Apple-in-Indien-auf-160-Millionen-Dollar-11535196.html
-Die Firma hinter der App StayTouch sieht durch Apples NameDrop ein indisches Patent verletzt. Sie fordert Schadenersatz und will die Funktion stoppen lassen.
+Ist der Anthropic-Boom schon wieder vorbei? Aktie fällt unter den Ausgabepreis
+https://t3n.de/news/ist-der-anthropic-boom-schon-wieder-vorbei-aktie-faellt-unter-den-ausgabepreis-1775067/
+Anthropic startete an der Börse mit einem Kurssprung von 34 Prozent und einer Bewertung von zwei Billionen Dollar. Doch die Euphorie währte nur kurz. weiterlesen auf t3n.de
 
-308821 · 2026-11-23 18:06 · Basic Thinking
+d2761b · 2026-11-24 16:35 · heise
 
-Die verlogene Rückkehr von Nvidia-Boss Jensen Huang
-https://www.basicthinking.de/blog/2026/11/23/die-verlogene-rueckkehr-von-nvidia-boss-jensen-huang/
-Der Beitrag Die verlogene Rückkehr von Nvidia-Boss Jensen Huang erschien zuerst beim Online-Magazin BASIC thinking. Über unseren Newsletter UPDATE startest du jeden Morgen bestens informiert in den Tag. Die Nvidia-Saga nimmt kein Ende. Nachdem Unternehmenschef und Aushängeschild Jensen Huang nach…
+Mathe-Wettlauf: Anthropic und OpenAI mit fast zeitgleichen Beweisen für VP ≠ VNP
+https://www.heise.de/news/Mathe-Wettlauf-Anthropic-und-OpenAI-mit-fast-zeitgleichen-Beweisen-fuer-VP-VNP-11536640.html
+Wenige Tage nach dem Riemann-Beweis legen Anthropic und OpenAI fast zeitgleich Beweise für ein jahrzehntealtes Problem der theoretischen Informatik vor.
 
-50d5ed · 2026-11-23 18:00 · Golem
+ac653a · 2026-11-24 16:32 · Golem
 
-(g+) Google Deepminds Henry Shevlin: "Das ist der wichtigste Teil des Menschseins"
-https://www.golem.de/news/google-deepminds-henry-shevlin-das-ist-der-wichtigste-teil-des-menschseins-2611-215553.html
-Kann KI ein Bewusstsein entwickeln? Im Gespräch mit der Financial Times erklärt Googles Philosoph Henry Shevlin, warum es leichtsinnig wäre, eine empfindungsfähige KI zu erschaffen. Von Cristina Criddle (Deepmind, KI)
+Noch weit hinter SpaceX: Ariane 6 fliegt 36 Satelliten in den Orbit
+https://www.golem.de/news/europaeische-raumfahrt-ariane-6-fliegt-36-satelliten-in-den-orbit-2611-215597.html
+Die europäische Trägerrakete stellt derzeit die einzige echte Alternative zu SpaceX dar, kann einen systemischen Fehler aber nicht überwinden. (Rakete, Amazon)
 
-08cdaa · 2026-11-23 17:59 · heise
+6f0d57 · 2026-11-24 16:22 · heise
 
-Neuer DJ-CD-Player mit offenem Laufwerk und Auracast
-https://www.heise.de/news/Neuer-DJ-CD-Player-mit-offenem-Laufwerk-und-Auracast-11534926.html
-Teenage Engineering verkauft jetzt einen CD-Player, der von Rippen bis Mixen gleich alles können soll. Die Papierform ist jedoch durchwachsen.
+Elektrischer Porsche 718 Boxster: Erste Fahrt im Vorserienauto
+https://www.heise.de/tests/Fahr-Simulator-Probefahrt-im-elektrischen-Porsche-718-Boxster-11536440.html
+Porsche will den elektrischen 718 Boxster bald herausbringen. Eine Fahrt im Vorserien-Boxster liefert erstmals Eindrücke, auch zur Simulation des Verbrenners.
 
-e78dd8 · 2026-11-23 17:50 · heise
+8c9662 · 2026-11-24 16:15 · t3n
 
-Kostenloses Windows-Tool OLEDTextFix soll Textdarstellung auf OLEDs verbessern
-https://www.heise.de/news/Kostenloses-Windows-Tool-OLEDTextFix-soll-Textdarstellung-auf-OLEDs-verbessern-11534988.html
-Das kostenlose Open-Source-Tool für Windows soll Farbsäume an Schrift auf OLED-Monitoren mildern.
+Neue KI-Funktionen für Entwickler: Was du über Claude Ship wissen musst
+https://t3n.de/news/neue-ki-funktionen-fuer-entwickler-was-du-ueber-claude-ship-wissen-musst-1775032/
+Anthropic hat Claude Ship vorgestellt. Die neue Suite soll Entwickler:innen dabei helfen, KI-generierten Code schneller zu prüfen und freizugeben – und dadurch ihre Produktivität steigern. weiterlesen auf t3n.de
 
-a49e1f · 2026-11-23 17:49 · Golem
+faf2b9 · 2026-11-24 16:02 · heise
 
-Mercedes Benz Ludwigsfelde: Gewerkschaftler ruft zum "Flachlegen des Ladens, länger als ...
-https://www.golem.de/news/mercedes-benz-ludwigsfelde-gewerkschaftler-ruft-auf-zum-flachlegen-des-ladens-laenger-als-eine-woche-2611-215555.html
-Unklare Perspektiven bei der Umstellung auf Elektro-Transporter treiben die Belegschaft am Mercedes-Benz-Werk in Ludwigsfelde auf die Barrikaden. (Mercedes Benz, Wirtschaft)
+Darknet Diaries Deutsch: Dein Trauma im Darknet – Teil 1
+https://www.heise.de/news/Darknet-Diaries-Deutsch-Dein-Trauma-im-Darknet-Teil-1-11529258.html
+Ein Hacker stiehlt 33.000 Therapieakten und erpresst die Betroffenen. Dann macht er einen Fehler, der die Polizei auf seine Spur bringt.
 
-31b44c · 2026-11-23 17:15 · t3n
+29abd2 · 2026-11-24 16:00 · heise
 
-Datenversand per Schwerkraft: Physiker schicken Textnachricht durch eine Ziegelwand
-https://t3n.de/news/datenversand-schwerkraft-physiker-textnachricht-1774927/
-Ob im tiefen Straßentunnel, unter der Erde oder in Metallgehäusen: Moderne Funktechnik verliert an solchen Barrieren schnell die Verbindung. Für Signale aus abgeschotteten Räumen zweckentfremdete ein Team in Australien nun betagte Gebäudetechnik. weiterlesen auf t3n.de
+Black Friday: Bei Saugrobotern kräftig sparen – Topmodelle zum Tiefstpreis
+https://www.heise.de/bestenlisten/deals/black-friday-bei-saugrobotern-kraeftig-sparen-topmodelle-zum-tiefstpreis/69x6ye0
+Zum Black Friday locken Online-Händler mit Rabatten auf großen Saugroboter – teils über 30 Prozent. Wir prüfen, welche Angebote sich wirklich lohnen.
 
-ac99c4 · 2026-11-23 17:11 · heise
+8278f3 · 2026-11-24 15:48 · heise
 
-Black Friday: Interessante Hardware-Deals für Apple-Nutzer
-https://www.heise.de/news/Black-Friday-Interessante-Hardware-Deals-fuer-Apple-Nutzer-11534920.html
-Die Black-Friday-Woche hat begonnen – und auch Nutzer von iPhone, Mac & Co. können sparen. Ein Überblick beachtenswerter Angebote.
+Euclid entdeckt bisher ältesten Quasar
+https://www.heise.de/news/Euclid-entdeckt-bisher-aeltesten-Quasar-11536620.html
+Das Weltraumteleskop Euclid hat einen weiteren uralten Quasar entdeckt. Es ist ein Blick in die Zeit 630 Millionen Jahre nach dem Urknall.
 
-4f02eb · 2026-11-23 17:07 · heise
+fd820d · 2026-11-24 15:40 · t3n
 
-Zahlreiche Sicherheitslücken betreffen Komponenten des Java-Ökosystems Spring
-https://www.heise.de/news/Zahlreiche-Sicherheitsluecken-betreffen-Komponenten-des-Java-Oekosystems-Spring-11534890.html
-Wichtige Sicherheitsupdates schließen unter anderem Lücken in Spring AI, Spring Framework und Spring Security.
+Black Friday: Diese 9 Fritzboxen, Repeater und Co. sind wirklich günstig
+https://t3n.de/news/black-friday-fritzbox-repeater-thermostat-dect-1775043/
+Rund um den Black Friday reduzieren viele Anbieter die Preise auf Fritzboxen und passendes Zubehör. Wie gut sind die Preise für Router, Repeater und Smarthome-Zubehör? Wir machen den Check. weiterlesen auf t3n.de
 
-c41bb1 · 2026-11-23 16:45 · Golem
+b335f8 · 2026-11-24 15:39 · Spiegel Netzwelt
 
-Excel, Word, Powerpoint: Airbus will seit acht Jahren weg von Microsoft Office
-https://www.golem.de/news/excel-word-powerpoint-airbus-will-seit-acht-jahren-weg-von-microsoft-office-2611-215547.html
-Mittlerweile hat Vertragspartner Google auch viel getan, um die Umstellung zu vervollständigen. In Gänze wird das wohl nie geschehen. (Office, Google)
+Social Media: Menschen können kaum erkennen, wann politische Posts KI-generiert sind
+https://www.spiegel.de/netzwelt/us-studie-menschen-koennen-kaum-erkennen-wann-politische-posts-ki-generiert-sind-a-333f030c-79cc-48f9-8a72-f18e44d535ad
+Menschen sind nur begrenzt in der Lage, zu unterscheiden, ob politische Social-Media-Inhalte von Menschen oder von KI verfasst wurden. Das haben Forscher anhand von Posts zum US-Wahlkampf herausgefunden.
 
-9a5437 · 2026-11-23 16:33 · t3n
+29a249 · 2026-11-24 15:28 · heise
 
-Rückkehr zu Nvidia: Jensen Huang kann offenbar machen, was er will
-https://t3n.de/news/rueckkehr-zu-nvidia-jensen-huang-kann-offenbar-machen-was-er-will-1774926/
-Nach einer aufgedeckten Affäre ist Nvidia-Chef Jensen Huang von seinem Posten zurückgetreten – nur, um jetzt zurückzukehren. Beide Seiten machen sich lächerlich, findet unser Autor. weiterlesen auf t3n.de
+LogikStrom: Kostenloses Schaltplan-Programm nach DIN EN, Vibecoded
+https://www.heise.de/news/LogikStrom-Kostenloses-Schaltplan-Programm-nach-DIN-EN-gebaut-mit-KI-11536576.html
+LogikStrom zeichnet Stromlaufpläne nach DIN EN und erzeugt Kontaktspiegel und Klemmenplan automatisch. Kostenlos, offline, ohne Konto.
 
-4541af · 2026-11-23 16:30 · heise
+6ab138 · 2026-11-24 15:21 · heise
 
-Maker baut Roboterhand mit 18 Servos und Stahlsehnen für 300 US-Dollar
-https://www.heise.de/news/Roboterhand-aus-dem-3D-Drucker-kommt-auf-18-Freiheitsgrade-11534638.html
-Eine Roboterhand mit 18 Freiheitsgraden, deren Servos die Finger über Stahlseile wie Sehnen bewegen, hat ein Maker für rund 300 US-Dollar gebaut.
+iPhone Duo: Für das Foldable angepasste Apps von Apple und anderen
+https://www.heise.de/news/iPhone-Duo-Fuer-das-Foldable-angepasste-Apps-von-Apple-und-anderen-11496172.html
+Apple hat viele seiner Apps für sein erstes Falt-Telefon angepasst. Andere Entwickler ziehen ebenfalls mit. Ein Überblick interessanter Programme.
 
-b852e1 · 2026-11-23 16:27 · heise
+e7c2e9 · 2026-11-24 15:16 · heise
 
-Nach AMD: Auch Nvidias GeForce-Grafiktreiber belastet SSD-Lebensdauer übermäßig
-https://www.heise.de/news/Nach-AMD-Auch-Nvidias-GeForce-Grafiktreiber-belastet-SSD-Lebensdauer-uebermaessig-11534844.html
-Nvidias Grafikkartentreiber für Windows hat mit exzessiven Schreibzugriffen auf SSDs zu kämpfen. Ein erster Hotfix-Treiber hilft anscheinend nicht immer.
+EU schränkt Einfuhr von Hybridautos ein
+https://www.heise.de/news/EU-schraenkt-Einfuhr-von-Hybridautos-ein-11536410.html
+Hunderttausende Hybridautos werden aus China in die EU importiert. Die europäischen Autobauer stehen unter Druck. Nun begrenzt Brüssel die Zahl der Einfuhren.
 
-842d65 · 2026-11-23 16:22 · heise
+d3f4e6 · 2026-11-24 15:07 · heise
 
-In-Memory-Datenbank Valkey 9.2: Gleiche Daten, weniger Bytes auf der Leitung
-https://www.heise.de/news/In-Memory-Datenbank-Valkey-9-2-Weniger-RAM-Spitzen-beim-Sichern-11534812.html
-Valkey 9.2 kann Speicherspitzen beim Sichern vermeiden und beim Datenabgleich zwischen Servern Bandbreite sparen.
+Google führt eine neue Suchseite mit KI-Seitenleiste ohne Suchbutton ein
+https://www.heise.de/news/Google-fuehrt-eine-neue-Suchseite-mit-KI-Seitenleiste-ohne-Suchbutton-ein-11536330.html
+Google baut seine Startseite um: Aus dem Such- wird ein KI-Button, zudem zieht eine Seitenleiste für die letzten KI-Suchanfragen und Gemini Notebook ein.
 
-44a059 · 2026-11-23 16:20 · Golem
+de3b4d · 2026-11-24 15:05 · t3n
 
-Jensen Huang: Nvidia-Aktie springt nach Huang-Rückkehr um 30 Prozent
-https://www.golem.de/news/jensen-huang-nvidia-aktie-springt-nach-huang-rueckkehr-um-30-prozent-2611-215550.html
-Die Rückkehr von Jensen Huang als Nvidias CEO verschafft der Aktie Aufwind: Zum Handelsstart steigt sie stark. (Nvidia, KI)
+Nach Microsoft-Ausfall: So abhängig ist die deutsche Verwaltung von Outlook, Teams und Co.
+https://t3n.de/news/microsoft-teams-outlook-ausfall-deutsche-politik-exchange-1774968/
+Die Ausfälle von Outlook, Teams und Co. haben in manchen Firmen für Chaos gesorgt. Aber wie stark war die deutsche Politik betroffen? Wir haben nachgefragt.weiterlesen auf t3n.de
 
-0aa891 · 2026-11-23 16:16 · Computerwoche
+b52ea1 · 2026-11-24 15:00 · heise
 
-CrowdStrike schließt mit Zscaler-Kauf Netzwerksicherheit-Lücke
-https://www.computerwoche.de/article/4252106/crowdstrike-schliest-mit-zscaler-kauf-netzwerksicherheit-lucke.html
-width="1024" height="683" sizes="auto, (max-width: 1024px) 100vw, 1024px" In einem rekordverdächtigen Deal greift sich CrowdStrike Zscaler, um sich im Bereich Netzwerksicherheit zu verstärken. Michael Vi/Shutterstock CrowdStrike hat vereinbart, den Cloud-Sicherheitsanbieter Zscaler für 43,9…
+Bambu Lab P3C: Günstigerer Werkzeugwechsler mit sieben Köpfen
+https://www.heise.de/news/Bambu-Lab-P3C-Guenstigerer-Werkzeugwechsler-mit-sieben-Koepfen-11536198.html
+Bambu Lab stellt mit dem P3C eine günstigere Alternative zum Werkzeugwechsler H3C vor – mit sieben statt neun PrintTools, aber abermals Fokus auf TPU-Druck.
 
-a71f8a · 2026-11-23 16:13 · Golem
+727c5d · 2026-11-24 14:50 · heise
 
-Probefahrt mit Mercedes GLA: Wie hinter einem Atomtransport
-https://www.golem.de/news/probefahrt-mit-mercedes-gla-wie-hinter-einem-atomtransport-2611-215546.html
-Mercedes-Benz zieht einen Schlussstrich unter seine EQ-Phase. Der EQA-Nachfolger GLA überzeugt mit niedrigem Verbrauch. Ein Bericht von Dirk Kunde (Elektroauto, Auto)
+Nach der Suche das Postfach: Kagi greift Gmail an
+https://www.heise.de/news/Nach-der-Suche-das-Postfach-Kagi-greift-Gmail-an-11536264.html
+Kagi startet die öffentliche Beta seines werbefreien E-Mail- und Kalenderdienstes. Zum Funktionsumfang gehören eigene Domains, Tracking-Schutz und KI-Filter.
 
-830d88 · 2026-11-23 16:07 · heise
+329b30 · 2026-11-24 14:36 · heise
 
-Offizielles Apple-Forum: US-Version komplett weg, Deutschland noch da
-https://www.heise.de/news/Offizielles-Apple-Forum-US-Version-komplett-weg-Deutschland-noch-da-11534772.html
-Trotz viel Kritik hat Apple seine Apple Support Community zum Wochenende endgültig dichtgemacht. Verweise aus dem Web laufen ins Leere.
+Statt Jira: OpenProject erhält Millionenauftrag vom ITZBund
+https://www.heise.de/news/Statt-Jira-OpenProject-erhaelt-Millionenauftrag-vom-ITZBund-11536286.html
+Statt Jira setzt der IT-Dienstleister des Bundes ITZBund künftig auf eine heimische Open-Source-Lösung: Der neue Issue-Tracker soll von OpenProject kommen.
 
-4af3a1 · 2026-11-23 16:03 · heise
+f94f82 · 2026-11-24 14:35 · heise
 
-„Upload2Shell“: Ghostscript-Lücke betrifft viele Systeme
-https://www.heise.de/news/Upload2Shell-Ghostscript-Luecke-betrifft-viele-Systeme-11534768.html
-Eine Schwachstelle in Ghostscript namens „Upload2Shell“ gefährdet diverse Betriebssysteme, Programme und Dienste im Netz.
+„Das sollte nicht existieren“: Relativ nahes Dreifachsternsystem als Rätsel
+https://www.heise.de/news/Das-sollte-nicht-existieren-Relativ-nahes-Dreifachsternsystem-als-Raetsel-11535842.html
+Das Sternsystem Welopōʻai dürfte so gar nicht existieren. In der nahen und weiteren Nachbarschaft der Sonne gibt es jedenfalls nichts Vergleichbares.
 
-b72773 · 2026-11-23 16:00 · t3n
+46d3cf · 2026-11-24 14:30 · t3n
 
-Smartphone in der Prüfung: Mit dieser Methode ließ Südkorea Schummler auffliegen
-https://t3n.de/news/smartphone-in-der-pruefung-mit-dieser-methode-liess-suedkorea-schummler-auffliegen-1774868/
-Bei der landesweiten Hochschulaufnahmeprüfung in Südkorea soll es keinen Raum für Schummler geben. Um Betrüger zu entlarven, die heimlich Smartphones nutzen wollten, hatte sich das Bildungsministerium deshalb zuvor etwas ausgedacht. weiterlesen auf t3n.de
+Browser auf dem iPhone: Warum Mozilla und 55.000 andere Unternehmen die EU auffordern, gegen Apple vorzugehen
+https://t3n.de/news/browser-auf-dem-iphone-warum-mozilla-und-55-000-andere-unternehmen-die-eu-auffordern-gegen-apple-vorzugehen-1774997/
+Mozilla, Shopify und bis zu 55.000 weitere Firmen verlangen von der EU-Kommission, gegen Apple vorzugehen. Der Vorwurf: Das Unternehmen blockiere alternative Browser-Technik auf iPhone und iPad – trotz klarer Vorgaben aus Brüssel.weiterlesen auf t3n.de
 
-05fd56 · 2026-11-23 16:00 · Basic Thinking
+4d7538 · 2026-11-24 14:24 · heise
 
-Black Week: Quattro XL (TOPCon) 2000 Wp + Anker SOLIX Solarbank 4 Pro für nur 1.599 €
-https://www.basicthinking.de/blog/2026/11/23/watt-ne-gelegenheit-4-sunpro-module-und-anker-solix-solarbank-4-pro/
-Der Beitrag Black Week: Quattro XL (TOPCon) 2000 Wp + Anker SOLIX Solarbank 4 Pro für nur 1.599 € erschien zuerst beim Online-Magazin BASIC thinking. Über unseren Newsletter UPDATE startest du jeden Morgen bestens informiert in den Tag. Zur Black Week ab dem 23. November reduziert Kleines Kraftwerk…
+Linnemann: KI als „Gamechanger“, Bundeswehr will krisenfeste Gesundheitsdaten
+https://www.heise.de/news/Linnemann-KI-als-Gamechanger-Bundeswehr-will-krisenfeste-Gesundheitsdaten-11536290.html
+Minister Linnemann will das Gesundheitssystem mit KI und präventiver Datenmedizin bezahlbar halten. Militär und Industrie mahnen zur besseren Notfallversorgung.
 
-e0a6f4 · 2026-11-23 16:00 · heise
+eea4df · 2026-11-24 14:08 · Spiegel Netzwelt
 
-20 Prozent Rabatt auf Garmin: Black-Friday-Deals zu Wearables & Smartphones
-https://www.heise.de/bestenlisten/deals/20-prozent-rabatt-auf-garmin-black-friday-deals-zu-wearables-und-smartphones/770jzpc
-Smartphone, Tablet oder Smartwatch günstig kaufen: Wir zeigen die besten Black-Friday-Deals für Mobilgeräte.
+Nvidia: Was Huangs Rückkehr über die US-Demokratie verrät
+https://www.spiegel.de/netzwelt/nvidia-was-huangs-rueckkehr-ueber-die-us-demokratie-verraet-a-1eb4c718-6cd5-45a5-8be4-123057639aa1
+Der US-Präsident holt Jensen Huang zurück an die Spitze des KI-Unternehmens Nvidia. Das sagt einiges über den Zustand der amerikanischen Demokratie.
 
-d51494 · 2026-11-23 15:56 · heise
+371577 · 2026-11-24 14:00 · t3n
 
-Superflinker Gaming-Monitor: Samsung verspricht 1100 Hertz
-https://www.heise.de/news/Superflinker-Gaming-Monitor-Samsung-verspricht-1100-Hertz-11534912.html
-Samsungs Gaming-Monitor Odyssey G6 soll 600 fps bei WQHD und 1100 fps bei Full-HD-Auflösung erzielen. Sein IPS-Panel könnte dabei allerdings Probleme aufwerfen.
+Auf Tiktok ist alles „Code Rotted“: Was der Gaming-Begriff im echten Leben beschreibt
+https://t3n.de/news/auf-tiktok-ist-alles-code-rotted-was-der-gaming-begriff-im-echten-leben-beschreibt-1775004/
+Der Begriff „Code Rot“ stammt eigentlich aus der Gaming-Szene. Jugendliche verwenden ihn aber auch, um Alltägliches zu beschreiben. Nahezu jedes Problem lässt sich für sie auf „verrotteten“ Code zurückführen. weiterlesen auf t3n.de
 
-cb4dc7 · 2026-11-23 15:55 · t3n
+96b591 · 2026-11-24 13:47 · heise
 
-„Man ist als Sicherheitsnetz da“: Was der Job als Fluglotse für Lieferdrohnen mit sich bringt
-https://t3n.de/news/sicherheitsnetz-job-fluglotse-lieferdrohne-1774446/
-Im Zeitalter der Lebensmittellieferungen per Drohne braucht es entsprechendes Personal, um die Schwärme am Himmel zu ordnen. Trevor Wischnewsky gehört in Texas dazu. Was für seinen Job nötig ist.weiterlesen auf t3n.de
+KI-Beschleunigung: Wie weit Apple bei Siri AI und Co. gekommen ist
+https://www.heise.de/news/Siri-AI-und-KI-Greifen-Apples-interne-Umbaumassnahmen-11535122.html
+Unter John Ternus will Apple schneller werden. Allerdings scheinen die großen Veränderungen im KI-Bereich und anderswo noch nicht zu greifen, so ein Bericht.
 
-bdc372 · 2026-11-23 15:50 · heise
+76eaad · 2026-11-24 13:37 · heise
 
-Europäischer Smartphonemarkt bricht ein: Nur Apple und Samsung gewinnen Anteile
-https://www.heise.de/news/Europaeischer-Smartphonemarkt-bricht-ein-Nur-Apple-und-Samsung-gewinnen-Anteile-11534946.html
-Der europäische Markt ist im dritten Quartal so schwach wie seit 13 Jahren nicht mehr. Am stärksten trifft es chinesische Marken wie Xiaomi, Oppo und Honor.
+Zahlen, bitte! Eine Million für BASIC: Eine kleine Geschichte der Computerbücher
+https://www.heise.de/hintergrund/Zahlen-bitte-Eine-Million-fuer-BASIC-Eine-kleine-Geschichte-der-Computerbuecher-11535814.html
+„Habent sua fata libelli“ – Bücher haben ihre Schicksale. Das gilt erst recht für schnelllebige Computerbücher: Eine kleine Zeit- und Zahlenreise.
 
-08c39b · 2026-11-23 15:45 · heise
+fd569c · 2026-11-24 13:32 · t3n
 
-Große KI-Modelle auf mehreren Windows-11-PCs: Microsoft bringt USB4-Vernetzung
-https://www.heise.de/news/Grosse-KI-Modelle-auf-mehreren-Windows-11-PCs-Microsoft-bringt-USB4-Vernetzung-11534674.html
-Eine RDMA-Erweiterung für die USB4-Vernetzungsfunktion P2P ermöglicht es, KI-Modelle auf mehrere Windows-Rechner zu verteilen. Apple-Macs können das per TB5.
+Smarte Schwimmbrille im Test: Kann ein KI-Coach meinen Freistil retten?
+https://t3n.de/news/smarte-schwimmbrille-im-test-kann-ein-ki-coach-meinen-freistil-retten-1774277/
+Eine Schwimmbrille für jederfrau oder -mann, die Bahnen zählt, Zeiten überwacht und gegen Aufpreis das Schwimmtraining managt: Das jedenfalls verspricht die Smaweiterlesen auf t3n.de
 
-b58f5d · 2026-11-23 15:42 · t3n
+dc1c8c · 2026-11-24 13:30 · heise
 
-Überraschende Rückkehr: Jensen Huang wird wieder Nvidia-Chef
-https://t3n.de/news/nvidia-jensen-huang-rueckkehr-1774918/
-Jensen Huang war das Gesicht von Nvidia – und soll es jetzt wieder sein: Noch vergangene Woche hieß es, dass der Mitbegründer nicht zum Chip-Konzern zurückkomme. Nun folgt die Kehrtwende.weiterlesen auf t3n.de
+Black Friday: Die besten Kopfhörer zum Tiefstpreis – Sonos Ace, Nothing & Shokz
+https://www.heise.de/bestenlisten/deals/black-friday-die-besten-kopfhoerer-zum-tiefstpreis-sonos-ace-nothing-und-shokz/ce1wvmg
+Zur Black Week kosten viele getestete Kopfhörer bis zu 35 Prozent weniger. Wir prüfen die Angebote für In-Ear-, Over-Ear- und Open-Ear-Modelle.
 
-442878 · 2026-11-23 15:30 · Golem
+d028ff · 2026-11-24 13:18 · t3n
 
-Jahrhundertdeal: Crowdstrike kauft Zscaler für 44 Milliarden Dollar und fordert Microsoft heraus
-https://www.golem.de/news/jahrhundertdeal-crowdstrike-uebernimmt-zscaler-fuer-44-milliarden-us-dollar-2611-215542.html
-Der Milliardendeal vereint Endgeräte- und Cloud-Sicherheit unter einem Dach. Microsoft und Palo Alto Networks bekommen einen mächtigen Rivalen. (Crowdstrike, Security)
+Optimierung versus Datenschutz: Google verknüpft KI-Modus mit Drive, Wallet und Gemini
+https://t3n.de/news/google-verknuepft-ki-modus-drive-1775003/
+Google baut seinen KI-Dienst Personal Intelligence weiter aus. Der KI-Modus der Suche soll künftig auch Zugriff auf Drive, Wallet und die Gemini-App der Nutzer:innen erhalten – wenn diese das wollen. Und was ist mit dem Datenschutz?weiterlesen auf t3n.de
 
-7553c8 · 2026-11-23 15:16 · Golem
+a0a32c · 2026-11-24 12:58 · heise
 
-CEO: Nvidia holt Jensen Huang zurück
-https://www.golem.de/news/spionage-jensen-huang-wird-wieder-nvidia-ceo-2611-215544.html
-Kommando zurück: Kurz nach seinem Abgang ist Jensen Huang wieder Chef von Nvidia. Die Entscheidung fiel einstimmig. (Jensen Huang, Nvidia)
+Streit um Browser-Engines: Koalition fordert von EU Sanktionen gegen Apple
+https://www.heise.de/news/Streit-um-Browser-Engines-Koalition-fordert-von-EU-Sanktionen-gegen-Apple-11536016.html
+Apple erlaubt in der EU zwar alternative Browser-Engines, doch für Entwickler lohnt sich das kaum. Eine Gruppe aus Mozilla, Shopify und anderen will Maßnahmen.
 
-46b5f0 · 2026-11-23 15:16 · heise
+a48227 · 2026-11-24 12:41 · heise
 
-Nvidia setzt Jensen Huang wieder als CEO ein
-https://www.heise.de/news/Nvidia-setzt-Jensen-Huang-wieder-als-CEO-ein-11534936.html
-Einstimmig hat der Verwaltungsrat von Nvidia Jensen Huang wieder als CEO eingesetzt. Ein Ende der Affären um das Unternehmen ist das nicht.
+Drei Fragen und Antworten: Was der KI-Agent wusste, bevor er falsch abbog
+https://www.heise.de/news/Drei-Fragen-und-Antworten-Der-KI-Agent-irrt-Aber-war-es-ueberhaupt-das-Modell-11536024.html
+Ein geänderter Prompt reicht oft nicht. Wie man Fehler von KI-Agenten an der richtigen Stelle behebt und prüft, ob dadurch neue Probleme entstehen.
 
-5cbe06 · 2026-11-23 15:15 · t3n
+f29b1c · 2026-11-24 12:40 · heise
 
-Kein Kabelfrust zu Weihnachten: So machst du den Weihnachtsbaum smart
-https://t3n.de/news/smart-home-weihnachten-1661855/
-Ein schön geschmückter Tannenbaum gehört zu Weihnachten dazu. Damit er auch im Dunkeln gut aussieht, ist eine Lichterkette Pflicht. Doch wer will die schon immer wieder ein- und ausstecken? Mit diesen smarten Gadgets sparst du dir die Mühe. weiterlesen auf t3n.de
+Nach Sky-Kauf: RTL reicht doppelte Bundesliga-Rechte an Disney+ weiter
+https://www.heise.de/news/Disney-Bundesliga-Highlights-laufen-ab-Januar-unter-ESPN-11535998.html
+Disney+ zeigt ab Januar 2027 Highlight-Clips aller Spiele der 1. und 2. Bundesliga. Die Rechte stammen von RTL, das sie nach dem Sky-Kauf doppelt hatte.
 
-49d23a · 2026-11-23 15:00 · heise
+13e28c · 2026-11-24 12:30 · t3n
 
-KI-Update kompakt: KI-Aktien, Gemini 4 Neon, Riemannsche Vermutung, Geschenktipp
-https://www.heise.de/news/KI-Update-kompakt-KI-Aktien-Gemini-4-Neon-Riemannsche-Vermutung-Geschenktipp-11532019.html
-Das „KI-Update“ liefert drei mal pro Woche eine Zusammenfassung der wichtigsten KI-Entwicklungen.
-
-bb6de7 · 2026-11-23 15:00 · heise
-
-Kritik zur Serie „Blade Runner 2099“: Wovon Androiden träumen
-https://www.heise.de/news/Kritik-zur-Serie-Blade-Runner-2099-Wovon-Androiden-traeumen-11534680.html
-Kann man „Blade Runner“ würdig mit einer TV-Serie fortsetzen? Durchaus! Starke Bilder und eine starke Hauptdarstellerin machen „2099“ zum Erfolg.
-
-0a95a7 · 2026-11-23 14:55 · t3n
-
-Cybersicherheit: 23 Begriffe von Phishing bis Zero-Day erklärt
-https://t3n.de/news/cybersicherheit-glossar-1707854/
-Von Phishing-Mails im privaten Postfach bis zu Ransomware-Attacken auf Krankenhäuser und öffentliche Verwaltungen: Cyber-Sicherheit betrifft uns alle. Wir erklären die wichtigsten Begriffe.weiterlesen auf t3n.de
-
-2720e1 · 2026-11-23 14:49 · Computerwoche
-
-Digitales Vertrauen – ein neuer Milliardenmarkt für Mobilfunker?
-https://www.computerwoche.de/article/4252052/digitales-vertrauen-ein-neuer-milliardenmarkt-fur-mobilfunker.html
-Mobilfunkanbieter könnten künftig eine größere Rolle bei der Betrugsverhinderung spielen. ImageFlow – Shutterstock.com Der TK-Branche winkt eine ungewöhnliche Chance: Sie könnte künftig nicht mehr nur Connectivity verkaufen, sondern auch Vertrauen. Bislang basiert der Kampf gegen digitalen Betrug…
-
-2b00a7 · 2026-11-23 14:30 · t3n
-
-Apple plant die nächste Produktrunde: Diese iPhones, iPads und Macs kommen im Frühjahr
-https://t3n.de/news/apple-plant-die-naechste-produktrunde-diese-iphones-ipads-und-macs-kommen-im-fruehjahr-1774810/
-Nach einem Herbst voller neuer Hardware arbeitet Apple an den nächsten Produkten. Darunter: ein noch fehlendes iPhone, weitere OLED-iPads und günstige(re) Macs.weiterlesen auf t3n.de
-
-a418cf · 2026-11-23 14:02 · heise
-
-NASA: Mars-Rover und -Orbiter mit technischen Problemen
-https://www.heise.de/news/NASA-Mars-Rover-und-Orbiter-mit-technischen-Problemen-11534371.html
-Perseverance und Mars Odyssey mussten ihre wissenschaftliche Arbeit aus unterschiedlichen Gründen aussetzen. Bei der NASA arbeitet man an Lösungen.
-
-4a9877 · 2026-11-23 14:00 · t3n
-
-Bereit für den Black Friday? Diese 5 Tools machen dich zum Schnäppchenprofi
-https://t3n.de/news/bereit-fuer-den-black-friday-diese-5-tools-machen-dich-zum-schnaeppchenprofi-1774841/
-Millionen Angebote, ständig wechselnde Preise und vermeintlich einmalige Rabattaktionen: Wer am Black Friday wirklich sparen möchte, braucht einen guten Überblick, der ohne spezialisierte Online-Tools kaum zu bekommen ist. Fünf spannende Lösungen haben wir hierfür ausgewählt.weiterlesen auf t3n.de
-
-a0f823 · 2026-11-23 13:55 · heise
-
-Microsoft PC Assist: Aufräumhilfe mit viel Bing
-https://www.heise.de/news/Microsoft-PC-Assist-Aufraeumhilfe-mit-viel-Bing-11534684.html
-Microsoft hat ein kostenloses Tool namens „PC Assist“ veröffentlicht. Es soll etwa Laufwerke aufräumen. An allen Ecken lauert Bing.
-
-bafc02 · 2026-11-23 13:55 · t3n
-
-GTA 6: Diese 4 Details machen Leonida lebendiger als jede Open World zuvor
-https://t3n.de/news/gta-6-4-details-lebendige-open-world-1774244/
-GTA 6 sieht natürlich super aus – doch das Interessanteste an dem Spiel steckt unter der Oberfläche. Tief in der Engine, in Systemen, die im Hintergrund arbeiten und Leonida erst wirklich zum Leben erwecken. weiterlesen auf t3n.de
-
-ba4f3f · 2026-11-23 13:26 · heise
-
-Kommentar: Den Notbetrieb übt man nicht erst im Notfall
-https://www.heise.de/meinung/Kommentar-Weniger-Klumpenrisiko-bitte-ohne-Over-Engineering-11534656.html
-Zwei Anbieter sind noch kein Plan B. Benjamin Pfister erklärt, warum gemeinsame Abhängigkeiten auch den Notbetrieb gefährden.
-
-310bae · 2026-11-23 12:59 · heise
-
-Teardown: HomeView von Apple kehrt zu schlechter Reparierbarkeit zurück
-https://www.heise.de/news/Apple-HomeView-im-Teardown-Reparatur-unnoetig-kompliziert-11533912.html
-Apple hatte Fortschritte beim Aufbau seiner Geräte gemacht: Komponenten sind modular(er) und Akkus schnell(er) zu tauschen. Der HomeView vergisst hier viel.
-
-f6f2cb · 2026-11-23 12:50 · heise
-
-Geheimdienste sehen russischen Satelliten mit Atomwaffe angeblich kurz vor Start
-https://www.heise.de/news/Bericht-Geheimdienste-sehen-russischen-Satelliten-mit-Atomwaffe-kurz-vor-Start-11534307.html
-Laut einer Recherche mehrerer deutscher Medien gehen westliche Geheimdienste davon aus, dass Russland noch in diesem Jahr eine Atomwaffe ins All schießen will.
-
-a5fe4f · 2026-11-23 12:39 · heise
-
-Galaxy Watch 10: Widersprüchliche Berichte zur Vorstellung neuer Modelle 2027
-https://www.heise.de/news/Galaxy-Watch-10-Widerspruechliche-Berichte-zur-Vorstellung-neuer-Modelle-2027-11534502.html
-Sparzwang: Samsung könnte laut Bericht im nächsten Jahr keine neuen Galaxy-Watch-Modelle vorstellen. Eine andere Quelle widerspricht.
-
-1ead9b · 2026-11-23 12:35 · heise
-
-European XFEL erzeugt Röntgenlaserblitze mit Weltrekord-Energie
-https://www.heise.de/news/European-XFEL-erzeugt-Roentgenlaserblitze-mit-Weltrekord-Energie-11534542.html
-Am European XFEL wurde ein neuer Rekord bei der Energie von Röntgenlaserblitzen erreicht. Schon der vorherige Rekord wurde dort aufgestellt.
-
-99e1a6 · 2026-11-23 12:13 · heise
-
-Messenger Signal: Sperre für neugierige KI-Assistenten
-https://www.heise.de/news/Messenger-Signal-Sperre-fuer-neugierige-KI-Assistenten-11534436.html
-Der Messenger Signal bekommt eine neue Funktion, die das Mitlesen von Nachrichten durch KI-Assistenten verhindern soll.
-
-1c7713 · 2026-11-23 12:11 · heise
-
-Neue Hardware: Diese Geräte bringt Apple vermutlich bis März
-https://www.heise.de/news/Naechste-Produkterunde-Das-plant-Apple-im-Fruehjahr-11533920.html
-Der Herbst war voll mit neuen Apple‑Gerätschaften. Im kommenden Frühjahr soll die nächste Offensive starten – unter anderem beim iPhone.
-
-67a0f7 · 2026-11-23 12:01 · heise
-
-Streit ums Design: Gericht verhindert EU-weiten Verkauf des E-SUV BYD Ti7
-https://www.heise.de/news/Streit-ums-Design-Gericht-verhindert-EU-weiten-Verkauf-des-E-SUV-BYD-Ti7-11534173.html
-Ein Gericht in Den Haag untersagt BYD vorläufig Import, Verkauf und Produktion des SUV Ti7 in der EU. Es sieht Designrechte am Land Rover Defender verletzt.
-
-faa611 · 2026-11-23 11:44 · heise
-
-Ab in die VM: Ubuntu Core Desktop steht zum Test bereit
-https://www.heise.de/news/Ab-in-die-VM-Ubuntu-Core-Desktop-steht-zum-Test-bereit-11534241.html
-Canonicals Pläne für Ubuntu Core Desktop werden konkreter. Erste Test-Images sind verfügbar, die Veröffentlichung soll parallel zu 28.04 LTS folgen.
-
-b977a0 · 2026-11-23 11:00 · Basic Thinking
-
-Netflix schafft sich ab: Erste Produktionen ohne deutsche Stammsprecher
-https://www.basicthinking.de/blog/2026/11/23/netflix-produktionen-ohne-deutsche-stammsprecher/
-Der Beitrag Netflix schafft sich ab: Erste Produktionen ohne deutsche Stammsprecher erschien zuerst beim Online-Magazin BASIC thinking. Über unseren Newsletter UPDATE startest du jeden Morgen bestens informiert in den Tag. Wenn mitten in einer Serie plötzlich eine vertraute Stimme fehlt, wirkt das…
-
-cf8dc9 · 2026-11-23 10:49 · heise
-
-Cyberangriff legt Hugendubel, Tolino-Cloud und eBook.de lahm
-https://www.heise.de/news/Nach-Cyberangriff-Hugendubel-Tolino-Cloud-und-eBook-de-gestoert-11534213.html
-Die Webseiten von Hugendubel, Tolino-Cloud und eBook.de sind derzeit im Wartungsmodus. Ursache ist offenbar ein Cyberangriff.
-
-f38084 · 2026-11-23 10:43 · heise
-
-Erdgroßer „Planet X2“ könnte neben „Planet 9“ am Rand des Sonnensystems kreisen
-https://www.heise.de/news/Erdgrosser-Planet-X2-koennte-neben-Planet-9-am-Rand-des-Sonnensystems-kreisen-11534045.html
-Schon vor drei Jahren hat eine Forschungsgruppe vorgeschlagen, dass es hinter dem Neptun einen etwa erdgroßen Planeten geben könnte. Das untermauert sie jetzt.
+Altersvorsorgedepot: Banken legen los – doch der Staat verspätet sich
+https://t3n.de/news/altersvorsorgedepot-banken-legen-los-doch-der-staat-kommt-spaeter-1774990/
+Banken und Versicherer werben bereits um Kunden für das neue Altersvorsorgedepot. Doch ausgerechnet die staatliche Alternative lässt auf sich warten: Sie soll frühestens im Sommer 2027 starten. weiterlesen auf t3n.de
