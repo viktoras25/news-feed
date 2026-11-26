@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-11-26T09:59:57.022Z",
+  "generated_at_berlin": "2026-11-26 10:59",
+  "data_date": "2026-11-26",
+  "stale_after": "2026-11-26T23:00:00.000Z",
+  "window_hours": 24,
+  "window_from": "2026-11-25T09:59:57.022Z",
+  "entries_total": 638,
+  "entries_new": 598,
+  "entries_seen_before": 40,
+  "new_entries_by_group": {
+    "national": 351,
+    "ukraine_world": 17,
+    "economy": 70,
+    "tax_work": 11,
+    "tech_ai_labor": 100,
+    "leipzig_saxony": 45,
+    "good_news": 4
+  },
+  "files": [
+    "details/economy.md",
+    "details/good_news.md",
+    "details/leipzig_saxony.md",
+    "details/national.md",
+    "details/tax_work.md",
+    "details/tech_ai_labor.md",
+    "details/ukraine_world.md",
+    "health.md",
+    "index.md",
+    "manifest.json",
+    "news.json"
+  ],
+  "feeds_total": 53,
+  "feeds_dead": 0,
+  "feeds_empty": 0
+}
